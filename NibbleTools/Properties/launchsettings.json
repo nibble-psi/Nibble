@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "NibbleTools (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "NibbleTools (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}
