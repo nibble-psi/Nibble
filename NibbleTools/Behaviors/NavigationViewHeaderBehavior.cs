@@ -3,7 +3,7 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.Xaml.Interactivity;
 
-using NibbleTools.Contracts.Services;
+using NibbleTools.Interfaces.Services;
 
 namespace NibbleTools.Behaviors;
 

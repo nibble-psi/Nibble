@@ -1,11 +1,8 @@
 ﻿using Microsoft.Extensions.Options;
 
-using NibbleTools.Contracts.Services;
-using NibbleTools.Core.Contracts.Services;
-using NibbleTools.Core.Helpers;
+using NibbleTools.Interfaces.Services;
 using NibbleTools.Helpers;
 using NibbleTools.Models;
-
 using Windows.ApplicationModel;
 using Windows.Storage;
 

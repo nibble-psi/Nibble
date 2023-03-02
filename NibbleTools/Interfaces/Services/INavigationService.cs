@@ -1,7 +1,7 @@
 ﻿using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
 
-namespace NibbleTools.Contracts.Services;
+namespace NibbleTools.Interfaces.Services;
 
 public interface INavigationService
 {

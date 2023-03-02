@@ -1,10 +1,9 @@
 ﻿using System.Diagnostics;
-
+using FluentAssertions;
 using Microsoft.UI.Xaml.Controls;
 
 namespace NibbleTools.Tests.MSTest;
 
-// TODO: Write unit tests.
 // https://docs.microsoft.com/visualstudio/test/getting-started-with-unit-testing
 // https://docs.microsoft.com/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests
 // https://docs.microsoft.com/visualstudio/test/run-unit-tests-with-test-explorer
@@ -42,9 +41,10 @@ public class TestClass
         Assert.IsTrue(true);
     }
 
-    [UITestMethod]
-    public void UITestMethod()
+    [TestMethod]
+    public void TestMethod2()
     {
-        Assert.AreEqual(0, new Grid().ActualWidth);
+        var status = true;
+        status.Should().BeTrue();
     }
 }

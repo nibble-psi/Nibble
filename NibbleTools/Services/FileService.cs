@@ -2,7 +2,7 @@
 
 using Newtonsoft.Json;
 
-using NibbleTools.Core.Contracts.Services;
+using NibbleTools.Services;
 
 namespace NibbleTools.Core.Services;
 

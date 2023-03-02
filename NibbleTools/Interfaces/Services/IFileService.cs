@@ -1,4 +1,4 @@
-﻿namespace NibbleTools.Core.Contracts.Services;
+﻿namespace NibbleTools.Services;
 
 public interface IFileService
 {

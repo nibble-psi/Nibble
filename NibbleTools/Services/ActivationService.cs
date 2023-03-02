@@ -2,7 +2,7 @@
 using Microsoft.UI.Xaml.Controls;
 
 using NibbleTools.Activation;
-using NibbleTools.Contracts.Services;
+using NibbleTools.Interfaces.Services;
 using NibbleTools.Views;
 
 namespace NibbleTools.Services;

@@ -2,7 +2,7 @@
 
 using Microsoft.UI.Xaml.Controls;
 
-using NibbleTools.Contracts.Services;
+using NibbleTools.Interfaces.Services;
 using NibbleTools.Helpers;
 using NibbleTools.ViewModels;
 

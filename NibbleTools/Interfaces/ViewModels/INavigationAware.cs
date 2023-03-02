@@ -1,4 +1,4 @@
-﻿namespace NibbleTools.Contracts.ViewModels;
+﻿namespace NibbleTools.Interfaces.ViewModels;
 
 public interface INavigationAware
 {

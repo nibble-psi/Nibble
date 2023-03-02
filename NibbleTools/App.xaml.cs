@@ -1,13 +1,15 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System.Diagnostics;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.UI.Xaml;
 
 using NibbleTools.Activation;
-using NibbleTools.Contracts.Services;
-using NibbleTools.Core.Contracts.Services;
+using NibbleTools.Interfaces.Services;
 using NibbleTools.Core.Services;
 using NibbleTools.Helpers;
 using NibbleTools.Models;
+using NibbleTools.Pages;
 using NibbleTools.Services;
 using NibbleTools.ViewModels;
 using NibbleTools.Views;
@@ -70,6 +72,8 @@ public partial class App : Application
             services.AddTransient<SettingsViewModel>();
             services.AddTransient<SettingsPage>();
             services.AddTransient<MainViewModel>();
+            services.AddTransient<BitwisePage>();
+            services.AddTransient<BitwiseViewModel>();
             services.AddTransient<MainPage>();
             services.AddTransient<ShellPage>();
             services.AddTransient<ShellViewModel>();
@@ -84,8 +88,7 @@ public partial class App : Application
 
     private void App_UnhandledException(object sender, Microsoft.UI.Xaml.UnhandledExceptionEventArgs e)
     {
-        // TODO: Log and handle exceptions as appropriate.
-        // https://docs.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.application.unhandledexception.
+        Debug.WriteLine(e.Exception);
     }
 
     protected async override void OnLaunched(LaunchActivatedEventArgs args)

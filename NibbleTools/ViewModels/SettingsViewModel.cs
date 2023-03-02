@@ -6,7 +6,7 @@ using CommunityToolkit.Mvvm.Input;
 
 using Microsoft.UI.Xaml;
 
-using NibbleTools.Contracts.Services;
+using NibbleTools.Interfaces.Services;
 using NibbleTools.Helpers;
 
 using Windows.ApplicationModel;

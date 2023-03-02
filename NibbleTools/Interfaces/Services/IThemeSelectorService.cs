@@ -1,6 +1,6 @@
 ﻿using Microsoft.UI.Xaml;
 
-namespace NibbleTools.Contracts.Services;
+namespace NibbleTools.Interfaces.Services;
 
 public interface IThemeSelectorService
 {

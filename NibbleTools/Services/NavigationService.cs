@@ -3,8 +3,8 @@
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
 
-using NibbleTools.Contracts.Services;
-using NibbleTools.Contracts.ViewModels;
+using NibbleTools.Interfaces.Services;
+using NibbleTools.Interfaces.ViewModels;
 using NibbleTools.Helpers;
 
 namespace NibbleTools.Services;

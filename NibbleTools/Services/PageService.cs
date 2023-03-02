@@ -2,7 +2,8 @@
 
 using Microsoft.UI.Xaml.Controls;
 
-using NibbleTools.Contracts.Services;
+using NibbleTools.Interfaces.Services;
+using NibbleTools.Pages;
 using NibbleTools.ViewModels;
 using NibbleTools.Views;
 
@@ -15,6 +16,7 @@ public class PageService : IPageService
     public PageService()
     {
         Configure<MainViewModel, MainPage>();
+        Configure<BitwiseViewModel,BitwisePage>();
         Configure<SettingsViewModel, SettingsPage>();
     }
 

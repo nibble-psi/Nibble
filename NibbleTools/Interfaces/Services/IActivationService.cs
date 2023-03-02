@@ -1,4 +1,4 @@
-﻿namespace NibbleTools.Contracts.Services;
+﻿namespace NibbleTools.Interfaces.Services;
 
 public interface IActivationService
 {

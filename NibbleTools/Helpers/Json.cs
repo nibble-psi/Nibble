@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace NibbleTools.Core.Helpers;
+namespace NibbleTools.Helpers;
 
 public static class Json
 {

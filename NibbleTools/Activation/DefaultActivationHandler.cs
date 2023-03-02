@@ -1,6 +1,6 @@
 ﻿using Microsoft.UI.Xaml;
 
-using NibbleTools.Contracts.Services;
+using NibbleTools.Interfaces.Services;
 using NibbleTools.ViewModels;
 
 namespace NibbleTools.Activation;

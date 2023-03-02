@@ -1,0 +1,22 @@
+<Page x:Class="NibbleTools.Pages.BitwisePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:NibbleTools.Pages"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:helpers="using:NibbleTools.Helpers"
+      xmlns:viewmodels="using:NibbleTools.ViewModels"
+      d:DataContext="{d:DesignInstance Type=viewmodels:BitwiseViewModel}"
+      mc:Ignorable="d">
+
+
+    <Grid>
+        <StackPanel x:Name="ContentArea">
+            <TextBlock Text="Sveiki kolegos, cia Bitwise page:)"
+                       Style="{ThemeResource SubtitleTextBlockStyle}" />
+            <TextBlock Text="{Binding Number}" />
+            <Button Content="Increase"
+                    Command="{Binding IncreseNumberCommand}" />
+        </StackPanel>
+    </Grid>
+</Page>
