@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentAssertions;
+﻿using FluentAssertions;
 using NibbleTools.Helpers;
 using NibbleTools.Interfaces.BitsOperations;
 
@@ -12,13 +7,7 @@ namespace NibbleTools.Tests.MSTest;
 [TestClass]
 public class BitShiftTest
 {
-    private IBitShiftOperations bitShiftOperations;
-
-    [ClassInitialize]
-    public void ClassInitialize(TestContext context)
-    {
-        bitShiftOperations = new BitShiftOperations();
-    }
+    private readonly IBitShiftOperations bitShiftOperations = new BitShiftOperations();
 
     [TestMethod]
     public void ArithmeticLeftShiftTest()
@@ -31,35 +20,35 @@ public class BitShiftTest
     public void ArithmeticRightShiftTest()
     {
         var result = bitShiftOperations.ArithmeticRightShift(2, 1);
-        Assert.AreEqual(1, result);
+        result.Should().Be(1);
     }
 
     [TestMethod]
     public void LogicalLeftShiftTest()
     {
         var result = bitShiftOperations.LogicalLeftShift(10, 2);
-        Assert.AreEqual(2, result);
+        result.Should().Be(40);
     }
 
     [TestMethod]
     public void LogicalRightShiftTest()
     {
-        var result = bitShiftOperations.LogicalRightShift(2, 1);
-        result.Should().Be(40);
+        var result = bitShiftOperations.LogicalRightShift(10, 1);
+        result.Should().Be(5);
     }
 
     [TestMethod]
     public void CircularLeftShiftTest()
     {
         var result = bitShiftOperations.CircularLeftShift(1, 1);
-        Assert.AreEqual(2, result);
+        result.Should().Be(2);
     }
 
     [TestMethod]
     public void CircularRightShiftTest()
     {
         var result = bitShiftOperations.CircularRightShift(2, 1);
-        Assert.AreEqual(1, result);
+        result.Should().Be(1);
     }
 
 }
