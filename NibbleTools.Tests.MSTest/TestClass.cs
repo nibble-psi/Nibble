@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using FluentAssertions;
-using Microsoft.UI.Xaml.Controls;
 
 namespace NibbleTools.Tests.MSTest;
 
