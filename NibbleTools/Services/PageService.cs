@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 using Microsoft.UI.Xaml.Controls;
-
+using NibbleTools.Configuration;
 using NibbleTools.Interfaces.Services;
 using NibbleTools.Pages;
 using NibbleTools.ViewModels;
@@ -15,9 +15,7 @@ public class PageService : IPageService
 
     public PageService()
     {
-        Configure<MainViewModel, MainPage>();
-        Configure<BitwiseViewModel,BitwisePage>();
-        Configure<SettingsViewModel, SettingsPage>();
+        this.ConfigurePages();
     }
 
     public Type GetPageType(string key)
@@ -34,7 +32,7 @@ public class PageService : IPageService
         return pageType;
     }
 
-    private void Configure<VM, V>()
+    public void Configure<VM, V>()
         where VM : ObservableObject
         where V : Page
     {

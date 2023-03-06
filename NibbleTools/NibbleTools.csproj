@@ -15,6 +15,50 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Assets\Icons\**" />
+    <Compile Remove="Assets\Images\**" />
+    <Content Remove="Assets\Icons\**" />
+    <Content Remove="Assets\Images\**" />
+    <EmbeddedResource Remove="Assets\Icons\**" />
+    <EmbeddedResource Remove="Assets\Images\**" />
+    <None Remove="Assets\Icons\**" />
+    <None Remove="Assets\Images\**" />
+    <Page Remove="Assets\Icons\**" />
+    <Page Remove="Assets\Images\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\FluentIcons\FluentIconsAlwaysOnTop.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsAwake.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsBinaryCode.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsBit.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsByte.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsColorPicker.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsEncrypted.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsExperimentation.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsFancyZones.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsFileExplorerPreview.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsFileLocksmith.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsFindMyMouse.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsHosts.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsImageResizer.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsJson.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsKeyboardManager.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsMouseCrosshairs.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsMouseHighlighter.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsMouseJump.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsMouseUtils.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsPastePlain.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsPowerAccent.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsPowerOcr.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsPowerRename.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsPowerToys.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsPowerToysRun.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsScreenRuler.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsSettings.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsShortcutGuide.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsTime.png" />
+    <None Remove="Assets\FluentIcons\FluentIconsVideoConferenceMute.png" />
+    <None Remove="Assets\WindowIcon.ico" />
     <None Remove="Views\BitwisePage.xaml" />
   </ItemGroup>
 
@@ -35,6 +79,102 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Content Update="Assets\FluentIcons\FluentIconsBinaryCode.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsBit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsByte.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsEncrypted.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsAlwaysOnTop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsAwake.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsColorPicker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsExperimentation.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsFancyZones.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsFileExplorerPreview.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsFileLocksmith.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsFindMyMouse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsHosts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsImageResizer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsKeyboardManager.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsMouseCrosshairs.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsMouseHighlighter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsMouseJump.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsMouseUtils.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsPastePlain.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsPowerAccent.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsPowerOcr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsPowerRename.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsPowerToys.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsPowerToysRun.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsScreenRuler.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsSettings.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsShortcutGuide.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsVideoConferenceMute.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsJson.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentIconsTime.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\WindowIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Page Update="Pages\BitwisePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -45,15 +185,39 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\Images\" />
-    <Folder Include="Assets\Icons\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="Strings\en-us\Resources.resw" />
   </ItemGroup>
   
   <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <PRIResource Remove="Assets\Icons\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PRIResource Remove="Assets\Images\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Remove="Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Remove="Assets\Square44x44Logo.scale-100.png" />
+    <Content Remove="Assets\Square44x44Logo.scale-125.png" />
+    <Content Remove="Assets\Square44x44Logo.scale-150.png" />
+    <Content Remove="Assets\Square44x44Logo.scale-400.png" />
+    <Content Remove="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Remove="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Remove="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Remove="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Remove="Assets\Square44x44Logo.targetsize-48.png" />
+  </ItemGroup>
 </Project>
