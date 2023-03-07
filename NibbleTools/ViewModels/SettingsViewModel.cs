@@ -1,56 +1,59 @@
 ﻿using System.Reflection;
-using System.Windows.Input;
-
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-
 using Microsoft.UI.Xaml;
-
 using NibbleTools.Interfaces.Services;
 using NibbleTools.Helpers;
-
 using Windows.ApplicationModel;
 
 namespace NibbleTools.ViewModels;
 
-public class SettingsViewModel : ObservableRecipient
+public partial class SettingsViewModel : ObservableRecipient
 {
     private readonly IThemeSelectorService _themeSelectorService;
-    private ElementTheme _elementTheme;
-    private string _versionDescription;
+    private int _themeIndex;
+    private ElementTheme _currentTheme;
 
-    public ElementTheme ElementTheme
+    [ObservableProperty] private string _versionDescription = string.Empty;
+
+    public string AppDescription => "AppDescription".GetLocalized();
+
+
+
+    public int ThemeIndex
     {
-        get => _elementTheme;
-        set => SetProperty(ref _elementTheme, value);
+        get => _themeIndex;
+        set
+        {
+            if (_themeIndex == value)
+            {
+                return;
+            }
+
+            _themeIndex = value;
+            SwitchThemeCommand.Execute((ElementTheme)value);
+            OnPropertyChanged();
+        }
     }
 
-    public string VersionDescription
-    {
-        get => _versionDescription;
-        set => SetProperty(ref _versionDescription, value);
-    }
-
-    public ICommand SwitchThemeCommand
-    {
-        get;
-    }
 
     public SettingsViewModel(IThemeSelectorService themeSelectorService)
     {
         _themeSelectorService = themeSelectorService;
-        _elementTheme = _themeSelectorService.Theme;
-        _versionDescription = GetVersionDescription();
+        VersionDescription = GetVersionDescription();
+        ThemeIndex = (int)_themeSelectorService.Theme;
+    }
 
-        SwitchThemeCommand = new RelayCommand<ElementTheme>(
-            async (param) =>
-            {
-                if (ElementTheme != param)
-                {
-                    ElementTheme = param;
-                    await _themeSelectorService.SetThemeAsync(param);
-                }
-            });
+    [RelayCommand]
+    private async Task SwitchTheme(ElementTheme theme)
+    {
+        if (_currentTheme == theme)
+        {
+            return;
+        }
+
+        _currentTheme = theme;
+        await _themeSelectorService.SetThemeAsync(theme);
     }
 
     private static string GetVersionDescription()
@@ -68,6 +71,7 @@ public class SettingsViewModel : ObservableRecipient
             version = Assembly.GetExecutingAssembly().GetName().Version!;
         }
 
-        return $"{"AppDisplayName".GetLocalized()} - {version.Major}.{version.Minor}.{version.Build}.{version.Revision}";
+        return
+            $"{"AppDisplayName".GetLocalized()} - {version.Major}.{version.Minor}.{version.Build}.{version.Revision}";
     }
 }
