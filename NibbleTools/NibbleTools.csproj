@@ -84,6 +84,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Page Update="Views\NotOperationPage.xaml">
+		<Generator>MSBuild:Compile</Generator>
+	</Page>
     <Page Update="Views\XORPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
