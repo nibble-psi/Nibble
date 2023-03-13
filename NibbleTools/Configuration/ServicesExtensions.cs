@@ -40,6 +40,7 @@ public static class ServicesExtensions
             // Views and ViewModels
             services.AddTransient<ShellPage,  ShellViewModel>();
             services.AddTransient<BitwisePage, BitwiseViewModel>();
+            services.AddTransient<NotOperationPage, NotOperationViewModel>();
             services.AddTransient<XORPage, XORViewModel>();
             services.AddTransient<SettingsPage, SettingsViewModel>();
             services.AddTransient<MainPage, MainViewModel>();

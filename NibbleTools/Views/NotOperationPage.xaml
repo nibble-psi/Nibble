@@ -1,0 +1,46 @@
+<Page x:Class="NibbleTools.Pages.NotOperationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:NibbleTools.Pages"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:helpers="using:NibbleTools.Helpers"
+      xmlns:viewmodels="using:NibbleTools.ViewModels"
+      d:DataContext="{d:DesignInstance Type=viewmodels:NotOperationViewModel}"
+      mc:Ignorable="d">
+
+
+    <Grid>
+        <StackPanel x:Name="ContentArea"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Spacing="50">
+            <StackPanel Orientation="Horizontal"
+                        Spacing="20">
+                <NumberBox Header="First value"
+                           Value="{x:Bind ViewModel.FirstValue, Mode=TwoWay}"
+                           InputScope="Number"
+                           Minimum="0"
+                           ValidationMode="InvalidInputOverwritten"
+                           AcceptsExpression="True" />
+            </StackPanel>
+
+            <Grid ColumnSpacing="20"
+                  RowSpacing="20"
+                  ColumnDefinitions="Auto, Auto"
+                  RowDefinitions="Auto">
+                <TextBlock Text="Result"
+                           Grid.Column="0"
+                           Grid.Row="0"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center" />
+                <TextBox IsReadOnly="True"
+                         Text="{Binding Result}"
+                         Grid.Column="1"
+                         Grid.Row="0" />
+
+            </Grid>
+
+        </StackPanel>
+    </Grid>
+</Page>

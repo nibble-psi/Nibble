@@ -44,7 +44,12 @@
                 <!--!Bitwise page-->
                 <NavigationViewItem x:Uid="Shell_Bitshift"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitwiseViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentShift.png}" />
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsAlwaysOnTop.png}" />
+
+                <!--!NotOperation page-->
+                <NavigationViewItem x:Uid="Shell_NotOperation"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.NotOperationViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsAlwaysOnTop.png}" />
 
                 <!--!XOR page-->
                 <NavigationViewItem x:Uid="Shell_XOR"
