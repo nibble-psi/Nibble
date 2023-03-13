@@ -15,5 +15,6 @@ public static class PageServiceExtensions
         pageService.Configure<MainViewModel, MainPage>();
         pageService.Configure<BitwiseViewModel, BitwisePage>();
         pageService.Configure<SettingsViewModel, SettingsPage>();
+        pageService.Configure<NotOperationViewModel, NotOperationPage>();
     }
 }

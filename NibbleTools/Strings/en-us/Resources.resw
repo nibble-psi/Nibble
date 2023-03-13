@@ -156,4 +156,7 @@
   <data name="Shell_Bitwise.Content" xml:space="preserve">
     <value>Bitwise operations</value>
   </data>
+  <data name="Shell_NotOperation.Content" xml:space="preserve">
+    <value>Not Operation</value>
+  </data>
 </root>

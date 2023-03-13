@@ -45,7 +45,12 @@
                 <NavigationViewItem x:Uid="Shell_Bitwise"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitwiseViewModel"
                                     Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsAlwaysOnTop.png}" />
-              
+
+                <!--!NotOperation page-->
+                <NavigationViewItem x:Uid="Shell_NotOperation"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.NotOperationViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsAlwaysOnTop.png}" />
+
 
                 <!--!Other way to add icons to NavigationViewItems-->
                 <!--<NavigationViewItem.Icon>
