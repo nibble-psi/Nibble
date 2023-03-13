@@ -9,14 +9,107 @@
       d:DataContext="{d:DesignInstance Type=viewmodels:BitwiseViewModel}"
       mc:Ignorable="d">
 
-
     <Grid>
-        <StackPanel x:Name="ContentArea">
-            <TextBlock Text="Sveiki kolegos, cia Bitwise page:)"
-                       Style="{ThemeResource SubtitleTextBlockStyle}" />
-            <TextBlock Text="{Binding Number}" />
-            <Button Content="Increase"
-                    Command="{Binding IncreseNumberCommand}" />
+        <StackPanel x:Name="ContentArea"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Spacing="50">
+            <StackPanel Orientation="Horizontal"
+                        Spacing="20">
+                <NumberBox Header="Input Number"
+                           Value="{x:Bind ViewModel.Number, Mode=TwoWay}"
+                           InputScope="Number"
+                           Minimum="0"
+                           ValidationMode="InvalidInputOverwritten"
+                           AcceptsExpression="True" />
+
+                <NumberBox Header="Bits to Shift"
+                           Value="{x:Bind ViewModel.BitsToShift, Mode=TwoWay}"
+                           SpinButtonPlacementMode="Compact"
+                           SmallChange="1"
+                           LargeChange="2"
+                           Minimum="0"
+                           InputScope="Number"
+                           ValidationMode="InvalidInputOverwritten"
+                           AcceptsExpression="True" />
+            </StackPanel>
+
+            <Grid ColumnSpacing="20"
+                  RowSpacing="20"
+                  ColumnDefinitions="Auto, Auto"
+                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto, Auto">
+                <TextBlock Text="Number"
+                           Grid.Column="0"
+                           Grid.Row="0"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center" />
+                <TextBox IsReadOnly="True"
+                         Text="{Binding NumberBinaryString}"
+                         Grid.Column="1"
+                         Grid.Row="0" />
+
+                <TextBlock Text="Logical Left"
+                           Grid.Column="0"
+                           Grid.Row="1"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center" />
+                <TextBox IsReadOnly="True"
+                         Text="{Binding LogicalLeftShiftBinaryString}"
+                         Grid.Column="1"
+                         Grid.Row="1" />
+
+                <TextBlock Text="Logical Right"
+                           Grid.Column="0"
+                           Grid.Row="2"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center" />
+                <TextBox IsReadOnly="True"
+                         Text="{Binding LogicalRightShiftBinaryString}"
+                         Grid.Column="1"
+                         Grid.Row="2" />
+
+                <TextBlock Text="Aritmetic Left"
+                           Grid.Column="0"
+                           Grid.Row="3"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center" />
+                <TextBox IsReadOnly="True"
+                         Text="{Binding ArithmeticLeftShiftBinaryString}"
+                         Grid.Column="1"
+                         Grid.Row="3" />
+
+                <TextBlock Text="Aritmetic Right"
+                           Grid.Column="0"
+                           Grid.Row="4"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center" />
+                <TextBox IsReadOnly="True"
+                         Text="{Binding ArithmeticRightShiftBinaryString}"
+                         Grid.Column="1"
+                         Grid.Row="4" />
+
+                <TextBlock Text="Circular Left"
+                           Grid.Column="0"
+                           Grid.Row="5"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center" />
+                <TextBox IsReadOnly="True"
+                         Text="{Binding CircularLeftShiftBinaryString}"
+                         Grid.Column="1"
+                         Grid.Row="5" />
+
+                <TextBlock Text="Circular Right"
+                           Grid.Column="0"
+                           Grid.Row="6"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center" />
+                <TextBox IsReadOnly="True"
+                         Text="{Binding CircularRightShiftBinaryString}"
+                         Grid.Column="1"
+                         Grid.Row="6" />
+
+            </Grid>
+
         </StackPanel>
     </Grid>
 </Page>

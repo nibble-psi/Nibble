@@ -42,7 +42,7 @@
                                     Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsAwake.png}" />
 
                 <!--!Bitwise page-->
-                <NavigationViewItem x:Uid="Shell_Bitwise"
+                <NavigationViewItem x:Uid="Shell_Bitshift"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitwiseViewModel"
                                     Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsAlwaysOnTop.png}" />
 
@@ -50,6 +50,11 @@
                 <NavigationViewItem x:Uid="Shell_NotOperation"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.NotOperationViewModel"
                                     Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsAlwaysOnTop.png}" />
+
+                <!--!XOR page-->
+                <NavigationViewItem x:Uid="Shell_XOR"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.XORViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsPowerRename.png}" />
 
 
                 <!--!Other way to add icons to NavigationViewItems-->
@@ -59,7 +64,7 @@
                 </NavigationViewItem.Icon>-->
 
             </NavigationView.MenuItems>
-            
+
             <NavigationView.HeaderTemplate>
                 <DataTemplate>
                     <Grid>

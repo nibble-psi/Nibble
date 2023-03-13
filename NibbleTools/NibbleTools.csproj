@@ -58,9 +58,12 @@
     <None Remove="Assets\FluentIcons\FluentIconsShortcutGuide.png" />
     <None Remove="Assets\FluentIcons\FluentIconsTime.png" />
     <None Remove="Assets\FluentIcons\FluentIconsVideoConferenceMute.png" />
+    <None Remove="Assets\FluentIcons\FluentShift.png" />
+    <None Remove="Assets\StoreLogo.png" />
     <None Remove="Assets\WindowIcon.ico" />
     <None Remove="Views\BitwisePage.xaml" />
     <None Remove="Views\NotOperationPage.xaml" />
+    <None Remove="Views\XORPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -81,6 +84,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Page Update="Views\NotOperationPage.xaml">
+    <Page Update="Views\XORPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Content Update="Assets\FluentIcons\FluentIconsBinaryCode.png">
@@ -174,6 +178,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="Assets\FluentIcons\FluentIconsTime.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\FluentIcons\FluentShift.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="Assets\WindowIcon.ico">
