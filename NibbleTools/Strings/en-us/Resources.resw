@@ -153,7 +153,10 @@
   <data name="SettingsPage_PrivacyTermsLink.NavigateUri" xml:space="preserve">
     <value>https://YourPrivacyUrlGoesHere/</value>
   </data>
-  <data name="Shell_Bitwise.Content" xml:space="preserve">
-    <value>Bitwise operations</value>
+  <data name="Shell_Bitshift.Content" xml:space="preserve">
+    <value>Bit Shift</value>
+  </data>
+  <data name="Shell_XOR.Content" xml:space="preserve">
+    <value>XOR</value>
   </data>
 </root>
