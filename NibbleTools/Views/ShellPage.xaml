@@ -46,6 +46,12 @@
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitwiseViewModel"
                                     Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentShift.png}" />
 
+                <!--!XOR page-->
+                <NavigationViewItem x:Uid="Shell_XOR"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.XORViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsPowerRename.png}" />
+
+
                 <!--!Other way to add icons to NavigationViewItems-->
                 <!--<NavigationViewItem.Icon>
                     <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}"

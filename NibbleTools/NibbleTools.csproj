@@ -62,6 +62,7 @@
     <None Remove="Assets\StoreLogo.png" />
     <None Remove="Assets\WindowIcon.ico" />
     <None Remove="Views\BitwisePage.xaml" />
+    <None Remove="Views\XORPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -81,6 +82,9 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Page Update="Views\XORPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Content Update="Assets\FluentIcons\FluentIconsBinaryCode.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
