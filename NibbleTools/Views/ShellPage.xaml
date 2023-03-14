@@ -44,22 +44,26 @@
                 <!--!Bitwise page-->
                 <NavigationViewItem x:Uid="Shell_Bitshift"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitwiseViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsAlwaysOnTop.png}" />
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsByte.png}" />
 
                 <!--!NotOperation page-->
                 <NavigationViewItem x:Uid="Shell_NotOperation"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.NotOperationViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsAlwaysOnTop.png}" />
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsByte.png}" />
 
                 <!--!XOR page-->
                 <NavigationViewItem x:Uid="Shell_XOR"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.XORViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsPowerRename.png}" />
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsByte.png}" />
 
                 <!--!OR page-->
                 <NavigationViewItem x:Uid="Shell_OR"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.ORViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsPowerRename.png}" />
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsByte.png}" />
+                <!--!And&Nand page-->
+                <NavigationViewItem x:Uid="Shell_AndNand"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.AndNandViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsByte.png}" />
 
 
                 <!--!Other way to add icons to NavigationViewItems-->

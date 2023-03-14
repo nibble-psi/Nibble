@@ -45,6 +45,7 @@ public static class ServicesExtensions
             services.AddTransient<ORPage, ORViewModel>();
             services.AddTransient<SettingsPage, SettingsViewModel>();
             services.AddTransient<MainPage, MainViewModel>();
+            services.AddTransient<AndNandPage, AndNandViewModel>();
 
         });
 

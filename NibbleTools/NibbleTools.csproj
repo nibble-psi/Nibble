@@ -61,6 +61,7 @@
     <None Remove="Assets\FluentIcons\FluentShift.png" />
     <None Remove="Assets\StoreLogo.png" />
     <None Remove="Assets\WindowIcon.ico" />
+    <None Remove="Views\AndNandPage.xaml" />
     <None Remove="Views\BitwisePage.xaml" />
     <None Remove="Views\NotOperationPage.xaml" />
     <None Remove="Views\ORPage.xaml" />
@@ -91,6 +92,9 @@
 		<Generator>MSBuild:Compile</Generator>
 	</Page>
     <Page Update="Views\XORPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\AndNandPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Content Update="Assets\FluentIcons\FluentIconsBinaryCode.png">
