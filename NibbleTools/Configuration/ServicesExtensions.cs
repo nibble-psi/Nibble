@@ -42,7 +42,7 @@ public static class ServicesExtensions
             services.AddTransient<BitwisePage, BitwiseViewModel>();
             services.AddTransient<NotOperationPage, NotOperationViewModel>();
             services.AddTransient<XORPage, XORViewModel>();
-            services.AddTransient<ORPage, ORViewModel>();
+            services.AddTransient<ORNORPage, ORNORViewModel>();
             services.AddTransient<SettingsPage, SettingsViewModel>();
             services.AddTransient<MainPage, MainViewModel>();
             services.AddTransient<AndNandPage, AndNandViewModel>();

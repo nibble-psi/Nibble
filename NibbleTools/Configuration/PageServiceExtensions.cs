@@ -15,7 +15,7 @@ public static class PageServiceExtensions
         pageService.Configure<MainViewModel, MainPage>();
         pageService.Configure<BitwiseViewModel, BitwisePage>();
         pageService.Configure<XORViewModel, XORPage>();
-        pageService.Configure<ORViewModel, ORPage>();
+        pageService.Configure<ORNORViewModel, ORNORPage>();
         pageService.Configure<SettingsViewModel, SettingsPage>();
         pageService.Configure<NotOperationViewModel, NotOperationPage>();
         pageService.Configure<AndNandViewModel, AndNandPage>();
