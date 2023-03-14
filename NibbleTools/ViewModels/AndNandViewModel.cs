@@ -9,31 +9,41 @@ namespace NibbleTools.ViewModels;
 public partial class AndNandViewModel : ObservableRecipient
 {
     [ObservableProperty]
-    private uint _firstValue = 0;
+    private int _firstValue = 0;
 
     [ObservableProperty]
-    private uint _secondValue = 0;
+    private int _secondValue = 0;
 
     [ObservableProperty]
-    private string _result = string.Empty;
+    private string _resultAND = string.Empty;
+
+    [ObservableProperty]
+    private string _resultNAND = string.Empty;
 
     public AndNandViewModel()
     {
 
     }
 
-    partial void OnFirstValueChanged(uint value)
+    partial void OnFirstValueChanged(int value)
     {
-        Result = OR(FirstValue, SecondValue).ToBinaryString();
+        ResultAND = AND(FirstValue, SecondValue).ToBinaryString();
+        ResultNAND = NAND(FirstValue, SecondValue).ToBinaryString();
     }
 
-    partial void OnSecondValueChanged(uint value)
+    partial void OnSecondValueChanged(int value)
     {
-        Result = OR(FirstValue, SecondValue).ToBinaryString();
+        ResultAND = AND(FirstValue, SecondValue).ToBinaryString();
+        ResultNAND = NAND(FirstValue, SecondValue).ToBinaryString();
     }
 
-    public uint OR(uint firstValue, uint secondValue)
+    public int AND(int firstValue, int secondValue)
     {
-        return firstValue | secondValue;
+        return firstValue & secondValue;
+    }
+
+    public int NAND(int firstValue, int secondValue)
+    {
+        return ~(firstValue & secondValue) & 0xf;
     }
 }

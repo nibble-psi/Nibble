@@ -160,12 +160,12 @@
     <value>XOR</value>
   </data>
   <data name="Shell_NotOperation.Content" xml:space="preserve">
-    <value>Not Operation</value>
+    <value>NOT</value>
   </data>
   <data name="Shell_OR.Content" xml:space="preserve">
     <value>OR</value>
   </data>
   <data name="Shell_AndNand.Content" xml:space="preserve">
-    <value>And &amp; Nand</value>
+    <value>AND &amp; NAND</value>
   </data>
 </root>

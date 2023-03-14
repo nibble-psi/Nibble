@@ -5,8 +5,7 @@
     xmlns:local="using:NibbleTools.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
     <Grid>
         <StackPanel x:Name="ContentArea"
@@ -36,17 +35,26 @@
             <Grid ColumnSpacing="20"
                   RowSpacing="20"
                   ColumnDefinitions="Auto, Auto"
-                  RowDefinitions="Auto">
-                <TextBlock Text="Result"
+                  RowDefinitions="Auto,Auto">
+                <TextBlock Text="AND"
                            Grid.Column="0"
                            Grid.Row="0"
                            TextAlignment="Left"
                            VerticalAlignment="Center"/>
 
                 <TextBox IsReadOnly="True"
-                           Text="{Binding Result}"
+                           Text="{Binding ResultAND}"
                            Grid.Column="1"
                            Grid.Row="0"/>
+                <TextBlock Text="NAND"
+                           Grid.Column="0"
+                           Grid.Row="1"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center"/>
+                <TextBox IsReadOnly="True"
+                           Text="{Binding ResultNAND}"
+                           Grid.Column="1"
+                           Grid.Row="1"/>
 
             </Grid>
         </StackPanel>
