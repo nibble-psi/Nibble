@@ -18,5 +18,6 @@ public static class PageServiceExtensions
         pageService.Configure<ORViewModel, ORPage>();
         pageService.Configure<SettingsViewModel, SettingsPage>();
         pageService.Configure<NotOperationViewModel, NotOperationPage>();
+        pageService.Configure<AndNandViewModel, AndNandPage>();
     }
 }

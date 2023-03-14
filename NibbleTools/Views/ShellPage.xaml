@@ -60,6 +60,10 @@
                 <NavigationViewItem x:Uid="Shell_OR"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.ORViewModel"
                                     Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsPowerRename.png}" />
+                <!--!And&Nand page-->
+                <NavigationViewItem x:Uid="Shell_AndNand"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.AndNandViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsBit.png}" />
 
 
                 <!--!Other way to add icons to NavigationViewItems-->
