@@ -59,10 +59,16 @@
     <None Remove="Assets\FluentIcons\FluentIconsTime.png" />
     <None Remove="Assets\FluentIcons\FluentIconsVideoConferenceMute.png" />
     <None Remove="Assets\FluentIcons\FluentShift.png" />
+    <None Remove="Assets\LogicGates\AND.png" />
+    <None Remove="Assets\LogicGates\NAND.png" />
+    <None Remove="Assets\LogicGates\NOR.png" />
+    <None Remove="Assets\LogicGates\NOT.png" />
+    <None Remove="Assets\LogicGates\OR.png" />
+    <None Remove="Assets\LogicGates\XOR.png" />
     <None Remove="Assets\StoreLogo.png" />
     <None Remove="Assets\WindowIcon.ico" />
     <None Remove="Views\AndNandPage.xaml" />
-    <None Remove="Views\BitwisePage.xaml" />
+    <None Remove="Views\BitShiftPage.xaml" />
     <None Remove="Views\NotOperationPage.xaml" />
     <None Remove="Views\ORPage.xaml" />
     <None Remove="Views\XORPage.xaml" />
@@ -191,6 +197,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="Assets\FluentIcons\FluentShift.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\LogicGates\AND.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\LogicGates\NAND.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\LogicGates\NOR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\LogicGates\NOT.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\LogicGates\OR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\LogicGates\XOR.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="Assets\WindowIcon.ico">
