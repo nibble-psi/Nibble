@@ -5,7 +5,7 @@ using Microsoft.UI.Xaml;
 using NibbleTools.Helpers;
 using NibbleTools.Interfaces.BitsOperations;
 
-namespace NibbleTools.ViewModels;
+namespace NibbleTools.ViewModels.BitsManipulation;
 public partial class BitShiftViewModel : ObservableRecipient
 {
     [ObservableProperty]

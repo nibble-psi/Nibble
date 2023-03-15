@@ -1,12 +1,12 @@
-<Page x:Class="NibbleTools.Pages.BitShiftPage"
+<?xml version="1.0" encoding="utf-8"?>
+<Page x:Class="NibbleTools.Views.BitwisePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:local="using:NibbleTools.Pages"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:helpers="using:NibbleTools.Helpers"
-      xmlns:viewmodels="using:NibbleTools.ViewModels"
-      d:DataContext="{d:DesignInstance Type=viewmodels:BitShiftViewModel}"
+      xmlns:viewmodels="using:NibbleTools.ViewModels.BitsManipulation"
+      d:DataContext="{d:DesignInstance Type=viewmodels:BitwiseViewModel}"
       mc:Ignorable="d">
 
     <Grid>
@@ -17,14 +17,15 @@
             <StackPanel Orientation="Horizontal"
                         Spacing="20">
                 <NumberBox Header="Input Number"
-                           Value="{x:Bind ViewModel.Number, Mode=TwoWay}"
+                           Value="{x:Bind ViewModel.FirstValue, Mode=TwoWay}"
                            InputScope="Number"
+                           SpinButtonPlacementMode="Compact"
                            Minimum="0"
                            ValidationMode="InvalidInputOverwritten"
                            AcceptsExpression="True" />
 
                 <NumberBox Header="Bits to Shift"
-                           Value="{x:Bind ViewModel.BitsToShift, Mode=TwoWay}"
+                           Value="{x:Bind ViewModel.SecondValue, Mode=TwoWay}"
                            SpinButtonPlacementMode="Compact"
                            SmallChange="1"
                            LargeChange="2"
@@ -34,7 +35,7 @@
                            AcceptsExpression="True" />
             </StackPanel>
 
-            <Grid ColumnSpacing="20"
+            <!--<Grid ColumnSpacing="20"
                   RowSpacing="20"
                   ColumnDefinitions="Auto, Auto"
                   RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto, Auto">
@@ -108,7 +109,7 @@
                          Grid.Column="1"
                          Grid.Row="6" />
 
-            </Grid>
+            </Grid>-->
 
         </StackPanel>
     </Grid>

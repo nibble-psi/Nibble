@@ -67,11 +67,9 @@
     <None Remove="Assets\LogicGates\XOR.png" />
     <None Remove="Assets\StoreLogo.png" />
     <None Remove="Assets\WindowIcon.ico" />
-    <None Remove="Views\AndNandPage.xaml" />
     <None Remove="Views\BitShiftPage.xaml" />
-    <None Remove="Views\NotOperationPage.xaml" />
+    <None Remove="Views\BitwisePage.xaml" />
     <None Remove="Views\ORNORPageNOR.xaml" />
-    <None Remove="Views\XORPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -91,16 +89,7 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Page Update="Views\ORNORPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Update="Views\NotOperationPage.xaml">
-		<Generator>MSBuild:Compile</Generator>
-	</Page>
-    <Page Update="Views\XORPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Update="Views\AndNandPage.xaml">
+    <Page Update="Views\BitwisePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Content Update="Assets\FluentIcons\FluentIconsBinaryCode.png">
@@ -264,5 +253,9 @@
     <Content Remove="Assets\Square44x44Logo.targetsize-256.png" />
     <Content Remove="Assets\Square44x44Logo.targetsize-32.png" />
     <Content Remove="Assets\Square44x44Logo.targetsize-48.png" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Views\BitsManipulation\" />
   </ItemGroup>
 </Project>

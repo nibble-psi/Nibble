@@ -168,4 +168,10 @@
   <data name="Shell_AndNand.Content" xml:space="preserve">
     <value>AND &amp; NAND</value>
   </data>
+  <data name="Shell_BitManipulation.Content" xml:space="preserve">
+    <value>Bits Manipulation</value>
+  </data>
+  <data name="Shell_Bitwise.Content" xml:space="preserve">
+    <value>Bitwise operations</value>
+  </data>
 </root>
