@@ -6,7 +6,7 @@ using NibbleTools.Helpers;
 using NibbleTools.Interfaces.BitsOperations;
 
 namespace NibbleTools.ViewModels;
-public partial class BitwiseViewModel : ObservableRecipient
+public partial class BitShiftViewModel : ObservableRecipient
 {
     [ObservableProperty]
     private uint _number;
@@ -37,7 +37,7 @@ public partial class BitwiseViewModel : ObservableRecipient
 
     private readonly IBitShiftOperations _bitShiftOperations;
 
-    public BitwiseViewModel()
+    public BitShiftViewModel()
     {
         _bitShiftOperations = new BitShiftOperations();
     }

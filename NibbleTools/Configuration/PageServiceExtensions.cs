@@ -13,7 +13,7 @@ public static class PageServiceExtensions
     public static void ConfigurePages(this IPageService pageService)
     {
         pageService.Configure<MainViewModel, MainPage>();
-        pageService.Configure<BitwiseViewModel, BitwisePage>();
+        pageService.Configure<BitShiftViewModel, BitShiftPage>();
         pageService.Configure<XORViewModel, XORPage>();
         pageService.Configure<ORNORViewModel, ORNORPage>();
         pageService.Configure<SettingsViewModel, SettingsPage>();

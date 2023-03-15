@@ -31,40 +31,48 @@
                         IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"
                         SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
                         IsSettingsVisible="True"
-                        ExpandedModeThresholdWidth="1280"
+                        ExpandedModeThresholdWidth="1280" 
                         DisplayModeChanged="NavigationViewControl_DisplayModeChanged"
                         Header="{x:Bind ((ContentControl)ViewModel.Selected).Content, Mode=OneWay}">
             <NavigationView.MenuItems>
 
+                
+                
                 <!--!Main page-->
                 <NavigationViewItem x:Uid="Shell_Main"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.MainViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsAwake.png}" />
+                                    Icon="{ui:BitmapIcon Source=/Assets/StoreLogo.png}" />
 
-                <!--!Bitwise page-->
+                <!--!BitShift page-->
                 <NavigationViewItem x:Uid="Shell_Bitshift"
-                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitwiseViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsByte.png}" />
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitShiftViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/LogicGates/AND.png}" />
 
                 <!--!NotOperation page-->
                 <NavigationViewItem x:Uid="Shell_NotOperation"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.NotOperationViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsByte.png}" />
+                                    Icon="{ui:BitmapIcon Source=/Assets/LogicGates/NOT.png}" />
 
                 <!--!XOR page-->
                 <NavigationViewItem x:Uid="Shell_XOR"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.XORViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsByte.png}" />
+                                    Icon="{ui:BitmapIcon Source=/Assets/LogicGates/XOR.png}" />
 
                 <!--!OR&NOR page-->
                 <NavigationViewItem x:Uid="Shell_ORNOR"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.ORNORViewModel"
                                     Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsByte.png}" />
                 
-                <!--!And&Nand page-->
+
+                <!--!OR page-->
+                <NavigationViewItem x:Uid="Shell_OR"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.ORViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/LogicGates/OR.png}" />
+                
+                <!--!AndNand page-->
                 <NavigationViewItem x:Uid="Shell_AndNand"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.AndNandViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsByte.png}" />
+                                    Icon="{ui:BitmapIcon Source=/Assets/LogicGates/NAND.png}" />
 
 
                 <!--!Other way to add icons to NavigationViewItems-->

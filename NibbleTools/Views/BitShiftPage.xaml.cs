@@ -24,17 +24,17 @@ namespace NibbleTools.Pages;
 /// <summary>
 /// An empty page that can be used on its own or navigated to within a Frame.
 /// </summary>
-public sealed partial class BitwisePage : Page
+public sealed partial class BitShiftPage : Page
 {
-    public BitwiseViewModel ViewModel
+    public BitShiftViewModel ViewModel
     {
         get;
         set;
     }
 
-    public BitwisePage()
+    public BitShiftPage()
     {
-        ViewModel = App.GetService<BitwiseViewModel>();
+        ViewModel = App.GetService<BitShiftViewModel>();
         DataContext = ViewModel;
         InitializeComponent();
     }
