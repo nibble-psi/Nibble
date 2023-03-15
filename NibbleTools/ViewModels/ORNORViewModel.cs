@@ -45,7 +45,6 @@ public partial class ORNORViewModel : ObservableRecipient
 
     public uint NOR(uint firstValue, uint secondValue)
     {
-        //TODO: fix
-        return 0;
+        return ~(firstValue | secondValue);
     }
 }
