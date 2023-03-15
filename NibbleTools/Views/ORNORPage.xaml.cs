@@ -24,17 +24,17 @@ namespace NibbleTools.Views;
 /// <summary>
 /// An empty page that can be used on its own or navigated to within a Frame.
 /// </summary>
-public sealed partial class ORPage : Page
+public sealed partial class ORNORPage : Page
 {
-    public ORViewModel ViewModel
+    public ORNORViewModel ViewModel
     {
         get;
         set;
     }
 
-    public ORPage()
+    public ORNORPage()
     {
-        ViewModel = App.GetService<ORViewModel>();
+        ViewModel = App.GetService<ORNORViewModel>();
         DataContext = ViewModel;
         this.InitializeComponent();
     }

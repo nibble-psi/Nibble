@@ -70,7 +70,7 @@
     <None Remove="Views\AndNandPage.xaml" />
     <None Remove="Views\BitShiftPage.xaml" />
     <None Remove="Views\NotOperationPage.xaml" />
-    <None Remove="Views\ORPage.xaml" />
+    <None Remove="Views\ORNORPageNOR.xaml" />
     <None Remove="Views\XORPage.xaml" />
   </ItemGroup>
 
@@ -91,7 +91,7 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Page Update="Views\ORPage.xaml">
+    <Page Update="Views\ORNORPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Update="Views\NotOperationPage.xaml">
