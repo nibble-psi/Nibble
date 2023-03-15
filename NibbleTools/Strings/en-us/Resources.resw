@@ -162,8 +162,8 @@
   <data name="Shell_NotOperation.Content" xml:space="preserve">
     <value>NOT</value>
   </data>
-  <data name="Shell_OR.Content" xml:space="preserve">
-    <value>OR</value>
+  <data name="Shell_ORNOR.Content" xml:space="preserve">
+    <value>OR &amp; NOR</value>
   </data>
   <data name="Shell_AndNand.Content" xml:space="preserve">
     <value>AND &amp; NAND</value>

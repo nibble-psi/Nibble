@@ -58,15 +58,16 @@
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.XORViewModel"
                                     Icon="{ui:BitmapIcon Source=/Assets/LogicGates/XOR.png}" />
 
-                <!--!OR page-->
-                <NavigationViewItem x:Uid="Shell_OR"
-                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.ORViewModel"
+                <!--!OR&NOR page-->
+                <NavigationViewItem x:Uid="Shell_ORNOR"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.ORNORViewModel"
                                     Icon="{ui:BitmapIcon Source=/Assets/LogicGates/OR.png}" />
-                
+
                 <!--!AndNand page-->
                 <NavigationViewItem x:Uid="Shell_AndNand"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.AndNandViewModel"
                                     Icon="{ui:BitmapIcon Source=/Assets/LogicGates/NAND.png}" />
+
 
                 <!--!Other way to add icons to NavigationViewItems-->
                 <!--<NavigationViewItem.Icon>
