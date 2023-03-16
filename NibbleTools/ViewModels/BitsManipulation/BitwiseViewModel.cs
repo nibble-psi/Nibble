@@ -1,4 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Newtonsoft.Json.Linq;
 using NibbleTools.Helpers;
 using NibbleTools.Interfaces.BitsOperations;
 
@@ -8,38 +10,45 @@ public partial class BitwiseViewModel : ObservableRecipient
     private readonly IBitwiseOperations bitwiseOperations;
 
     [ObservableProperty]
-    private int _firstValue = 0;
+    private int _firstValue = 1;
 
     [ObservableProperty]
-    private int _secondValue = 0;
+    private string _firstValueBinary = string.Empty;
 
     [ObservableProperty]
-    private string _resultAnd = string.Empty;
+    private int _secondValue = 1;
 
     [ObservableProperty]
-    private string _resultOr = string.Empty;
+    private string _secondValueBinary = string.Empty;
 
     [ObservableProperty]
-    private string _resultXor = string.Empty;
+    private string resultAnd = string.Empty;
 
     [ObservableProperty]
-    private string _resultNotFirstValue = string.Empty;
+    private string resultOr = string.Empty;
 
     [ObservableProperty]
-    private string _resultNotSecondValue = string.Empty;
+    private string resultXor = string.Empty;
 
     [ObservableProperty]
-    private string _resultNand = string.Empty;
+    private string resultNotFirstValue = string.Empty;
 
     [ObservableProperty]
-    private string _resultNor = string.Empty;
+    private string resultNotSecondValue = string.Empty;
+
+    [ObservableProperty]
+    private string resultNand = string.Empty;
+
+    [ObservableProperty]
+    private string resultNor = string.Empty;
 
 
     public BitwiseViewModel()
     {
         bitwiseOperations = new BitwiseOperations();
+        FirstValueBinary = FirstValue.ToBinaryString();
+        SecondValueBinary = SecondValue.ToBinaryString();
     }
-
 
     partial void OnFirstValueChanged(int value)
     {
@@ -51,16 +60,21 @@ public partial class BitwiseViewModel : ObservableRecipient
         RecalculateResults();
     }
 
-    private void RecalculateResults()
+    public void RecalculateResults()
     {
-        ResultAnd = bitwiseOperations.And(FirstValue, SecondValue).ToBinaryString();
-        ResultOr = bitwiseOperations.Or(FirstValue, SecondValue).ToBinaryString();
-        ResultXor = bitwiseOperations.Xor(FirstValue, SecondValue).ToBinaryString();
+        FirstValueBinary = FirstValue.ToBinaryString();
+        SecondValueBinary = SecondValue.ToBinaryString();
+        
+        ResultAnd = bitwiseOperations.And(FirstValue, SecondValue);
 
-        ResultNotFirstValue = bitwiseOperations.Not(FirstValue).ToBinaryString();
-        ResultNotSecondValue = bitwiseOperations.Not(SecondValue).ToBinaryString();
+        ResultOr = bitwiseOperations.Or(FirstValue, SecondValue);
+        ResultXor = bitwiseOperations.Xor(FirstValue, SecondValue);
 
-        ResultNand = bitwiseOperations.Nand(FirstValue, SecondValue).ToBinaryString();
-        ResultNor = bitwiseOperations.Nor(FirstValue, SecondValue).ToBinaryString();
+        ResultNotFirstValue = bitwiseOperations.Not(FirstValue);
+        ResultNotSecondValue = bitwiseOperations.Not(SecondValue);
+
+        ResultNand = bitwiseOperations.Nand(FirstValue, SecondValue);
+        ResultNor = bitwiseOperations.Nor(FirstValue, SecondValue);
+
     }
 }

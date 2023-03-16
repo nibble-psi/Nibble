@@ -16,30 +16,37 @@
                     Spacing="50">
             <StackPanel Orientation="Horizontal"
                         Spacing="20">
-                <NumberBox Header="Input Number"
+                <NumberBox Header="First Number"
                            Value="{x:Bind ViewModel.FirstValue, Mode=TwoWay}"
-                           InputScope="Number"
                            SpinButtonPlacementMode="Compact"
-                           Minimum="0"
+                           Minimum="1"
                            ValidationMode="InvalidInputOverwritten"
                            AcceptsExpression="True" />
 
-                <NumberBox Header="Bits to Shift"
+                <NumberBox Header="Second Number"
                            Value="{x:Bind ViewModel.SecondValue, Mode=TwoWay}"
                            SpinButtonPlacementMode="Compact"
                            SmallChange="1"
                            LargeChange="2"
-                           Minimum="0"
-                           InputScope="Number"
+                           Minimum="1"
                            ValidationMode="InvalidInputOverwritten"
                            AcceptsExpression="True" />
             </StackPanel>
 
-            <!--<Grid ColumnSpacing="20"
+            <StackPanel Orientation="Horizontal"
+                        Spacing="20">
+                <TextBox IsReadOnly="True"
+                         Text="{Binding FirstValueBinary}" />
+
+                <TextBox IsReadOnly="True"
+                         Text="{Binding SecondValueBinary}" />
+            </StackPanel>
+
+            <Grid ColumnSpacing="20"
                   RowSpacing="20"
                   ColumnDefinitions="Auto, Auto"
-                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto, Auto">
-                <TextBlock Text="Number"
+                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto, Auto,Auto">
+                <!--<TextBlock Text="Number"
                            Grid.Column="0"
                            Grid.Row="0"
                            TextAlignment="Left"
@@ -47,69 +54,86 @@
                 <TextBox IsReadOnly="True"
                          Text="{Binding NumberBinaryString}"
                          Grid.Column="1"
-                         Grid.Row="0" />
+                         Grid.Row="0" />-->
 
-                <TextBlock Text="Logical Left"
+                <!--!AND-->
+                <TextBlock Text="AND"
                            Grid.Column="0"
                            Grid.Row="1"
                            TextAlignment="Left"
                            VerticalAlignment="Center" />
                 <TextBox IsReadOnly="True"
-                         Text="{Binding LogicalLeftShiftBinaryString}"
+                         Text="{Binding ResultAnd}"
                          Grid.Column="1"
                          Grid.Row="1" />
 
-                <TextBlock Text="Logical Right"
+                <!--!NAND-->
+                <TextBlock Text="NAND"
                            Grid.Column="0"
                            Grid.Row="2"
                            TextAlignment="Left"
                            VerticalAlignment="Center" />
                 <TextBox IsReadOnly="True"
-                         Text="{Binding LogicalRightShiftBinaryString}"
+                         Text="{Binding ResultNand}"
                          Grid.Column="1"
                          Grid.Row="2" />
 
-                <TextBlock Text="Aritmetic Left"
+                <!--!OR-->
+                <TextBlock Text="OR"
                            Grid.Column="0"
                            Grid.Row="3"
                            TextAlignment="Left"
                            VerticalAlignment="Center" />
                 <TextBox IsReadOnly="True"
-                         Text="{Binding ArithmeticLeftShiftBinaryString}"
+                         Text="{Binding ResultOr}"
                          Grid.Column="1"
                          Grid.Row="3" />
 
-                <TextBlock Text="Aritmetic Right"
+                <!--!NOR-->
+                <TextBlock Text="NOR"
                            Grid.Column="0"
                            Grid.Row="4"
                            TextAlignment="Left"
                            VerticalAlignment="Center" />
                 <TextBox IsReadOnly="True"
-                         Text="{Binding ArithmeticRightShiftBinaryString}"
+                         Text="{Binding ResultNor}"
                          Grid.Column="1"
                          Grid.Row="4" />
 
-                <TextBlock Text="Circular Left"
+                <!--!XOR-->
+                <TextBlock Text="XOR"
                            Grid.Column="0"
                            Grid.Row="5"
                            TextAlignment="Left"
                            VerticalAlignment="Center" />
                 <TextBox IsReadOnly="True"
-                         Text="{Binding CircularLeftShiftBinaryString}"
+                         Text="{Binding ResultXor}"
                          Grid.Column="1"
                          Grid.Row="5" />
 
-                <TextBlock Text="Circular Right"
+                <!--!NOT1-->
+                <TextBlock Text="NOT1"
                            Grid.Column="0"
                            Grid.Row="6"
                            TextAlignment="Left"
                            VerticalAlignment="Center" />
                 <TextBox IsReadOnly="True"
-                         Text="{Binding CircularRightShiftBinaryString}"
+                         Text="{Binding ResultNotFirstValue}"
                          Grid.Column="1"
                          Grid.Row="6" />
 
-            </Grid>-->
+                <!--!NOT2-->
+                <TextBlock Text="NOT2"
+                           Grid.Column="0"
+                           Grid.Row="7"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center" />
+                <TextBox IsReadOnly="True"
+                         Text="{Binding ResultNotSecondValue}"
+                         Grid.Column="1"
+                         Grid.Row="7" />
+
+            </Grid>
 
         </StackPanel>
     </Grid>

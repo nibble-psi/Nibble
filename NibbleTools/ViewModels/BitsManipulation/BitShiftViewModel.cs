@@ -42,7 +42,6 @@ public partial class BitShiftViewModel : ObservableRecipient
         _bitShiftOperations = new BitShiftOperations();
     }
 
-    [RelayCommand]
     public void ShiftNumber()
     {
         NumberBinaryString = Number.ToBinaryString();

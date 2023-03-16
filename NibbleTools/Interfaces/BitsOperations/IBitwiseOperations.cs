@@ -1,10 +1,10 @@
 ﻿namespace NibbleTools.Interfaces.BitsOperations;
 public interface IBitwiseOperations
 {
-    int Not(int value);
-    int Xor(int value1, int value2);
-    int And(int value1, int value2);
-    int Nand(int value1, int value2);
-    int Or(int value1, int value2);
-    int Nor(int value1, int value2);
+    string Not(int value);
+    string Xor(int value1, int value2);
+    string And(int value1, int value2);
+    string Nand(int value1, int value2);
+    string Or(int value1, int value2);
+    string Nor(int value1, int value2);
 }
