@@ -54,12 +54,15 @@
                                             Icon="{ui:BitmapIcon Source=/Assets/StoreLogo.png}" />
                         <!--!BitShift page-->
                         <NavigationViewItem x:Uid="Shell_Bitshift"
-                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitsManipulation.BitShiftViewModel"
-                                            Icon="{ui:BitmapIcon Source=/Assets/LogicGates/AND.png}" />
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitsManipulation.BitShiftViewModel">
+                            <!--Icon="{ui:BitmapIcon Source=/Assets/LogicGates/AND.png}">-->
+                            <NavigationViewItem.Icon>
+                                <FontIcon Glyph="&#xF0AF;" />
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
 
                     </NavigationViewItem.MenuItems>
                 </NavigationViewItem>
-
 
                 <!--!Other way to add icons to NavigationViewItems-->
                 <!--<NavigationViewItem.Icon>

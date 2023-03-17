@@ -9,10 +9,13 @@ namespace NibbleTools.ViewModels.BitsManipulation;
 public partial class BitShiftViewModel : ObservableRecipient
 {
     [ObservableProperty]
-    private uint _number;
+    private int _number = 1;
 
     [ObservableProperty]
-    private int bitsToShift;
+    private int bitsToShift = 1;
+
+    [ObservableProperty]
+    private string bitsToShiftBinaryString = string.Empty;
 
     [ObservableProperty]
     private string numberBinaryString = string.Empty;
@@ -39,21 +42,24 @@ public partial class BitShiftViewModel : ObservableRecipient
 
     public BitShiftViewModel()
     {
+        NumberBinaryString = Number.ToBinaryString();
+        BitsToShiftBinaryString = BitsToShift.ToBinaryString();
         _bitShiftOperations = new BitShiftOperations();
     }
 
     public void ShiftNumber()
     {
         NumberBinaryString = Number.ToBinaryString();
+        BitsToShiftBinaryString = BitsToShift.ToBinaryString();
 
-        ArithmeticLeftShiftBinaryString = _bitShiftOperations.ArithmeticLeftShift(Number, BitsToShift).ToBinaryString();
-        ArithmeticRightShiftBinaryString = _bitShiftOperations.ArithmeticRightShift(Number, BitsToShift).ToBinaryString();
+        ArithmeticLeftShiftBinaryString = _bitShiftOperations.ArithmeticLeftShift(Number, BitsToShift);
+        ArithmeticRightShiftBinaryString = _bitShiftOperations.ArithmeticRightShift(Number, BitsToShift);
 
-        LogicalLeftShiftBinaryString = _bitShiftOperations.LogicalLeftShift(Number, BitsToShift).ToBinaryString();
-        LogicalRightShiftBinaryString = _bitShiftOperations.LogicalRightShift(Number, BitsToShift).ToBinaryString();
+        LogicalLeftShiftBinaryString = _bitShiftOperations.LogicalLeftShift(Number, BitsToShift);
+        LogicalRightShiftBinaryString = _bitShiftOperations.LogicalRightShift(Number, BitsToShift);
 
-        CircularLeftShiftBinaryString = _bitShiftOperations.CircularLeftShift(Number, BitsToShift).ToBinaryString();
-        CircularRightShiftBinaryString = _bitShiftOperations.CircularRightShift(Number, BitsToShift).ToBinaryString();
+        CircularLeftShiftBinaryString = _bitShiftOperations.CircularLeftShift(Number, BitsToShift);
+        CircularRightShiftBinaryString = _bitShiftOperations.CircularRightShift(Number, BitsToShift);
     }
 
     partial void OnBitsToShiftChanged(int value)
@@ -61,7 +67,7 @@ public partial class BitShiftViewModel : ObservableRecipient
         ShiftNumber();
     }
 
-    partial void OnNumberChanged(uint value)
+    partial void OnNumberChanged(int value)
     {
         ShiftNumber();
     }

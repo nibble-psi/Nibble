@@ -8,53 +8,74 @@
       xmlns:viewmodels="using:NibbleTools.ViewModels.BitsManipulation"
       d:DataContext="{d:DesignInstance Type=viewmodels:BitwiseViewModel}"
       mc:Ignorable="d">
-
-    <Grid>
+    <ScrollViewer>
         <StackPanel x:Name="ContentArea"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"
-                    Spacing="50">
-            <StackPanel Orientation="Horizontal"
-                        Spacing="20">
-                <NumberBox Header="First Number"
-                           Value="{x:Bind ViewModel.FirstValue, Mode=TwoWay}"
+                    Spacing="30">
+
+            <!--!Input fiels-->
+            <Grid ColumnSpacing="20"
+                  RowSpacing="20"
+                  ColumnDefinitions="Auto, Auto, Auto"
+                  RowDefinitions="Auto,Auto,Auto">
+
+                <TextBlock Text="First Number"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center"
+                           Grid.Column="1" />
+                <TextBlock Text="Second Number"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center"
+                           Grid.Column="2" />
+
+                <TextBlock Text="DEC"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center"
+                           Grid.Row="1" />
+                <NumberBox Value="{x:Bind ViewModel.FirstValue, Mode=TwoWay}"
                            SpinButtonPlacementMode="Compact"
                            Minimum="1"
+                           Maximum="2147483647"
                            ValidationMode="InvalidInputOverwritten"
-                           AcceptsExpression="True" />
-
-                <NumberBox Header="Second Number"
-                           Value="{x:Bind ViewModel.SecondValue, Mode=TwoWay}"
+                           AcceptsExpression="True"
+                           Grid.Row="1"
+                           Grid.Column="1" />
+                <NumberBox Value="{x:Bind ViewModel.SecondValue, Mode=TwoWay}"
                            SpinButtonPlacementMode="Compact"
                            SmallChange="1"
                            LargeChange="2"
                            Minimum="1"
+                           Maximum="2147483647"
                            ValidationMode="InvalidInputOverwritten"
-                           AcceptsExpression="True" />
-            </StackPanel>
+                           AcceptsExpression="True"
+                           Grid.Row="1"
+                           Grid.Column="2" />
 
-            <StackPanel Orientation="Horizontal"
-                        Spacing="20">
+                <TextBlock Text="BIN"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center"
+                           Grid.Row="2" />
                 <TextBox IsReadOnly="True"
-                         Text="{Binding FirstValueBinary}" />
+                         Text="{Binding FirstValueBinary}"
+                         Grid.Row="2"
+                         Grid.Column="1" />
 
                 <TextBox IsReadOnly="True"
-                         Text="{Binding SecondValueBinary}" />
-            </StackPanel>
+                         Text="{Binding SecondValueBinary}"
+                         Grid.Row="2"
+                         Grid.Column="2" />
 
+            </Grid>
+
+            <TextBlock Text="Output"
+                       Style="{StaticResource TitleTextBlockStyle}" />
+
+            <!--!Output fiels-->
             <Grid ColumnSpacing="20"
                   RowSpacing="20"
                   ColumnDefinitions="Auto, Auto"
                   RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto, Auto,Auto">
-                <!--<TextBlock Text="Number"
-                           Grid.Column="0"
-                           Grid.Row="0"
-                           TextAlignment="Left"
-                           VerticalAlignment="Center" />
-                <TextBox IsReadOnly="True"
-                         Text="{Binding NumberBinaryString}"
-                         Grid.Column="1"
-                         Grid.Row="0" />-->
 
                 <!--!AND-->
                 <TextBlock Text="AND"
@@ -136,5 +157,5 @@
             </Grid>
 
         </StackPanel>
-    </Grid>
+    </ScrollViewer>
 </Page>

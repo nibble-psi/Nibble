@@ -2,10 +2,10 @@
 
 public interface IBitShiftOperations
 {
-    uint ArithmeticLeftShift(uint value, int offset);
-    uint ArithmeticRightShift(uint value, int offset);
-    uint LogicalLeftShift(uint value, int offset);
-    uint LogicalRightShift(uint value, int offset);
-    uint CircularLeftShift(uint value, int offset);
-    uint CircularRightShift(uint value, int offset);
+    string ArithmeticLeftShift(int value, int offset);
+    string ArithmeticRightShift(int value, int offset);
+    string LogicalLeftShift(int value, int offset);
+    string LogicalRightShift(int value, int offset);
+    string CircularLeftShift(int value, int offset);
+    string CircularRightShift(int value, int offset);
 }

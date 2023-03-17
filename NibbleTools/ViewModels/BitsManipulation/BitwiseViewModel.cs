@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Numerics;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Newtonsoft.Json.Linq;
 using NibbleTools.Helpers;
@@ -76,5 +77,6 @@ public partial class BitwiseViewModel : ObservableRecipient
         ResultNand = bitwiseOperations.Nand(FirstValue, SecondValue);
         ResultNor = bitwiseOperations.Nor(FirstValue, SecondValue);
 
+        
     }
 }
