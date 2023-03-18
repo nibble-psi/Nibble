@@ -53,11 +53,17 @@ public partial class BitwiseViewModel : ObservableRecipient
 
     partial void OnFirstValueChanged(int value)
     {
+        if (value < 0)
+            FirstValue = 1;        
+
         RecalculateResults();
     }
 
     partial void OnSecondValueChanged(int value)
     {
+        if (value < 0)
+            SecondValue = 1;
+
         RecalculateResults();
     }
 

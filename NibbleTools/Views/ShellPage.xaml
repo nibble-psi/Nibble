@@ -7,6 +7,9 @@
       xmlns:behaviors="using:NibbleTools.Behaviors"
       xmlns:ui="using:CommunityToolkit.WinUI.UI"
       xmlns:i="using:Microsoft.Xaml.Interactivity"
+      xmlns:viewmodels="using:NibbleTools.ViewModels"
+      d:DataContext="{d:DesignInstance Type=viewmodels:ShellViewModel}"
+      mc:Ignorable="d"
       Loaded="OnLoaded">
 
     <Grid>
@@ -36,26 +39,27 @@
                         Header="{x:Bind ((ContentControl)ViewModel.Selected).Content, Mode=OneWay}">
             <NavigationView.MenuItems>
 
-                <!--!Home page-->
+                <!--Home page-->
                 <NavigationViewItem x:Uid="Shell_Main"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.MainViewModel"
                                     Icon="Home" />
 
-                <!--!Bit Manipulations-->
-                <NavigationViewItem x:Uid="Shell_BitManipulation">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE950;" />
-                    </NavigationViewItem.Icon>
+                <!--Bit Manipulations-->
+                <NavigationViewItem x:Uid="Shell_BitManipulation"
+                                    Icon="{ui:BitmapIcon Source=/Assets/StoreLogo.png}">
                     <NavigationViewItem.MenuItems>
 
-                        <!--!Bitwise page-->
+                        <!--Bitwise page-->
                         <NavigationViewItem x:Uid="Shell_Bitwise"
-                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitsManipulation.BitwiseViewModel"
-                                            Icon="{ui:BitmapIcon Source=/Assets/StoreLogo.png}" />
-                        <!--!BitShift page-->
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitsManipulation.BitwiseViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon Glyph="&#xE950;" />
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+
+                        <!--BitShift page-->
                         <NavigationViewItem x:Uid="Shell_Bitshift"
                                             helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitsManipulation.BitShiftViewModel">
-                            <!--Icon="{ui:BitmapIcon Source=/Assets/LogicGates/AND.png}">-->
                             <NavigationViewItem.Icon>
                                 <FontIcon Glyph="&#xF0AF;" />
                             </NavigationViewItem.Icon>
@@ -63,13 +67,6 @@
 
                     </NavigationViewItem.MenuItems>
                 </NavigationViewItem>
-
-                <!--!Other way to add icons to NavigationViewItems-->
-                <!--<NavigationViewItem.Icon>
-                    <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}"
-                              Glyph="&#xe950;" />
-                </NavigationViewItem.Icon>-->
-
             </NavigationView.MenuItems>
 
             <NavigationView.HeaderTemplate>

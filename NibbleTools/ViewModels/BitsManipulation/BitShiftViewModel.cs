@@ -64,11 +64,17 @@ public partial class BitShiftViewModel : ObservableRecipient
 
     partial void OnBitsToShiftChanged(int value)
     {
+        if (value < 0)
+            BitsToShift = 1;
+        
         ShiftNumber();
     }
 
     partial void OnNumberChanged(int value)
     {
+        if (value < 0)
+            Number = 1;
+
         ShiftNumber();
     }
 

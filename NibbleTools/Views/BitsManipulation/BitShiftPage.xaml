@@ -13,7 +13,8 @@
         <StackPanel x:Name="ContentArea"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"
-                    Spacing="30">
+                    Spacing="30"
+                    Padding="0 20 0 40">
 
             <!--!Input fiels-->
             <Grid ColumnSpacing="20"
