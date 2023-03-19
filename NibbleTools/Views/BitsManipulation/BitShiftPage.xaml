@@ -5,111 +5,142 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:helpers="using:NibbleTools.Helpers"
-      xmlns:viewmodels="using:NibbleTools.ViewModels"
+      xmlns:viewmodels="using:NibbleTools.ViewModels.BitsManipulation"
       d:DataContext="{d:DesignInstance Type=viewmodels:BitShiftViewModel}"
       mc:Ignorable="d">
 
-    <Grid>
+    <ScrollViewer>
         <StackPanel x:Name="ContentArea"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"
-                    Spacing="50">
-            <StackPanel Orientation="Horizontal"
-                        Spacing="20">
-                <NumberBox Header="Input Number"
-                           Value="{x:Bind ViewModel.Number, Mode=TwoWay}"
-                           InputScope="Number"
-                           Minimum="0"
-                           ValidationMode="InvalidInputOverwritten"
-                           AcceptsExpression="True" />
+                    Spacing="30"
+                    Padding="0 20 0 40">
 
-                <NumberBox Header="Bits to Shift"
-                           Value="{x:Bind ViewModel.BitsToShift, Mode=TwoWay}"
+            <!--!Input fiels-->
+            <Grid ColumnSpacing="20"
+                  RowSpacing="20"
+                  ColumnDefinitions="Auto, Auto, Auto"
+                  RowDefinitions="Auto,Auto,Auto">
+
+                <TextBlock Text="Input Number"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center"
+                           Grid.Column="1" />
+                <TextBlock Text="Bits to Shift"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center"
+                           Grid.Column="2" />
+
+                <TextBlock Text="DEC"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center"
+                           Grid.Row="1" />
+                <NumberBox Value="{x:Bind ViewModel.Number, Mode=TwoWay}"
+                           SpinButtonPlacementMode="Compact"
+                           Minimum="1"
+                           Maximum="2147483647"
+                           ValidationMode="InvalidInputOverwritten"
+                           AcceptsExpression="True"
+                           Grid.Row="1"
+                           Grid.Column="1" />
+                <NumberBox Value="{x:Bind ViewModel.BitsToShift, Mode=TwoWay}"
                            SpinButtonPlacementMode="Compact"
                            SmallChange="1"
                            LargeChange="2"
-                           Minimum="0"
-                           InputScope="Number"
+                           Minimum="1"
+                           Maximum="2147483647"
                            ValidationMode="InvalidInputOverwritten"
-                           AcceptsExpression="True" />
-            </StackPanel>
+                           AcceptsExpression="True"
+                           Grid.Row="1"
+                           Grid.Column="2" />
 
+                <TextBlock Text="BIN"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center"
+                           Grid.Row="2" />
+                <TextBox IsReadOnly="True"
+                         Text="{Binding NumberBinaryString}"
+                         Grid.Row="2"
+                         Grid.Column="1" />
+
+                <TextBox IsReadOnly="True"
+                         Text="{Binding BitsToShiftBinaryString}"
+                         Grid.Row="2"
+                         Grid.Column="2" />
+
+            </Grid>
+
+            <TextBlock Text="Output"
+                       Style="{StaticResource TitleTextBlockStyle}" />
+
+            <!--!Output fiels-->
             <Grid ColumnSpacing="20"
                   RowSpacing="20"
                   ColumnDefinitions="Auto, Auto"
-                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto, Auto">
-                <TextBlock Text="Number"
+                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+
+                <TextBlock Text="Logical Left"
                            Grid.Column="0"
                            Grid.Row="0"
                            TextAlignment="Left"
                            VerticalAlignment="Center" />
                 <TextBox IsReadOnly="True"
-                         Text="{Binding NumberBinaryString}"
+                         Text="{Binding LogicalLeftShiftBinaryString}"
                          Grid.Column="1"
                          Grid.Row="0" />
 
-                <TextBlock Text="Logical Left"
+                <TextBlock Text="Logical Right"
                            Grid.Column="0"
                            Grid.Row="1"
                            TextAlignment="Left"
                            VerticalAlignment="Center" />
                 <TextBox IsReadOnly="True"
-                         Text="{Binding LogicalLeftShiftBinaryString}"
+                         Text="{Binding LogicalRightShiftBinaryString}"
                          Grid.Column="1"
                          Grid.Row="1" />
 
-                <TextBlock Text="Logical Right"
+                <TextBlock Text="Aritmetic Left"
                            Grid.Column="0"
                            Grid.Row="2"
                            TextAlignment="Left"
                            VerticalAlignment="Center" />
                 <TextBox IsReadOnly="True"
-                         Text="{Binding LogicalRightShiftBinaryString}"
+                         Text="{Binding ArithmeticLeftShiftBinaryString}"
                          Grid.Column="1"
                          Grid.Row="2" />
 
-                <TextBlock Text="Aritmetic Left"
+                <TextBlock Text="Aritmetic Right"
                            Grid.Column="0"
                            Grid.Row="3"
                            TextAlignment="Left"
                            VerticalAlignment="Center" />
                 <TextBox IsReadOnly="True"
-                         Text="{Binding ArithmeticLeftShiftBinaryString}"
+                         Text="{Binding ArithmeticRightShiftBinaryString}"
                          Grid.Column="1"
                          Grid.Row="3" />
 
-                <TextBlock Text="Aritmetic Right"
+                <TextBlock Text="Circular Left"
                            Grid.Column="0"
                            Grid.Row="4"
                            TextAlignment="Left"
                            VerticalAlignment="Center" />
                 <TextBox IsReadOnly="True"
-                         Text="{Binding ArithmeticRightShiftBinaryString}"
+                         Text="{Binding CircularLeftShiftBinaryString}"
                          Grid.Column="1"
                          Grid.Row="4" />
 
-                <TextBlock Text="Circular Left"
+                <TextBlock Text="Circular Right"
                            Grid.Column="0"
                            Grid.Row="5"
                            TextAlignment="Left"
                            VerticalAlignment="Center" />
                 <TextBox IsReadOnly="True"
-                         Text="{Binding CircularLeftShiftBinaryString}"
-                         Grid.Column="1"
-                         Grid.Row="5" />
-
-                <TextBlock Text="Circular Right"
-                           Grid.Column="0"
-                           Grid.Row="6"
-                           TextAlignment="Left"
-                           VerticalAlignment="Center" />
-                <TextBox IsReadOnly="True"
                          Text="{Binding CircularRightShiftBinaryString}"
                          Grid.Column="1"
-                         Grid.Row="6" />
+                         Grid.Row="5" />
 
             </Grid>
 
         </StackPanel>
-    </Grid>
+    </ScrollViewer>
 </Page>

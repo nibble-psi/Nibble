@@ -4,6 +4,7 @@ using NibbleTools.Interfaces.Services;
 using NibbleTools.Pages;
 using NibbleTools.Services;
 using NibbleTools.ViewModels;
+using NibbleTools.ViewModels.BitsManipulation;
 using NibbleTools.Views;
 
 namespace NibbleTools.Configuration;
@@ -12,12 +13,12 @@ public static class PageServiceExtensions
 {
     public static void ConfigurePages(this IPageService pageService)
     {
+        // Main Pages
         pageService.Configure<MainViewModel, MainPage>();
-        pageService.Configure<BitShiftViewModel, BitShiftPage>();
-        pageService.Configure<XORViewModel, XORPage>();
-        pageService.Configure<ORNORViewModel, ORNORPage>();
         pageService.Configure<SettingsViewModel, SettingsPage>();
-        pageService.Configure<NotOperationViewModel, NotOperationPage>();
-        pageService.Configure<AndNandViewModel, AndNandPage>();
+
+        // BitsManipulation pages
+        pageService.Configure<BitShiftViewModel, BitShiftPage>();
+        pageService.Configure<BitwiseViewModel, BitwisePage>();
     }
 }

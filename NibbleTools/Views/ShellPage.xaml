@@ -7,6 +7,9 @@
       xmlns:behaviors="using:NibbleTools.Behaviors"
       xmlns:ui="using:CommunityToolkit.WinUI.UI"
       xmlns:i="using:Microsoft.Xaml.Interactivity"
+      xmlns:viewmodels="using:NibbleTools.ViewModels"
+      d:DataContext="{d:DesignInstance Type=viewmodels:ShellViewModel}"
+      mc:Ignorable="d"
       Loaded="OnLoaded">
 
     <Grid>
@@ -31,50 +34,39 @@
                         IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"
                         SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
                         IsSettingsVisible="True"
-                        ExpandedModeThresholdWidth="1280" 
+                        ExpandedModeThresholdWidth="1280"
                         DisplayModeChanged="NavigationViewControl_DisplayModeChanged"
                         Header="{x:Bind ((ContentControl)ViewModel.Selected).Content, Mode=OneWay}">
             <NavigationView.MenuItems>
 
-                
-                
-                <!--!Main page-->
+                <!--Home page-->
                 <NavigationViewItem x:Uid="Shell_Main"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.MainViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/StoreLogo.png}" />
+                                    Icon="Home" />
 
-                <!--!BitShift page-->
-                <NavigationViewItem x:Uid="Shell_Bitshift"
-                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitShiftViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/LogicGates/AND.png}" />
+                <!--Bit Manipulations-->
+                <NavigationViewItem x:Uid="Shell_BitManipulation"
+                                    Icon="{ui:BitmapIcon Source=/Assets/StoreLogo.png}">
+                    <NavigationViewItem.MenuItems>
 
-                <!--!NotOperation page-->
-                <NavigationViewItem x:Uid="Shell_NotOperation"
-                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.NotOperationViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/LogicGates/NOT.png}" />
+                        <!--Bitwise page-->
+                        <NavigationViewItem x:Uid="Shell_Bitwise"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitsManipulation.BitwiseViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon Glyph="&#xE950;" />
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
 
-                <!--!XOR page-->
-                <NavigationViewItem x:Uid="Shell_XOR"
-                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.XORViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/LogicGates/XOR.png}" />
+                        <!--BitShift page-->
+                        <NavigationViewItem x:Uid="Shell_Bitshift"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BitsManipulation.BitShiftViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon Glyph="&#xF0AF;" />
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
 
-                <!--!OR&NOR page-->
-                <NavigationViewItem x:Uid="Shell_ORNOR"
-                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.ORNORViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/LogicGates/OR.png}" />
-
-                <!--!AndNand page-->
-                <NavigationViewItem x:Uid="Shell_AndNand"
-                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.AndNandViewModel"
-                                    Icon="{ui:BitmapIcon Source=/Assets/LogicGates/NAND.png}" />
-
-
-                <!--!Other way to add icons to NavigationViewItems-->
-                <!--<NavigationViewItem.Icon>
-                    <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}"
-                              Glyph="&#xe950;" />
-                </NavigationViewItem.Icon>-->
-
+                    </NavigationViewItem.MenuItems>
+                </NavigationViewItem>
             </NavigationView.MenuItems>
 
             <NavigationView.HeaderTemplate>

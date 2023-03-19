@@ -1,18 +1,37 @@
-﻿using NibbleTools.Interfaces.BitsOperations;
+﻿using Newtonsoft.Json.Linq;
+using NibbleTools.Interfaces.BitsOperations;
 
 namespace NibbleTools.Helpers;
 
 public class BitShiftOperations : IBitShiftOperations
 {
-    public uint ArithmeticLeftShift(uint value, int offset) => value << offset;
+    public string ArithmeticLeftShift(int value, int offset)
+    {
+        return (value << offset).ToBinaryString().TakeLastOrDefault(value.NumBits());
+    }
 
-    public uint ArithmeticRightShift(uint value, int offset) => value >> offset;
+    public string ArithmeticRightShift(int value, int offset)
+    {
+        return (value >> offset).ToBinaryString().TakeLastOrDefault(value.NumBits());
+    }
 
-    public uint LogicalLeftShift(uint value, int offset) => value << offset;
+    public string LogicalLeftShift(int value, int offset)
+    {
+        return (value << offset).ToBinaryString().TakeLastOrDefault(value.NumBits());
+    }
 
-    public uint LogicalRightShift(uint value, int offset) => value >>> offset;
+    public string LogicalRightShift(int value, int offset)
+    {
+        return (value >>> offset).ToBinaryString().TakeLastOrDefault(value.NumBits());
+    }
 
-    public uint CircularLeftShift(uint value, int offset) => (value << offset) | (value >> (32 - offset));
+    public string CircularLeftShift(int value, int offset)
+    {
+        return ((value << offset) | (value >> (32 - offset))).ToBinaryString().TakeLastOrDefault(value.NumBits());
+    }
 
-    public uint CircularRightShift(uint value, int offset) => (value >> offset) | (value << (32 - offset));
+    public string CircularRightShift(int value, int offset)
+    {
+        return ((value >> offset) | (value << (32 - offset))).ToBinaryString().TakeLastOrDefault(value.NumBits());
+    }
 }

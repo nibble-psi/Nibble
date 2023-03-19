@@ -11,6 +11,7 @@ using NibbleTools.Models;
 using NibbleTools.Pages;
 using NibbleTools.Services;
 using NibbleTools.ViewModels;
+using NibbleTools.ViewModels.BitsManipulation;
 using NibbleTools.Views;
 
 namespace NibbleTools.Configuration;
@@ -38,14 +39,12 @@ public static class ServicesExtensions
             services.Configure<LocalSettingsOptions>(context.Configuration.GetSection(nameof(LocalSettingsOptions)));
 
             // Views and ViewModels
-            services.AddTransient<ShellPage,  ShellViewModel>();
-            services.AddTransient<BitShiftPage, BitShiftViewModel>();
-            services.AddTransient<NotOperationPage, NotOperationViewModel>();
-            services.AddTransient<XORPage, XORViewModel>();
-            services.AddTransient<ORNORPage, ORNORViewModel>();
-            services.AddTransient<SettingsPage, SettingsViewModel>();
             services.AddTransient<MainPage, MainViewModel>();
-            services.AddTransient<AndNandPage, AndNandViewModel>();
+            services.AddTransient<ShellPage,  ShellViewModel>();
+            services.AddTransient<SettingsPage, SettingsViewModel>();
+
+            services.AddTransient<BitShiftPage, BitShiftViewModel>();
+            services.AddTransient<BitwisePage, BitwiseViewModel>();
 
         });
 
