@@ -67,6 +67,10 @@
 
                     </NavigationViewItem.MenuItems>
                 </NavigationViewItem>
+                <!--Number Generator page-->
+                <NavigationViewItem x:Uid="Shell_NumberGenerator"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.NumberGeneratorViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsTime.png}" />
             </NavigationView.MenuItems>
 
             <NavigationView.HeaderTemplate>

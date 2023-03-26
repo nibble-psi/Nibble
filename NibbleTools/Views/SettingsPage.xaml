@@ -12,7 +12,7 @@
     </Page.Resources>
 
     <ScrollViewer>
-        <StackPanel
+        <StackPanel MaxWidth="1000"
                     HorizontalAlignment="Stretch"
                     Spacing="4">
             <TextBlock Margin="1,0,0,4"

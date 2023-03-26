@@ -69,6 +69,7 @@
     <None Remove="Assets\WindowIcon.ico" />
     <None Remove="Views\BitShiftPage.xaml" />
     <None Remove="Views\BitwisePage.xaml" />
+    <None Remove="Views\NumberGeneratorPage.xaml" />
     <None Remove="Views\ORNORPageNOR.xaml" />
   </ItemGroup>
 
@@ -89,6 +90,9 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Page Update="Views\NumberGeneratorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="Views\BitwisePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
