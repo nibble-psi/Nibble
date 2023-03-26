@@ -20,5 +20,7 @@ public static class PageServiceExtensions
         // BitsManipulation pages
         pageService.Configure<BitShiftViewModel, BitShiftPage>();
         pageService.Configure<BitwiseViewModel, BitwisePage>();
+
+        pageService.Configure<StringGeneratorViewModel, StringGeneratorPage>();
     }
 }

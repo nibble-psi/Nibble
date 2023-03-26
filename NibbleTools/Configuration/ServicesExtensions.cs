@@ -46,6 +46,8 @@ public static class ServicesExtensions
             services.AddTransient<BitShiftPage, BitShiftViewModel>();
             services.AddTransient<BitwisePage, BitwiseViewModel>();
 
+            services.AddTransient<StringGeneratorPage, StringGeneratorViewModel>();
+
         });
 
     }
