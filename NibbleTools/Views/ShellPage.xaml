@@ -68,6 +68,15 @@
                     </NavigationViewItem.MenuItems>
                 </NavigationViewItem>
 
+
+                <NavigationViewItem x:Uid="Shell_BaseNumberConverter"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BaseNumberConverterModel">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xF0AF;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+
                 <!--Number Generator page-->
                 <NavigationViewItem x:Uid="Shell_NumberGenerator"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.NumberGeneratorViewModel"
@@ -80,7 +89,6 @@
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xF0AF;" />
                     </NavigationViewItem.Icon>
-                    
                 </NavigationViewItem>
 
 
@@ -88,6 +96,7 @@
                 <NavigationViewItem x:Uid="Shell_Counter"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.CounterViewModel"
                                     Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsScreenRuler.png}" />
+
 
                 <!--Text Split page-->
                 <NavigationViewItem x:Uid="Shell_TextSplit"
