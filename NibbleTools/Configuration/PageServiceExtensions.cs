@@ -29,5 +29,6 @@ public static class PageServiceExtensions
 
         // Text manipulation pages
         pageService.Configure<CounterViewModel, CounterPage>();
+        pageService.Configure<TextSplitViewModel, TextSplitPage>();
     }
 }

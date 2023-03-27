@@ -89,6 +89,11 @@
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.CounterViewModel"
                                     Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsScreenRuler.png}" />
 
+                <!--Text Split page-->
+                <NavigationViewItem x:Uid="Shell_TextSplit"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.TextSplitViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsAlwaysOnTop.png}" />
+
             </NavigationView.MenuItems>
 
            
