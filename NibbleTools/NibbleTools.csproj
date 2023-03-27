@@ -67,6 +67,7 @@
     <None Remove="Assets\LogicGates\XOR.png" />
     <None Remove="Assets\StoreLogo.png" />
     <None Remove="Assets\WindowIcon.ico" />
+    <None Remove="Views\BaseNumberConverterPage.xaml" />
     <None Remove="Views\BitShiftPage.xaml" />
     <None Remove="Views\BitwisePage.xaml" />
     <None Remove="Views\ORNORPageNOR.xaml" />
@@ -89,6 +90,9 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Page Update="Views\BaseNumberConverterPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="Views\BitwisePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>

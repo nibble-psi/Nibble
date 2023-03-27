@@ -67,6 +67,14 @@
 
                     </NavigationViewItem.MenuItems>
                 </NavigationViewItem>
+
+                <NavigationViewItem x:Uid="Shell_BaseNumberConverter"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BaseNumberConverterModel">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xF0AF;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
             </NavigationView.MenuItems>
 
             <NavigationView.HeaderTemplate>
