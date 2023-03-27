@@ -50,6 +50,7 @@ public static class ServicesExtensions
             services.AddTransient<NumberGeneratorPage, NumberGeneratorViewModel>();
             services.AddTransient<StringGeneratorPage, StringGeneratorViewModel>();
 
+            services.AddTransient<CounterPage, CounterViewModel>();
         });
 
     }

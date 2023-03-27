@@ -26,5 +26,8 @@ public static class PageServiceExtensions
         pageService.Configure<NumberGeneratorViewModel, NumberGeneratorPage>();
         pageService.Configure<StringGeneratorViewModel, StringGeneratorPage>();
 
+
+        // Text manipulation pages
+        pageService.Configure<CounterViewModel, CounterPage>();
     }
 }
