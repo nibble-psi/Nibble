@@ -73,13 +73,22 @@
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.NumberGeneratorViewModel"
                                     Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsTime.png}" />
 
+
+                <!--String Generator-->
                 <NavigationViewItem x:Uid="Shell_StringGenerator"
                                             helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.StringGeneratorViewModel">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xF0AF;" />
                     </NavigationViewItem.Icon>
+                    
                 </NavigationViewItem>
-                
+
+
+                <!--Counter page-->
+                <NavigationViewItem x:Uid="Shell_Counter"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.CounterViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsScreenRuler.png}" />
+
             </NavigationView.MenuItems>
 
            

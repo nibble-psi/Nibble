@@ -69,6 +69,5 @@ public sealed partial class StringGeneratorPage : Page
                     break;
             }
         }
-
     }
 }
