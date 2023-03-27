@@ -176,5 +176,17 @@
   </data>
   <data name="Shell_BaseNumberConverter.Content" xml:space="preserve">
     <value>Base Number Converter</value>
+  </data>    
+  <data name="Shell_NumberGenerator.Content" xml:space="preserve">
+    <value>Number generator</value>
+  </data>
+  <data name="Shell_StringGenerator.Content" xml:space="preserve">
+    <value>String Generator</value>
+  </data>
+  <data name="Shell_Counter.Content" xml:space="preserve">
+    <value>Text Counters</value>
+  </data>
+  <data name="Shell_TextSplit.Content" xml:space="preserve">
+    <value>Text Split</value>
   </data>
 </root>

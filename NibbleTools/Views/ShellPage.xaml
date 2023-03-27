@@ -68,6 +68,7 @@
                     </NavigationViewItem.MenuItems>
                 </NavigationViewItem>
 
+
                 <NavigationViewItem x:Uid="Shell_BaseNumberConverter"
                                             helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BaseNumberConverterModel">
                     <NavigationViewItem.Icon>
@@ -75,7 +76,36 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
+
+                <!--Number Generator page-->
+                <NavigationViewItem x:Uid="Shell_NumberGenerator"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.NumberGeneratorViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsTime.png}" />
+
+
+                <!--String Generator-->
+                <NavigationViewItem x:Uid="Shell_StringGenerator"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.StringGeneratorViewModel">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xF0AF;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+
+                <!--Counter page-->
+                <NavigationViewItem x:Uid="Shell_Counter"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.CounterViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsScreenRuler.png}" />
+
+
+                <!--Text Split page-->
+                <NavigationViewItem x:Uid="Shell_TextSplit"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.TextSplitViewModel"
+                                    Icon="{ui:BitmapIcon Source=/Assets/FluentIcons/FluentIconsAlwaysOnTop.png}" />
+
             </NavigationView.MenuItems>
+
+           
 
             <NavigationView.HeaderTemplate>
                 <DataTemplate>

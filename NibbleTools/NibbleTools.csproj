@@ -70,7 +70,11 @@
     <None Remove="Views\BaseNumberConverterPage.xaml" />
     <None Remove="Views\BitShiftPage.xaml" />
     <None Remove="Views\BitwisePage.xaml" />
+    <None Remove="Views\CounterPage.xaml" />
+    <None Remove="Views\NumberGeneratorPage.xaml" />
     <None Remove="Views\ORNORPageNOR.xaml" />
+    <None Remove="Views\StringGeneratorPage.xaml" />
+    <None Remove="Views\TextSplitPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -90,7 +94,20 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+
     <Page Update="Views\BaseNumberConverterPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\TextSplitPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\CounterPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\NumberGeneratorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\StringGeneratorPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Update="Views\BitwisePage.xaml">

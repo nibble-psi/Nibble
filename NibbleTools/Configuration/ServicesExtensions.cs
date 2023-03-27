@@ -48,6 +48,11 @@ public static class ServicesExtensions
 
             services.AddTransient<BaseNumberConverterPage, BaseNumberConverterModel>();
 
+            services.AddTransient<NumberGeneratorPage, NumberGeneratorViewModel>();
+            services.AddTransient<StringGeneratorPage, StringGeneratorViewModel>();
+
+            services.AddTransient<CounterPage, CounterViewModel>();
+            services.AddTransient<TextSplitPage, TextSplitViewModel>();
         });
 
     }

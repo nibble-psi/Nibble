@@ -21,6 +21,16 @@ public static class PageServiceExtensions
         pageService.Configure<BitShiftViewModel, BitShiftPage>();
         pageService.Configure<BitwiseViewModel, BitwisePage>();
 
+        // Converters
         pageService.Configure<BaseNumberConverterModel, BaseNumberConverterPage>();
+
+        // Sequences generator pages
+        pageService.Configure<NumberGeneratorViewModel, NumberGeneratorPage>();
+        pageService.Configure<StringGeneratorViewModel, StringGeneratorPage>();
+
+
+        // Text manipulation pages
+        pageService.Configure<CounterViewModel, CounterPage>();
+        pageService.Configure<TextSplitViewModel, TextSplitPage>();
     }
 }

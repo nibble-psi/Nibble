@@ -1,0 +1,82 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="NibbleTools.Views.TextSplitPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="using:NibbleTools.ViewModels"
+    d:DataContext="{d:DesignInstance Type=viewmodels:TextSplitViewModel}"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <StackPanel x:Name="ContentArea"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Spacing="30"
+                    Padding="0 20 0 50">
+
+            <!--Input field-->
+            <Grid  ColumnSpacing="30"
+            RowSpacing="20"
+            ColumnDefinitions="Auto, Auto, Auto, Auto, Auto, Auto"
+            RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto">
+                <TextBlock Text="Enter your text:"
+                           Grid.Column="1"
+                           Grid.Row="1"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center" />
+                <TextBox 
+                         Text="{x:Bind ViewModel.Input, Mode=TwoWay}"
+                         AcceptsReturn="True"
+                         IsReadOnly="False"
+                         Grid.Column="1"
+                         Grid.Row="2"
+                         TextWrapping="Wrap"
+                         Width="800"
+                         Height="300"/>
+                <TextBlock Text="Enter your seperator or length for splitting:"
+                           Grid.Column="1"
+                           Grid.Row="3"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center" />
+                <TextBox 
+                         Text="{x:Bind ViewModel.Seperator, Mode=TwoWay}"
+                         IsReadOnly="False"
+                         Grid.Column="1"
+                         Grid.Row="4"
+                         Width="100"
+                         HorizontalAlignment="Left"
+                         TextWrapping="Wrap"/>
+                <Button Style="{StaticResource AccentButtonStyle}"
+                    Content="Split"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Command="{Binding ButtonClickCommand}"/>
+
+            </Grid>
+
+            <!--Output fields-->
+
+            <TextBlock Text="Output"
+                       Style="{StaticResource TitleTextBlockStyle}" />
+
+            <Grid ColumnSpacing="20"
+                  RowSpacing="20"
+                  ColumnDefinitions="Auto,Auto,Auto,Auto"
+                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+
+                <TextBox     IsReadOnly="True"
+                         Text="{Binding Output}"
+                         Grid.Column="1"
+                         Grid.Row="1"
+                         TextWrapping="Wrap"
+                         Width="800"
+                         Height="300"/>
+            </Grid>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>
