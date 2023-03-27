@@ -1,6 +1,3 @@
-// Copyright (c) Microsoft Corporation and Contributors.
-// Licensed under the MIT License.
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -37,35 +34,4 @@ public sealed partial class CounterPage : Page
         DataContext = ViewModel;
         this.InitializeComponent();
     }
-
-    //private void GenerateWord_Click(object sender, RoutedEventArgs e)
-    //{
-    //    ComboBoxItem? selectedItem = DDL.SelectedItem as ComboBoxItem;
-
-    //    if (selectedItem != null)
-    //    {
-    //        string itemContent = selectedItem.Content as string;
-
-    //        switch (itemContent)
-    //        {
-    //            case "Word":
-    //                string randomWord = StringGeneratorViewModel.GenerateRandomWord(7);
-    //                TextBox1.Text = randomWord;
-    //                break;
-
-    //            case "Sentence":
-    //                string randomSentence = StringGeneratorViewModel.GenerateRandomSentence();
-    //                TextBox1.Text = randomSentence;
-    //                break;
-
-    //            case "Paragraph":
-    //                string randomParagraph = StringGeneratorViewModel.GenerateRandomParagraph();
-    //                TextBox1.Text = randomParagraph;
-    //                break;
-
-    //            default:
-    //                break;
-    //        }
-    //    }
-    //}
 }

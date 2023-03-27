@@ -46,11 +46,11 @@ public static class ServicesExtensions
             services.AddTransient<BitShiftPage, BitShiftViewModel>();
             services.AddTransient<BitwisePage, BitwiseViewModel>();
 
-
             services.AddTransient<NumberGeneratorPage, NumberGeneratorViewModel>();
             services.AddTransient<StringGeneratorPage, StringGeneratorViewModel>();
 
             services.AddTransient<CounterPage, CounterViewModel>();
+            services.AddTransient<TextSplitPage, TextSplitViewModel>();
         });
 
     }

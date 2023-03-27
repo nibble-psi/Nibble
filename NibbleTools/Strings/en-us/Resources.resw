@@ -183,4 +183,7 @@
   <data name="Shell_Counter.Content" xml:space="preserve">
     <value>Text Counters</value>
   </data>
+  <data name="Shell_TextSplit.Content" xml:space="preserve">
+    <value>Text Split</value>
+  </data>
 </root>
