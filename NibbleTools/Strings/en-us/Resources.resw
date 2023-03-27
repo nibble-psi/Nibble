@@ -154,7 +154,7 @@
     <value>https://YourPrivacyUrlGoesHere/</value>
   </data>
   <data name="Shell_Bitshift.Content" xml:space="preserve">
-    <value>Bit Shift</value>
+    <value>Bit Shift Operations</value>
   </data>
   <data name="Shell_XOR.Content" xml:space="preserve">
     <value>XOR</value>
@@ -172,21 +172,27 @@
     <value>Bits Manipulation</value>
   </data>
   <data name="Shell_Bitwise.Content" xml:space="preserve">
-    <value>Bitwise operations</value>
+    <value>Bitwise Operations</value>
   </data>
   <data name="Shell_BaseNumberConverter.Content" xml:space="preserve">
     <value>Base Number Converter</value>
-  </data>    
+  </data>
   <data name="Shell_NumberGenerator.Content" xml:space="preserve">
-    <value>Number generator</value>
+    <value>Number Generator</value>
   </data>
   <data name="Shell_StringGenerator.Content" xml:space="preserve">
     <value>String Generator</value>
   </data>
   <data name="Shell_Counter.Content" xml:space="preserve">
-    <value>Text Counters</value>
+    <value>Text Counter</value>
   </data>
   <data name="Shell_TextSplit.Content" xml:space="preserve">
     <value>Text Split</value>
+  </data>
+  <data name="Shell_Generators.Content" xml:space="preserve">
+    <value>Generators</value>
+  </data>
+  <data name="Shell_TextManipulation.Content" xml:space="preserve">
+    <value>Text Manipulation</value>
   </data>
 </root>

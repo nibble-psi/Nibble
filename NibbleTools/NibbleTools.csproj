@@ -27,44 +27,6 @@
     <Page Remove="Assets\Images\**" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Assets\FluentIcons\FluentIconsAlwaysOnTop.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsAwake.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsBinaryCode.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsBit.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsByte.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsColorPicker.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsEncrypted.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsExperimentation.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsFancyZones.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsFileExplorerPreview.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsFileLocksmith.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsFindMyMouse.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsHosts.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsImageResizer.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsJson.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsKeyboardManager.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsMouseCrosshairs.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsMouseHighlighter.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsMouseJump.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsMouseUtils.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsPastePlain.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsPowerAccent.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsPowerOcr.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsPowerRename.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsPowerToys.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsPowerToysRun.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsScreenRuler.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsSettings.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsShortcutGuide.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsTime.png" />
-    <None Remove="Assets\FluentIcons\FluentIconsVideoConferenceMute.png" />
-    <None Remove="Assets\FluentIcons\FluentShift.png" />
-    <None Remove="Assets\LogicGates\AND.png" />
-    <None Remove="Assets\LogicGates\NAND.png" />
-    <None Remove="Assets\LogicGates\NOR.png" />
-    <None Remove="Assets\LogicGates\NOT.png" />
-    <None Remove="Assets\LogicGates\OR.png" />
-    <None Remove="Assets\LogicGates\XOR.png" />
     <None Remove="Assets\StoreLogo.png" />
     <None Remove="Assets\WindowIcon.ico" />
     <None Remove="Views\BaseNumberConverterPage.xaml" />
@@ -83,7 +45,7 @@
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Labs.WinUI.SettingsControls" Version="0.0.16" />
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0-preview1" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0-preview.2.23128.3" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.3.230228005-preview1" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.WinUI.Managed" Version="2.0.9" />
@@ -113,120 +75,6 @@
     <Page Update="Views\BitwisePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Content Update="Assets\FluentIcons\FluentIconsBinaryCode.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsBit.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsByte.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsEncrypted.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsAlwaysOnTop.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsAwake.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsColorPicker.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsExperimentation.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsFancyZones.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsFileExplorerPreview.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsFileLocksmith.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsFindMyMouse.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsHosts.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsImageResizer.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsKeyboardManager.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsMouseCrosshairs.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsMouseHighlighter.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsMouseJump.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsMouseUtils.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsPastePlain.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsPowerAccent.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsPowerOcr.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsPowerRename.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsPowerToys.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsPowerToysRun.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsScreenRuler.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsSettings.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsShortcutGuide.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsVideoConferenceMute.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsJson.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentIconsTime.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\FluentIcons\FluentShift.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\LogicGates\AND.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\LogicGates\NAND.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\LogicGates\NOR.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\LogicGates\NOT.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\LogicGates\OR.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\LogicGates\XOR.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Update="Assets\WindowIcon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -278,5 +126,8 @@
   
   <ItemGroup>
     <Folder Include="Views\BitsManipulation\" />
+    <Folder Include="Views\Generators\" />
+    <Folder Include="Views\Converters\" />
+    <Folder Include="Views\TextManipulation\" />
   </ItemGroup>
 </Project>
