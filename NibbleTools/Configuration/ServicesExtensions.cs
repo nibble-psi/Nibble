@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.UI.Xaml;
@@ -15,11 +14,11 @@ using NibbleTools.ViewModels.BitsManipulation;
 using NibbleTools.Views;
 
 namespace NibbleTools.Configuration;
+
 public static class ServicesExtensions
 {
-    public static IHostBuilder ConfigureServices(this IHostBuilder builder)
-    {
-        return builder.ConfigureServices((context, services) =>
+    public static IHostBuilder ConfigureServices(this IHostBuilder builder) =>
+        builder.ConfigureServices((context, services) =>
         {
             // Default Activation Handler
             services.AddTransient<ActivationHandler<LaunchActivatedEventArgs>, DefaultActivationHandler>();
@@ -40,7 +39,7 @@ public static class ServicesExtensions
 
             // Views and ViewModels
             services.AddTransient<MainPage, MainViewModel>();
-            services.AddTransient<ShellPage,  ShellViewModel>();
+            services.AddTransient<ShellPage, ShellViewModel>();
             services.AddTransient<SettingsPage, SettingsViewModel>();
 
             services.AddTransient<BitShiftPage, BitShiftViewModel>();
@@ -55,13 +54,9 @@ public static class ServicesExtensions
             services.AddTransient<TextSplitPage, TextSplitViewModel>();
         });
 
-    }
-
     public static IServiceCollection AddTransient<TPage, TViewModel>(this IServiceCollection services)
-            where TPage : Page
-            where TViewModel : ObservableObject
-    {
-        return services.AddTransient(typeof(TViewModel))
-            .AddTransient(typeof(TPage));
-    }
+        where TPage : Page
+        where TViewModel : ObservableObject =>
+        services.AddTransient(typeof(TViewModel))
+                .AddTransient(typeof(TPage));
 }

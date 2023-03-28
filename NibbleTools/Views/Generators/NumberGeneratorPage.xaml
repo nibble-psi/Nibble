@@ -15,32 +15,32 @@
                     Spacing="30"
                     Padding="0 20 0 50">
 
-        <!--Input fields-->
-        <Grid  ColumnSpacing="30"
-            RowSpacing="20"
-            ColumnDefinitions="Auto, Auto, Auto, Auto"
-            RowDefinitions="Auto,Auto,Auto,Auto">
-            <TextBlock Text="Min Value"
+            <!--Input fields-->
+            <Grid ColumnSpacing="30"
+                  RowSpacing="20"
+                  ColumnDefinitions="Auto, Auto, Auto, Auto"
+                  RowDefinitions="Auto,Auto,Auto,Auto">
+                <TextBlock Text="Min Value"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center"
+                           Grid.Column="0" />
+                <TextBlock Text="Max Value"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Column="1" />
-            <TextBlock Text="Max Value"
+                <TextBlock Text="Amount of numbers"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Column="2" />
-            <TextBlock Text="Amount of numbers"
-                           TextAlignment="Left"
-                           VerticalAlignment="Center"
-                           Grid.Column="3" />
-            <NumberBox Value="{x:Bind ViewModel.MinValue, Mode=TwoWay}"
+                <NumberBox Value="{x:Bind ViewModel.MinValue, Mode=TwoWay}"
                            SpinButtonPlacementMode="Compact"
                            Minimum="1"
                            Maximum="2147483647"
                            ValidationMode="InvalidInputOverwritten"
                            AcceptsExpression="True"
                            Grid.Row="1"
-                           Grid.Column="1"/>
-            <NumberBox Value="{x:Bind ViewModel.MaxValue, Mode=TwoWay}"
+                           Grid.Column="0" />
+                <NumberBox Value="{x:Bind ViewModel.MaxValue, Mode=TwoWay}"
                            SpinButtonPlacementMode="Compact"
                            SmallChange="1"
                            LargeChange="2"
@@ -49,45 +49,30 @@
                            ValidationMode="InvalidInputOverwritten"
                            AcceptsExpression="True"
                            Grid.Row="1"
-                           Grid.Column="2" />
-            <NumberBox Value="{x:Bind ViewModel.Count, Mode=TwoWay}"
+                           Grid.Column="1" />
+                <NumberBox Value="{x:Bind ViewModel.Count, Mode=TwoWay}"
                            SpinButtonPlacementMode="Compact"
                            Minimum="1"
                            Maximum="2147483647"
                            ValidationMode="InvalidInputOverwritten"
                            AcceptsExpression="True"
                            Grid.Row="1"
-                           Grid.Column="3" />
-            <Button Style="{StaticResource AccentButtonStyle}"
-                    Content="Generate"
-                    Grid.Row="3"
-                    Grid.Column="1"
-                    Command="{Binding ButtonClickCommand}"/>
+                           Grid.Column="2" />
+                <Button Content="Generate"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Command="{Binding ButtonClickCommand}" />
 
-        </Grid>
+            </Grid>
 
-        <TextBlock Text="Output"
-                       Style="{StaticResource TitleTextBlockStyle}" />
+            <TextBox Header="Output Text"
+                     Width="800"
+                     Height="300"
+                     Margin="0 20 0 0"
+                     IsReadOnly="True"
+                     TextWrapping="Wrap"
+                     Text="{Binding Number}" />
 
-        <!--Output fields-->
-        <Grid ColumnSpacing="20"
-                  RowSpacing="20"
-                  ColumnDefinitions="Auto, Auto"
-                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto, Auto,Auto">
-
-            <!--Number-->
-            <TextBlock Text="Number"
-                           Grid.Column="1"
-                           Grid.Row="0"
-                           TextAlignment="Left"
-                           VerticalAlignment="Center" />
-            <TextBox     IsReadOnly="True"
-                         Text="{Binding Number}"
-                         Grid.Column="1"
-                         Grid.Row="1"
-                         TextWrapping="Wrap"
-                         MaxWidth="500"/>
-        </Grid>
 
         </StackPanel>
     </ScrollViewer>

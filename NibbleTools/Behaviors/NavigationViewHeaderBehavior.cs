@@ -2,7 +2,6 @@
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.Xaml.Interactivity;
-
 using NibbleTools.Interfaces.Services;
 
 namespace NibbleTools.Behaviors;
@@ -11,11 +10,29 @@ public class NavigationViewHeaderBehavior : Behavior<NavigationView>
 {
     private static NavigationViewHeaderBehavior? _current;
 
+    public static readonly DependencyProperty DefaultHeaderProperty =
+        DependencyProperty.Register("DefaultHeader", typeof(object), typeof(NavigationViewHeaderBehavior),
+            new PropertyMetadata(null, (d, e) => _current!.UpdateHeader()));
+
+    public static readonly DependencyProperty HeaderModeProperty =
+        DependencyProperty.RegisterAttached("HeaderMode", typeof(bool), typeof(NavigationViewHeaderBehavior),
+            new PropertyMetadata(NavigationViewHeaderMode.Always, (d, e) => _current!.UpdateHeader()));
+
+    public static readonly DependencyProperty HeaderContextProperty =
+        DependencyProperty.RegisterAttached("HeaderContext", typeof(object), typeof(NavigationViewHeaderBehavior),
+            new PropertyMetadata(null, (d, e) => _current!.UpdateHeader()));
+
+    public static readonly DependencyProperty HeaderTemplateProperty =
+        DependencyProperty.RegisterAttached("HeaderTemplate", typeof(DataTemplate),
+            typeof(NavigationViewHeaderBehavior),
+            new PropertyMetadata(null, (d, e) => _current!.UpdateHeaderTemplate()));
+
     private Page? _currentPage;
 
     public DataTemplate? DefaultHeaderTemplate
     {
-        get; set;
+        get;
+        set;
     }
 
     public object DefaultHeader
@@ -24,29 +41,19 @@ public class NavigationViewHeaderBehavior : Behavior<NavigationView>
         set => SetValue(DefaultHeaderProperty, value);
     }
 
-    public static readonly DependencyProperty DefaultHeaderProperty =
-        DependencyProperty.Register("DefaultHeader", typeof(object), typeof(NavigationViewHeaderBehavior), new PropertyMetadata(null, (d, e) => _current!.UpdateHeader()));
+    public static NavigationViewHeaderMode GetHeaderMode(Page item) =>
+        (NavigationViewHeaderMode)item.GetValue(HeaderModeProperty);
 
-    public static NavigationViewHeaderMode GetHeaderMode(Page item) => (NavigationViewHeaderMode)item.GetValue(HeaderModeProperty);
-
-    public static void SetHeaderMode(Page item, NavigationViewHeaderMode value) => item.SetValue(HeaderModeProperty, value);
-
-    public static readonly DependencyProperty HeaderModeProperty =
-        DependencyProperty.RegisterAttached("HeaderMode", typeof(bool), typeof(NavigationViewHeaderBehavior), new PropertyMetadata(NavigationViewHeaderMode.Always, (d, e) => _current!.UpdateHeader()));
+    public static void SetHeaderMode(Page item, NavigationViewHeaderMode value) =>
+        item.SetValue(HeaderModeProperty, value);
 
     public static object GetHeaderContext(Page item) => item.GetValue(HeaderContextProperty);
 
     public static void SetHeaderContext(Page item, object value) => item.SetValue(HeaderContextProperty, value);
 
-    public static readonly DependencyProperty HeaderContextProperty =
-        DependencyProperty.RegisterAttached("HeaderContext", typeof(object), typeof(NavigationViewHeaderBehavior), new PropertyMetadata(null, (d, e) => _current!.UpdateHeader()));
-
     public static DataTemplate GetHeaderTemplate(Page item) => (DataTemplate)item.GetValue(HeaderTemplateProperty);
 
     public static void SetHeaderTemplate(Page item, DataTemplate value) => item.SetValue(HeaderTemplateProperty, value);
-
-    public static readonly DependencyProperty HeaderTemplateProperty =
-        DependencyProperty.RegisterAttached("HeaderTemplate", typeof(DataTemplate), typeof(NavigationViewHeaderBehavior), new PropertyMetadata(null, (d, e) => _current!.UpdateHeaderTemplate()));
 
     protected override void OnAttached()
     {

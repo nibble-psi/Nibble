@@ -1,11 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-
 using Microsoft.UI.Xaml.Controls;
 using NibbleTools.Configuration;
 using NibbleTools.Interfaces.Services;
-using NibbleTools.Pages;
-using NibbleTools.ViewModels;
-using NibbleTools.Views;
 
 namespace NibbleTools.Services;
 
@@ -47,7 +43,8 @@ public class PageService : IPageService
             var type = typeof(V);
             if (_pages.Any(p => p.Value == type))
             {
-                throw new ArgumentException($"This type is already configured with key {_pages.First(p => p.Value == type).Key}");
+                throw new ArgumentException(
+                    $"This type is already configured with key {_pages.First(p => p.Value == type).Key}");
             }
 
             _pages.Add(key, type);

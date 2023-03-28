@@ -1,6 +1,7 @@
 ﻿using NibbleTools.Interfaces.BitsOperations;
 
 namespace NibbleTools.Helpers;
+
 public class BitwiseOperations : IBitwiseOperations
 {
     public string And(int value1, int value2)
@@ -21,10 +22,7 @@ public class BitwiseOperations : IBitwiseOperations
         return (~(value1 | value2)).ToBinaryString().TakeLastOrDefault(numBits);
     }
 
-    public string Not(int value)
-    {
-        return (~value).ToBinaryString().TakeLastOrDefault(value.NumBits());
-    }
+    public string Not(int value) => (~value).ToBinaryString().TakeLastOrDefault(value.NumBits());
 
     public string Or(int value1, int value2)
     {

@@ -1,9 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-
 using Microsoft.UI.Xaml.Controls;
-
-using NibbleTools.Interfaces.Services;
 using NibbleTools.Helpers;
+using NibbleTools.Interfaces.Services;
 using NibbleTools.ViewModels;
 
 namespace NibbleTools.Services;
@@ -16,15 +14,15 @@ public class NavigationViewService : INavigationViewService
 
     private NavigationView? _navigationView;
 
-    public IList<object>? MenuItems => _navigationView?.MenuItems;
-
-    public object? SettingsItem => _navigationView?.SettingsItem;
-
     public NavigationViewService(INavigationService navigationService, IPageService pageService)
     {
         _navigationService = navigationService;
         _pageService = pageService;
     }
+
+    public IList<object>? MenuItems => _navigationView?.MenuItems;
+
+    public object? SettingsItem => _navigationView?.SettingsItem;
 
     [MemberNotNull(nameof(_navigationView))]
     public void Initialize(NavigationView navigationView)
@@ -47,13 +45,15 @@ public class NavigationViewService : INavigationViewService
     {
         if (_navigationView != null)
         {
-            return GetSelectedItem(_navigationView.MenuItems, pageType) ?? GetSelectedItem(_navigationView.FooterMenuItems, pageType);
+            return GetSelectedItem(_navigationView.MenuItems, pageType) ??
+                   GetSelectedItem(_navigationView.FooterMenuItems, pageType);
         }
 
         return null;
     }
 
-    private void OnBackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args) => _navigationService.GoBack();
+    private void OnBackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args) =>
+        _navigationService.GoBack();
 
     private void OnItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
     {

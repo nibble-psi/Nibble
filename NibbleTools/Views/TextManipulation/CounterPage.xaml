@@ -11,83 +11,55 @@
     <ScrollViewer>
         <StackPanel x:Name="ContentArea"
                     VerticalAlignment="Top"
-                    HorizontalAlignment="Left"
+                    HorizontalAlignment="Stretch"
                     Spacing="30"
                     Padding="0 20 0 50">
 
-            <!--Input field-->
-            <Grid  ColumnSpacing="30"
-            RowSpacing="20"
-            ColumnDefinitions="Auto, Auto, Auto, Auto"
-            RowDefinitions="Auto,Auto,Auto,Auto">
-                <TextBlock Text="Enter your text:"
-                           Grid.Column="1"
-                           Grid.Row="1"
-                           TextAlignment="Left"
-                           VerticalAlignment="Center" />
-                <TextBox 
-                         Text="{x:Bind ViewModel.Input, Mode=TwoWay}"
-                         AcceptsReturn="True"
-                         IsReadOnly="False"
-                         Grid.Column="1"
-                         Grid.Row="2"
-                         TextWrapping="Wrap"
-                         Width="800"
-                         Height="300"/>
-                <Button Style="{StaticResource AccentButtonStyle}"
-                    Content="Count"
-                    Grid.Row="3"
-                    Grid.Column="1"
-                    Command="{Binding ButtonClickCommand}"/>
 
+            <Grid ColumnDefinitions="*, Auto"
+                  ColumnSpacing="30"
+                  VerticalAlignment="Stretch">
+                <TextBox
+                    Text="{x:Bind ViewModel.Input, Mode=TwoWay}"
+                    Header="Input Text"
+                    AcceptsReturn="True"
+                    IsReadOnly="False"
+                    TextWrapping="Wrap"
+                    Height="300" />
+
+                <StackPanel Orientation="Vertical"
+                            Spacing="20"
+                            Grid.Column="1"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Stretch">
+                    <TextBlock Text="Symbols count"
+                               TextAlignment="Left"
+                               VerticalAlignment="Center" />
+                    <TextBox IsReadOnly="True"
+                             Text="{Binding Symbols}"
+                             TextWrapping="Wrap"
+                             MaxWidth="500" />
+
+                    <TextBlock Text="Words count"
+                               TextAlignment="Left"
+                               VerticalAlignment="Center" />
+                    <TextBox IsReadOnly="True"
+                             Text="{Binding Words}"
+                             TextWrapping="Wrap"
+                             MaxWidth="500" />
+
+                    <TextBlock Text="Lines count"
+                               TextAlignment="Left"
+                               VerticalAlignment="Center" />
+                    <TextBox IsReadOnly="True"
+                             Text="{Binding Lines}"
+                             TextWrapping="Wrap"
+                             MaxWidth="500" />
+                </StackPanel>
             </Grid>
 
-            <!--Output fields-->
-
-            <TextBlock Text="Output"
-                       Style="{StaticResource TitleTextBlockStyle}" />
-
-            <Grid ColumnSpacing="20"
-                  RowSpacing="20"
-                  ColumnDefinitions="Auto, Auto, Auto, Auto"
-                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto, Auto,Auto">
-
-                <TextBlock Text="Symbols count"
-                           Grid.Column="1"
-                           Grid.Row="1"
-                           TextAlignment="Left"
-                           VerticalAlignment="Center" />
-                <TextBox     IsReadOnly="True"
-                         Text="{Binding Symbols}"
-                         Grid.Column="1"
-                         Grid.Row="2"
-                         TextWrapping="Wrap"
-                         MaxWidth="500"/>
-
-                <TextBlock Text="Words count"
-                           Grid.Column="2"
-                           Grid.Row="1"
-                           TextAlignment="Left"
-                           VerticalAlignment="Center" />
-                <TextBox     IsReadOnly="True"
-                         Text="{Binding Words}"
-                         Grid.Column="2"
-                         Grid.Row="2"
-                         TextWrapping="Wrap"
-                         MaxWidth="500"/>
-
-                <TextBlock Text="Lines count"
-                           Grid.Column="3"
-                           Grid.Row="1"
-                           TextAlignment="Left"
-                           VerticalAlignment="Center" />
-                <TextBox     IsReadOnly="True"
-                         Text="{Binding Lines}"
-                         Grid.Column="3"
-                         Grid.Row="2"
-                         TextWrapping="Wrap"
-                         MaxWidth="500"/>
-            </Grid>
+            <Button Content="Count"
+                    Command="{Binding ButtonClickCommand}" />
 
         </StackPanel>
     </ScrollViewer>

@@ -1,44 +1,32 @@
-﻿using System.Text;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using Microsoft.UI.Xaml;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using NibbleTools.Helpers;
 using NibbleTools.Interfaces.BitsOperations;
 
 namespace NibbleTools.ViewModels.BitsManipulation;
+
 public partial class BitShiftViewModel : ObservableRecipient
 {
-    [ObservableProperty]
-    private int _number = 1;
-
-    [ObservableProperty]
-    private int bitsToShift = 1;
-
-    [ObservableProperty]
-    private string bitsToShiftBinaryString = string.Empty;
-
-    [ObservableProperty]
-    private string numberBinaryString = string.Empty;
-
-    [ObservableProperty]
-    private string arithmeticLeftShiftBinaryString = string.Empty;
-
-    [ObservableProperty]
-    private string arithmeticRightShiftBinaryString = string.Empty;
-
-    [ObservableProperty]
-    private string logicalLeftShiftBinaryString = string.Empty;
-
-    [ObservableProperty]
-    private string logicalRightShiftBinaryString = string.Empty;
-
-    [ObservableProperty]
-    private string circularLeftShiftBinaryString = string.Empty;
-
-    [ObservableProperty]
-    private string circularRightShiftBinaryString = string.Empty;
-
     private readonly IBitShiftOperations _bitShiftOperations;
+
+    [ObservableProperty] private int _number = 1;
+
+    [ObservableProperty] private string arithmeticLeftShiftBinaryString = string.Empty;
+
+    [ObservableProperty] private string arithmeticRightShiftBinaryString = string.Empty;
+
+    [ObservableProperty] private int bitsToShift = 1;
+
+    [ObservableProperty] private string bitsToShiftBinaryString = string.Empty;
+
+    [ObservableProperty] private string circularLeftShiftBinaryString = string.Empty;
+
+    [ObservableProperty] private string circularRightShiftBinaryString = string.Empty;
+
+    [ObservableProperty] private string logicalLeftShiftBinaryString = string.Empty;
+
+    [ObservableProperty] private string logicalRightShiftBinaryString = string.Empty;
+
+    [ObservableProperty] private string numberBinaryString = string.Empty;
 
     public BitShiftViewModel()
     {
@@ -65,17 +53,20 @@ public partial class BitShiftViewModel : ObservableRecipient
     partial void OnBitsToShiftChanged(int value)
     {
         if (value < 0)
+        {
             BitsToShift = 1;
-        
+        }
+
         ShiftNumber();
     }
 
     partial void OnNumberChanged(int value)
     {
         if (value < 0)
+        {
             Number = 1;
+        }
 
         ShiftNumber();
     }
-
 }

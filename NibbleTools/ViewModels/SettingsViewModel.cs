@@ -1,23 +1,30 @@
 ﻿using System.Reflection;
+using Windows.ApplicationModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.UI.Xaml;
-using NibbleTools.Interfaces.Services;
 using NibbleTools.Helpers;
-using Windows.ApplicationModel;
+using NibbleTools.Interfaces.Services;
 
 namespace NibbleTools.ViewModels;
 
 public partial class SettingsViewModel : ObservableRecipient
 {
     private readonly IThemeSelectorService _themeSelectorService;
-    private int _themeIndex;
     private ElementTheme _currentTheme;
+    private int _themeIndex;
 
     [ObservableProperty] private string _versionDescription = string.Empty;
 
-    public string AppDescription => "AppDescription".GetLocalized();
 
+    public SettingsViewModel(IThemeSelectorService themeSelectorService)
+    {
+        _themeSelectorService = themeSelectorService;
+        VersionDescription = GetVersionDescription();
+        ThemeIndex = (int)_themeSelectorService.Theme;
+    }
+
+    public string AppDescription => "AppDescription".GetLocalized();
 
 
     public int ThemeIndex
@@ -34,14 +41,6 @@ public partial class SettingsViewModel : ObservableRecipient
             SwitchThemeCommand.Execute((ElementTheme)value);
             OnPropertyChanged();
         }
-    }
-
-
-    public SettingsViewModel(IThemeSelectorService themeSelectorService)
-    {
-        _themeSelectorService = themeSelectorService;
-        VersionDescription = GetVersionDescription();
-        ThemeIndex = (int)_themeSelectorService.Theme;
     }
 
     [RelayCommand]
@@ -64,7 +63,8 @@ public partial class SettingsViewModel : ObservableRecipient
         {
             var packageVersion = Package.Current.Id.Version;
 
-            version = new(packageVersion.Major, packageVersion.Minor, packageVersion.Build, packageVersion.Revision);
+            version = new Version(packageVersion.Major, packageVersion.Minor, packageVersion.Build,
+                packageVersion.Revision);
         }
         else
         {

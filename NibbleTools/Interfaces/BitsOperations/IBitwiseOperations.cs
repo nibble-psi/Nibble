@@ -1,4 +1,5 @@
 ﻿namespace NibbleTools.Interfaces.BitsOperations;
+
 public interface IBitwiseOperations
 {
     string Not(int value);

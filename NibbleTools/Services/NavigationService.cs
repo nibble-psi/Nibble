@@ -1,11 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
-
+using NibbleTools.Helpers;
 using NibbleTools.Interfaces.Services;
 using NibbleTools.Interfaces.ViewModels;
-using NibbleTools.Helpers;
 
 namespace NibbleTools.Services;
 
@@ -14,8 +12,13 @@ namespace NibbleTools.Services;
 public class NavigationService : INavigationService
 {
     private readonly IPageService _pageService;
-    private object? _lastParameterUsed;
     private Frame? _frame;
+    private object? _lastParameterUsed;
+
+    public NavigationService(IPageService pageService)
+    {
+        _pageService = pageService;
+    }
 
     public event NavigatedEventHandler? Navigated;
 
@@ -43,27 +46,6 @@ public class NavigationService : INavigationService
     [MemberNotNullWhen(true, nameof(Frame), nameof(_frame))]
     public bool CanGoBack => Frame != null && Frame.CanGoBack;
 
-    public NavigationService(IPageService pageService)
-    {
-        _pageService = pageService;
-    }
-
-    private void RegisterFrameEvents()
-    {
-        if (_frame != null)
-        {
-            _frame.Navigated += OnNavigated;
-        }
-    }
-
-    private void UnregisterFrameEvents()
-    {
-        if (_frame != null)
-        {
-            _frame.Navigated -= OnNavigated;
-        }
-    }
-
     public bool GoBack()
     {
         if (CanGoBack)
@@ -85,7 +67,8 @@ public class NavigationService : INavigationService
     {
         var pageType = _pageService.GetPageType(pageKey);
 
-        if (_frame != null && (_frame.Content?.GetType() != pageType || (parameter != null && !parameter.Equals(_lastParameterUsed))))
+        if (_frame != null && (_frame.Content?.GetType() != pageType ||
+                               (parameter != null && !parameter.Equals(_lastParameterUsed))))
         {
             _frame.Tag = clearNavigation;
             var vmBeforeNavigation = _frame.GetPageViewModel();
@@ -103,6 +86,22 @@ public class NavigationService : INavigationService
         }
 
         return false;
+    }
+
+    private void RegisterFrameEvents()
+    {
+        if (_frame != null)
+        {
+            _frame.Navigated += OnNavigated;
+        }
+    }
+
+    private void UnregisterFrameEvents()
+    {
+        if (_frame != null)
+        {
+            _frame.Navigated -= OnNavigated;
+        }
     }
 
     private void OnNavigated(object sender, NavigationEventArgs e)
