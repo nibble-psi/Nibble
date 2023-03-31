@@ -11,6 +11,10 @@ public partial class UuidGeneratorViewModel : ObservableRecipient
 
     [ObservableProperty] private int _count = 1;
 
+    [ObservableProperty] private bool _isUpperCase;
+
+    [ObservableProperty] private string _separator = string.Empty;
+
     [RelayCommand]
     public void GenerateUuid()
     {
@@ -18,9 +22,14 @@ public partial class UuidGeneratorViewModel : ObservableRecipient
 
         for (var i = 0; i < Count; i++)
         {
-            uuids[i] = Guid.NewGuid().ToString();
+            var value = Guid.NewGuid().ToString();
+
+            if (IsUpperCase)
+                value = value.ToUpper();
+
+            uuids[i] = value;
         }
 
-        Uuid = string.Join(StringExtensions.NewLine, uuids);
+        Uuid = string.Join(Separator + StringExtensions.NewLine, uuids);
     }
 }

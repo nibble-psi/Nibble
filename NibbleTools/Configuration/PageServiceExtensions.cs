@@ -3,8 +3,10 @@ using NibbleTools.Pages;
 using NibbleTools.ViewModels;
 using NibbleTools.ViewModels.BitsManipulation;
 using NibbleTools.ViewModels.CryptographySecurity;
+using NibbleTools.ViewModels.TextManipulation;
 using NibbleTools.Views;
 using NibbleTools.Views.CryptographySecurity;
+using NibbleTools.Views.TextManipulation;
 
 namespace NibbleTools.Configuration;
 
@@ -31,6 +33,7 @@ public static class PageServiceExtensions
         // Text manipulation pages
         pageService.Configure<CounterViewModel, CounterPage>();
         pageService.Configure<TextSplitViewModel, TextSplitPage>();
+        pageService.Configure<SymbolsReplaceViewModel, SymbolsReplacePage>();
 
         // Cryptography and security pages
         pageService.Configure<UuidGeneratorViewModel, UuidGeneratorPage>();

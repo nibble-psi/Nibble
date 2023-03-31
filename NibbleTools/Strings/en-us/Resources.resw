@@ -198,4 +198,7 @@
   <data name="Shell_UuidGenerator.Content" xml:space="preserve">
     <value>UUID Generator</value>
   </data>
+  <data name="Shell_SymbolsReplace.Content" xml:space="preserve">
+    <value>Symbols Replace</value>
+  </data>
 </root>

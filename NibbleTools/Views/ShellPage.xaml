@@ -118,6 +118,14 @@
                             </NavigationViewItem.Icon>
                         </NavigationViewItem>
 
+                        <!--Symbols replace page-->
+                        <NavigationViewItem x:Uid="Shell_SymbolsReplace"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.TextManipulation.SymbolsReplaceViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon Glyph="&#xE844;" />
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+
                     </NavigationViewItem.MenuItems>
                 </NavigationViewItem>
 

@@ -37,6 +37,7 @@
         <None Remove="Views\NumberGeneratorPage.xaml" />
         <None Remove="Views\ORNORPageNOR.xaml" />
         <None Remove="Views\StringGeneratorPage.xaml" />
+        <None Remove="Views\TextManipulation\SymbolsReplacePage.xaml" />
         <None Remove="Views\TextSplitPage.xaml" />
     </ItemGroup>
 
@@ -57,6 +58,9 @@
         <None Update="appsettings.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <Page Update="Views\TextManipulation\SymbolsReplacePage.xaml">
+          <Generator>MSBuild:Compile</Generator>
+        </Page>
         <Page Update="Views\CryptographySecurity\UuidGeneratorPage.xaml">
           <Generator>MSBuild:Compile</Generator>
         </Page>
@@ -132,6 +136,5 @@
         <Folder Include="Views\BitsManipulation\" />
         <Folder Include="Views\Generators\" />
         <Folder Include="Views\Converters\" />
-        <Folder Include="Views\TextManipulation\" />
     </ItemGroup>
 </Project>

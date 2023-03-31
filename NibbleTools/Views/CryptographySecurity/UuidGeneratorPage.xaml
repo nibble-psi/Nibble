@@ -11,7 +11,7 @@
         <StackPanel x:Name="ContentArea"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Stretch"
-                    Spacing="30"
+                    Spacing="40"
                     Padding="0 20 0 50">
 
             <TextBox Text="{x:Bind ViewModel.Uuid, Mode=TwoWay}"
@@ -20,18 +20,34 @@
                      IsReadOnly="True"
                      HorizontalAlignment="Left"
                      TextWrapping="Wrap"
-                     Width="300" />
+                     MinWidth="310" />
 
-            <NumberBox Value="{x:Bind ViewModel.Count, Mode=TwoWay}"
-                       SpinButtonPlacementMode="Compact"
-                       HorizontalAlignment="Left"
-                       Minimum="1"
-                       Maximum="2147483647"
-                       ValidationMode="InvalidInputOverwritten"
-                       AcceptsExpression="True" />
+            <StackPanel HorizontalAlignment="Left"
+                        Orientation="Horizontal"
+                        Spacing="30">
+                <NumberBox Value="{x:Bind ViewModel.Count, Mode=TwoWay}"
+                           SpinButtonPlacementMode="Compact"
+                           Header="Count"
+                           HorizontalAlignment="Left"
+                           Minimum="1"
+                           Maximum="2147483647"
+                           ValidationMode="InvalidInputOverwritten"
+                           AcceptsExpression="True" />
+
+                <TextBox Text="{x:Bind ViewModel.Separator, Mode=TwoWay}"
+                         IsReadOnly="False"
+                         Header="Delimiter"
+                         HorizontalAlignment="Left"
+                         TextWrapping="Wrap" />
+
+                <CheckBox IsChecked="{x:Bind ViewModel.IsUpperCase, Mode=TwoWay}"
+                          VerticalAlignment="Bottom"
+                          Content="Upper Case" />
+
+            </StackPanel>
 
             <Button Content="Generate"
-                    Command="{x:Bind ViewModel.GenerateUuidCommand }" />
+                    Command="{x:Bind ViewModel.GenerateUuidCommand}" />
 
         </StackPanel>
     </ScrollViewer>
