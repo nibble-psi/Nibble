@@ -129,6 +129,13 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
+                <NavigationViewItem x:Uid="Shell_UuidGenerator"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.CryptographySecurity.UuidGeneratorViewModel">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE8D7;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
             </NavigationView.MenuItems>
 
             <NavigationView.HeaderTemplate>

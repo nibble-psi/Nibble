@@ -11,7 +11,9 @@ using NibbleTools.Pages;
 using NibbleTools.Services;
 using NibbleTools.ViewModels;
 using NibbleTools.ViewModels.BitsManipulation;
+using NibbleTools.ViewModels.CryptographySecurity;
 using NibbleTools.Views;
+using NibbleTools.Views.CryptographySecurity;
 
 namespace NibbleTools.Configuration;
 
@@ -52,6 +54,8 @@ public static class ServicesExtensions
 
             services.AddTransient<CounterPage, CounterViewModel>();
             services.AddTransient<TextSplitPage, TextSplitViewModel>();
+
+            services.AddTransient<UuidGeneratorPage, UuidGeneratorViewModel>();
         });
 
     public static IServiceCollection AddTransient<TPage, TViewModel>(this IServiceCollection services)

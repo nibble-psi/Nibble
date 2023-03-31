@@ -21,4 +21,10 @@ public static class StringExtensions
 
         return value[^count..];
     }
+
+    public static string AppendNewLine(this string value) =>
+        value + NewLine;
+
+    public static readonly string NewLine = Environment.NewLine;
+
 }
