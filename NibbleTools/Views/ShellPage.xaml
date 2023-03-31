@@ -118,6 +118,14 @@
                             </NavigationViewItem.Icon>
                         </NavigationViewItem>
 
+                        <!--Symbols replace page-->
+                        <NavigationViewItem x:Uid="Shell_SymbolsReplace"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.TextManipulation.SymbolsReplaceViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon Glyph="&#xE844;" />
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+
                     </NavigationViewItem.MenuItems>
                 </NavigationViewItem>
 
@@ -126,6 +134,13 @@
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.BaseNumberConverterModel">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xF11B;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem x:Uid="Shell_UuidGenerator"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.CryptographySecurity.UuidGeneratorViewModel">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE8D7;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
