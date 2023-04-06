@@ -137,10 +137,19 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
+                <!--Uuid generator-->
                 <NavigationViewItem x:Uid="Shell_UuidGenerator"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.CryptographySecurity.UuidGeneratorViewModel">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE8D7;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <!--Hash code generator-->
+                <NavigationViewItem x:Uid="Shell_HashCodeGenerator"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.HashCodeGeneratorViewModel">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE8B1;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 

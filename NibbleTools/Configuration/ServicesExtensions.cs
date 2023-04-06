@@ -59,6 +59,7 @@ public static class ServicesExtensions
             services.AddTransient<SymbolsReplacePage, SymbolsReplaceViewModel>();
 
             services.AddTransient<UuidGeneratorPage, UuidGeneratorViewModel>();
+            services.AddTransient<HashCodeGeneratorPage, HashCodeGeneratorViewModel>();
         });
 
     public static IServiceCollection AddTransient<TPage, TViewModel>(this IServiceCollection services)

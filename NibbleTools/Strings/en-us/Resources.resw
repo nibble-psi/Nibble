@@ -201,4 +201,7 @@
   <data name="Shell_SymbolsReplace.Content" xml:space="preserve">
     <value>Symbols Replace</value>
   </data>
+  <data name="Shell_HashCodeGenerator.Content" xml:space="preserve">
+    <value>Hash Code Generator</value>
+  </data>
 </root>

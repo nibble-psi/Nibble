@@ -37,5 +37,6 @@ public static class PageServiceExtensions
 
         // Cryptography and security pages
         pageService.Configure<UuidGeneratorViewModel, UuidGeneratorPage>();
+        pageService.Configure<HashCodeGeneratorViewModel, HashCodeGeneratorPage>();
     }
 }
