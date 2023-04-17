@@ -34,6 +34,7 @@ public static class PageServiceExtensions
         pageService.Configure<CounterViewModel, CounterPage>();
         pageService.Configure<TextSplitViewModel, TextSplitPage>();
         pageService.Configure<SymbolsReplaceViewModel, SymbolsReplacePage>();
+        pageService.Configure<LinesSorterViewModel, LinesSorterPage>();
 
         // Cryptography and security pages
         pageService.Configure<UuidGeneratorViewModel, UuidGeneratorPage>();

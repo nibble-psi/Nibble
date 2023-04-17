@@ -38,6 +38,7 @@
         <None Remove="Views\NumberGeneratorPage.xaml" />
         <None Remove="Views\ORNORPageNOR.xaml" />
         <None Remove="Views\StringGeneratorPage.xaml" />
+        <None Remove="Views\TextManipulation\LinesSorterPage.xaml" />
         <None Remove="Views\TextManipulation\SymbolsReplacePage.xaml" />
         <None Remove="Views\TextSplitPage.xaml" />
     </ItemGroup>
@@ -59,6 +60,9 @@
         <None Update="appsettings.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <Page Update="Views\TextManipulation\LinesSorterPage.xaml">
+          <Generator>MSBuild:Compile</Generator>
+        </Page>
         <Page Update="Views\HashCodeGeneratorPage.xaml">
           <Generator>MSBuild:Compile</Generator>
         </Page>
