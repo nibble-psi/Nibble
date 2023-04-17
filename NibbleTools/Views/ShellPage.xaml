@@ -137,6 +137,14 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
+                <!--Unit converter-->
+                <NavigationViewItem x:Uid="Shell_UnitConverter"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.UnitConverterViewModel">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xECC6;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
                 <!--Uuid generator-->
                 <NavigationViewItem x:Uid="Shell_UuidGenerator"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.CryptographySecurity.UuidGeneratorViewModel">
