@@ -1,0 +1,53 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="NibbleTools.Views.LetterCasesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="using:NibbleTools.ViewModels"
+    d:DataContext="{d:DesignInstance Type=viewmodels:LetterCasesViewModel}"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <StackPanel x:Name="ContentArea"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Stretch"
+                    Spacing="30"
+                    Padding="0 20 0 50">
+
+            <Grid ColumnDefinitions="*, *"
+                  ColumnSpacing="40"
+                  RowDefinitions="Auto"
+                  HorizontalAlignment="Stretch">
+                <TextBox
+                    x:Name="Input"
+                    Header="Input Text"
+                    AcceptsReturn="True"
+                    IsReadOnly="False"
+                    TextWrapping="Wrap"
+                    Height="300" />
+
+                <TextBox 
+                         x:Name="Output"
+                         IsReadOnly="True"
+                         Header="Output Text"                      
+                         TextWrapping="Wrap"
+                         Height="300"
+                         Grid.Column="1" />
+            </Grid>
+
+            <ComboBox x:Name="DDL" Width="150" Height="30" SelectedIndex="0">
+                <ComboBoxItem Content="lower case" />
+                <ComboBoxItem Content="UPPER CASE" />
+                <ComboBoxItem Content="Capitalized Case" />
+            </ComboBox>
+
+            <Button x:Name="SortButton" Content="Convert" Width="100" Height="30" Margin="0 40 5 0"
+                    Click="LetterCases_Click" />
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

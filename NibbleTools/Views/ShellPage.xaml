@@ -118,9 +118,17 @@
                             </NavigationViewItem.Icon>
                         </NavigationViewItem>
 
-                        <!--Text Split page-->
+                        <!--Lines Sorter page-->
                         <NavigationViewItem x:Uid="Shell_LinesSorter"
                                             helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.LinesSorterViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon Glyph="&#xE844;" />
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+
+                        <!--Letter Cases Converter page-->
+                        <NavigationViewItem x:Uid="Shell_LetterCases"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.LetterCasesViewModel">
                             <NavigationViewItem.Icon>
                                 <FontIcon Glyph="&#xE844;" />
                             </NavigationViewItem.Icon>
