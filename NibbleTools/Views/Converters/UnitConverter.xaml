@@ -9,9 +9,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewmodels="using:NibbleTools.ViewModels"
     d:DataContext="{d:DesignInstance Type=viewmodels:UnitConverterViewModel}"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    mc:Ignorable="d">
 
     <StackPanel x:Name="ContentArea"
                 Orientation="Horizontal"
@@ -31,7 +29,7 @@
                         Grid.Row="0"
                         Grid.Column="0"
                        Margin="0,0,30,0"/>
-            <ComboBox x:Name="itemOne" PlaceholderText=".." Width="80" Grid.Column="0" Grid.Row="1">
+            <ComboBox x:Name="itemOne" SelectedIndex="0" Width="80" Grid.Column="0" Grid.Row="1">
                 <ComboBoxItem Content="m"/>
                 <ComboBoxItem Content="km"/>
                 <ComboBoxItem Content="cm"/>
@@ -44,7 +42,7 @@
                         Grid.Row="0"
                         Margin="0,0,30,0"/>
             
-            <ComboBox x:Name="itemTwo" PlaceholderText=".." Width="80" Grid.Column="1" Grid.Row="1">
+            <ComboBox x:Name="itemTwo" SelectedIndex="2" Width="80" Grid.Column="1" Grid.Row="1">
                 <ComboBoxItem Content="m"/>
                 <ComboBoxItem Content="km"/>
                 <ComboBoxItem Content="cm"/>
