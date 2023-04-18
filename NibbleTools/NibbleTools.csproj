@@ -32,6 +32,7 @@
         <None Remove="Views\BaseNumberConverterPage.xaml" />
         <None Remove="Views\BitShiftPage.xaml" />
         <None Remove="Views\BitwisePage.xaml" />
+        <None Remove="Views\Converters\UnitConverter.xaml" />
         <None Remove="Views\CounterPage.xaml" />
         <None Remove="Views\CryptographySecurity\UuidGeneratorPage.xaml" />
         <None Remove="Views\HashCodeGeneratorPage.xaml" />
@@ -61,6 +62,9 @@
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
         <Page Update="Views\TextManipulation\LinesSorterPage.xaml">
+          <Generator>MSBuild:Compile</Generator>
+        </Page>
+        <Page Update="Views\Converters\UnitConverter.xaml">
           <Generator>MSBuild:Compile</Generator>
         </Page>
         <Page Update="Views\HashCodeGeneratorPage.xaml">
@@ -143,6 +147,5 @@
     <ItemGroup>
         <Folder Include="Views\BitsManipulation\" />
         <Folder Include="Views\Generators\" />
-        <Folder Include="Views\Converters\" />
     </ItemGroup>
 </Project>
