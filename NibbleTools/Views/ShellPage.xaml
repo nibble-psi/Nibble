@@ -118,6 +118,14 @@
                             </NavigationViewItem.Icon>
                         </NavigationViewItem>
 
+                        <!--Text Split page-->
+                        <NavigationViewItem x:Uid="Shell_LinesSorter"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.LinesSorterViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon Glyph="&#xE844;" />
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+
                         <!--Symbols replace page-->
                         <NavigationViewItem x:Uid="Shell_SymbolsReplace"
                                             helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.TextManipulation.SymbolsReplaceViewModel">

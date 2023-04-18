@@ -204,6 +204,9 @@
   <data name="Shell_HashCodeGenerator.Content" xml:space="preserve">
     <value>Hash Code Generator</value>
   </data>
+  <data name="Shell_LinesSorter.Content" xml:space="preserve">
+    <value>Lines Sorter</value>
+  </data>
   <data name="Shell_UnitConverter.Content" xml:space="preserve">
     <value>Unit Converter</value>
   </data>

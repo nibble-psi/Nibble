@@ -58,6 +58,8 @@ public static class ServicesExtensions
             services.AddTransient<CounterPage, CounterViewModel>();
             services.AddTransient<TextSplitPage, TextSplitViewModel>();
             services.AddTransient<SymbolsReplacePage, SymbolsReplaceViewModel>();
+            services.AddTransient<LinesSorterPage, LinesSorterViewModel>();
+
 
             services.AddTransient<UuidGeneratorPage, UuidGeneratorViewModel>();
             services.AddTransient<HashCodeGeneratorPage, HashCodeGeneratorViewModel>();
