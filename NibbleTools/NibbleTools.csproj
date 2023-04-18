@@ -33,6 +33,7 @@
         <None Remove="Views\BitShiftPage.xaml" />
         <None Remove="Views\BitwisePage.xaml" />
         <None Remove="Views\Converters\UnitConverter.xaml" />
+        <None Remove="Views\Converters\UnixTimestampsConverter.xaml" />
         <None Remove="Views\CounterPage.xaml" />
         <None Remove="Views\CryptographySecurity\PasswordGeneratorPage.xaml" />
         <None Remove="Views\CryptographySecurity\UuidGeneratorPage.xaml" />
@@ -63,6 +64,9 @@
         <None Update="appsettings.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <Page Update="Views\Converters\UnixTimestampsConverter.xaml">
+          <Generator>MSBuild:Compile</Generator>
+        </Page>
         <Page Update="Views\CryptographySecurity\PasswordGeneratorPage.xaml">
             <Generator>MSBuild:Compile</Generator>
         </Page>

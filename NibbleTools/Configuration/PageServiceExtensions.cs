@@ -25,6 +25,7 @@ public static class PageServiceExtensions
         // Converters
         pageService.Configure<BaseNumberConverterModel, BaseNumberConverterPage>();
         pageService.Configure<UnitConverterViewModel, UnitConverterPage>();
+        pageService.Configure<UnixTimestampsConverterViewModel, UnixTimestampsConverterPage>();
 
         // Sequences generator pages
         pageService.Configure<NumberGeneratorViewModel, NumberGeneratorPage>();
