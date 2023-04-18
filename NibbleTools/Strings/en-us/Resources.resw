@@ -213,4 +213,7 @@
   <data name="Shell_LetterCases.Content" xml:space="preserve">
     <value>Text Letter Cases Converter</value>
   </data>
+  <data name="Shell_PasswordGenerator.Content" xml:space="preserve">
+    <value>Password Generator</value>
+  </data>
 </root>
