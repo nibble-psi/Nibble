@@ -10,23 +10,23 @@ public partial class BitShiftViewModel : ObservableRecipient
 
     [ObservableProperty] private int _number = 1;
 
-    [ObservableProperty] private string arithmeticLeftShiftBinaryString = string.Empty;
+    [ObservableProperty] private string _arithmeticLeftShiftBinaryString = string.Empty;
 
-    [ObservableProperty] private string arithmeticRightShiftBinaryString = string.Empty;
+    [ObservableProperty] private string _arithmeticRightShiftBinaryString = string.Empty;
 
-    [ObservableProperty] private int bitsToShift = 1;
+    [ObservableProperty] private int _bitsToShift = 1;
 
-    [ObservableProperty] private string bitsToShiftBinaryString = string.Empty;
+    [ObservableProperty] private string _bitsToShiftBinaryString = string.Empty;
 
-    [ObservableProperty] private string circularLeftShiftBinaryString = string.Empty;
+    [ObservableProperty] private string _circularLeftShiftBinaryString = string.Empty;
 
-    [ObservableProperty] private string circularRightShiftBinaryString = string.Empty;
+    [ObservableProperty] private string _circularRightShiftBinaryString = string.Empty;
 
-    [ObservableProperty] private string logicalLeftShiftBinaryString = string.Empty;
+    [ObservableProperty] private string _logicalLeftShiftBinaryString = string.Empty;
 
-    [ObservableProperty] private string logicalRightShiftBinaryString = string.Empty;
+    [ObservableProperty] private string _logicalRightShiftBinaryString = string.Empty;
 
-    [ObservableProperty] private string numberBinaryString = string.Empty;
+    [ObservableProperty] private string _numberBinaryString = string.Empty;
 
     public BitShiftViewModel()
     {
@@ -35,7 +35,7 @@ public partial class BitShiftViewModel : ObservableRecipient
         _bitShiftOperations = new BitShiftOperations();
     }
 
-    public void ShiftNumber()
+    private void ShiftNumber()
     {
         NumberBinaryString = Number.ToBinaryString();
         BitsToShiftBinaryString = BitsToShift.ToBinaryString();

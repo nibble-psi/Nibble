@@ -29,8 +29,7 @@ public partial class CounterViewModel : ObservableRecipient
     {
         Words = 0;
         var index = 0;
-
-        // skip whitespace until first word
+        
         while (index < Input.Length && char.IsWhiteSpace(Input[index]))
         {
             index++;
@@ -38,15 +37,13 @@ public partial class CounterViewModel : ObservableRecipient
 
         while (index < Input.Length)
         {
-            // check if current char is part of a word
             while (index < Input.Length && !char.IsWhiteSpace(Input[index]))
             {
                 index++;
             }
 
             Words++;
-
-            // skip whitespace until next word
+            
             while (index < Input.Length && char.IsWhiteSpace(Input[index]))
             {
                 index++;

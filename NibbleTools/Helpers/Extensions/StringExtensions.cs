@@ -2,6 +2,8 @@
 
 public static class StringExtensions
 {
+    public static readonly string NewLine = Environment.NewLine;
+
     public static string TakeLastOrDefault(this string value, int count, string? defaultValue = default)
     {
         if (count < 0 || count > value.Length)
@@ -24,7 +26,4 @@ public static class StringExtensions
 
     public static string AppendNewLine(this string value) =>
         value + NewLine;
-
-    public static readonly string NewLine = Environment.NewLine;
-
 }

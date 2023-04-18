@@ -6,7 +6,7 @@ namespace NibbleTools.ViewModels.BitsManipulation;
 
 public partial class BitwiseViewModel : ObservableRecipient
 {
-    private readonly IBitwiseOperations bitwiseOperations;
+    private readonly IBitwiseOperations _bitwiseOperations;
 
     [ObservableProperty] private int _firstValue = 1;
 
@@ -16,24 +16,25 @@ public partial class BitwiseViewModel : ObservableRecipient
 
     [ObservableProperty] private string _secondValueBinary = string.Empty;
 
-    [ObservableProperty] private string resultAnd = string.Empty;
+    [ObservableProperty] private string _resultAnd = string.Empty;
 
-    [ObservableProperty] private string resultNand = string.Empty;
+    [ObservableProperty] private string _resultNand = string.Empty;
 
-    [ObservableProperty] private string resultNor = string.Empty;
+    [ObservableProperty] private string _resultNor = string.Empty;
 
-    [ObservableProperty] private string resultNotFirstValue = string.Empty;
+    [ObservableProperty] private string _resultNotFirstValue = string.Empty;
 
-    [ObservableProperty] private string resultNotSecondValue = string.Empty;
+    [ObservableProperty] private string _resultNotSecondValue = string.Empty;
 
-    [ObservableProperty] private string resultOr = string.Empty;
+    [ObservableProperty] private string _resultOr = string.Empty;
 
     [ObservableProperty] private string resultXor = string.Empty;
 
 
     public BitwiseViewModel()
     {
-        bitwiseOperations = new BitwiseOperations();
+        _bitwiseOperations = new BitwiseOperations();
+        
         FirstValueBinary = FirstValue.ToBinaryString();
         SecondValueBinary = SecondValue.ToBinaryString();
     }
@@ -58,20 +59,20 @@ public partial class BitwiseViewModel : ObservableRecipient
         RecalculateResults();
     }
 
-    public void RecalculateResults()
+    private void RecalculateResults()
     {
         FirstValueBinary = FirstValue.ToBinaryString();
         SecondValueBinary = SecondValue.ToBinaryString();
 
-        ResultAnd = bitwiseOperations.And(FirstValue, SecondValue);
+        ResultAnd = _bitwiseOperations.And(FirstValue, SecondValue);
 
-        ResultOr = bitwiseOperations.Or(FirstValue, SecondValue);
-        ResultXor = bitwiseOperations.Xor(FirstValue, SecondValue);
+        ResultOr = _bitwiseOperations.Or(FirstValue, SecondValue);
+        ResultXor = _bitwiseOperations.Xor(FirstValue, SecondValue);
 
-        ResultNotFirstValue = bitwiseOperations.Not(FirstValue);
-        ResultNotSecondValue = bitwiseOperations.Not(SecondValue);
+        ResultNotFirstValue = _bitwiseOperations.Not(FirstValue);
+        ResultNotSecondValue = _bitwiseOperations.Not(SecondValue);
 
-        ResultNand = bitwiseOperations.Nand(FirstValue, SecondValue);
-        ResultNor = bitwiseOperations.Nor(FirstValue, SecondValue);
+        ResultNand = _bitwiseOperations.Nand(FirstValue, SecondValue);
+        ResultNor = _bitwiseOperations.Nor(FirstValue, SecondValue);
     }
 }

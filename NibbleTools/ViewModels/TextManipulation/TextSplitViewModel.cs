@@ -29,14 +29,17 @@ public partial class TextSplitViewModel : ObservableRecipient
     public void SplitBySeperator()
     {
         Output = string.Empty;
-        if (Seperator != string.Empty && Input != string.Empty)
-        {
-            var chunks = Input.Split(Seperator);
 
-            foreach (var chunk in chunks)
-            {
-                Output += chunk + "\n";
-            }
+        if (Seperator == string.Empty || Input == string.Empty)
+        {
+            return;
+        }
+
+        var chunks = Input.Split(Seperator);
+
+        foreach (var chunk in chunks)
+        {
+            Output += chunk + "\n";
         }
     }
 
@@ -44,18 +47,20 @@ public partial class TextSplitViewModel : ObservableRecipient
     {
         Output = string.Empty;
 
-        if (chunkSize >= 1 && Input != string.Empty)
+        if (chunkSize < 1 || Input == string.Empty)
         {
-            for (var i = 0; i < Input.Length; i += chunkSize)
+            return;
+        }
+
+        for (var i = 0; i < Input.Length; i += chunkSize)
+        {
+            if (i + chunkSize < Input.Length)
             {
-                if (i + chunkSize < Input.Length)
-                {
-                    Output += Input.Substring(i, chunkSize) + "\n";
-                }
-                else
-                {
-                    Output += Input.Substring(i);
-                }
+                Output += string.Concat(Input.AsSpan(i, chunkSize), "\n");
+            }
+            else
+            {
+                Output += Input[i..];
             }
         }
     }

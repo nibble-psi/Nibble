@@ -20,58 +20,57 @@
 
         <!--Input fields-->
         <Grid ColumnSpacing="30"
-                RowSpacing="20"
-                ColumnDefinitions="Auto, Auto, Auto, Auto"
-                RowDefinitions="Auto,Auto,Auto,Auto">
+              RowSpacing="20"
+              ColumnDefinitions="Auto, Auto, Auto, Auto"
+              RowDefinitions="Auto,Auto,Auto,Auto">
             <TextBlock Text="From:"
-                        TextAlignment="Left"
-                        VerticalAlignment="Center"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                       Margin="0,0,30,0"/>
+                       TextAlignment="Left"
+                       VerticalAlignment="Center"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Margin="0,0,30,0" />
             <ComboBox x:Name="itemOne" SelectedIndex="0" Width="80" Grid.Column="0" Grid.Row="1">
-                <ComboBoxItem Content="m"/>
-                <ComboBoxItem Content="km"/>
-                <ComboBoxItem Content="cm"/>
+                <ComboBoxItem Content="m" />
+                <ComboBoxItem Content="km" />
+                <ComboBoxItem Content="cm" />
             </ComboBox>
 
             <TextBlock Text="To:"
-                        TextAlignment="Left"
-                        VerticalAlignment="Center"
-                        Grid.Column="1"
-                        Grid.Row="0"
-                        Margin="0,0,30,0"/>
-            
+                       TextAlignment="Left"
+                       VerticalAlignment="Center"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       Margin="0,0,30,0" />
+
             <ComboBox x:Name="itemTwo" SelectedIndex="2" Width="80" Grid.Column="1" Grid.Row="1">
-                <ComboBoxItem Content="m"/>
-                <ComboBoxItem Content="km"/>
-                <ComboBoxItem Content="cm"/>
+                <ComboBoxItem Content="m" />
+                <ComboBoxItem Content="km" />
+                <ComboBoxItem Content="cm" />
             </ComboBox>
-                
+
             <NumberBox x:Name="Value"
-                    SpinButtonPlacementMode="Hidden"
-                    SmallChange="1"
-                    LargeChange="2"
-                    Minimum="1"
-                    Maximum="10000"
-                    ValidationMode="InvalidInputOverwritten"
-                    Grid.Column="0"
-                    Grid.Row="3"/>
-                
-            <Button Content="Convert"                   
+                       SpinButtonPlacementMode="Hidden"
+                       SmallChange="1"
+                       LargeChange="2"
+                       Minimum="1"
+                       Maximum="10000"
+                       ValidationMode="InvalidInputOverwritten"
+                       Grid.Column="0"
+                       Grid.Row="3" />
+
+            <Button Content="Convert"
                     Grid.Column="1"
                     Grid.Row="3"
-                    Click="Convert_Click"
-                    />
-                
-            <TextBox 
-                    x:Name="TextBox1"
-                    IsReadOnly="True"
-                    TextWrapping="Wrap"
-                    Grid.Column="2"
-                    Grid.Row="3"
-                    Text="{Binding Result}"/>
+                    Click="Convert_Click" />
+
+            <TextBox
+                x:Name="TextBox1"
+                IsReadOnly="True"
+                TextWrapping="Wrap"
+                Grid.Column="2"
+                Grid.Row="3"
+                Text="{Binding Result}" />
         </Grid>
-                
+
     </StackPanel>
 </Page>

@@ -11,7 +11,9 @@ namespace NibbleTools.ViewModels;
 public partial class SettingsViewModel : ObservableRecipient
 {
     private readonly IThemeSelectorService _themeSelectorService;
+    
     private ElementTheme _currentTheme;
+    
     private int _themeIndex;
 
     [ObservableProperty] private string _versionDescription = string.Empty;
@@ -20,13 +22,14 @@ public partial class SettingsViewModel : ObservableRecipient
     public SettingsViewModel(IThemeSelectorService themeSelectorService)
     {
         _themeSelectorService = themeSelectorService;
+        
         VersionDescription = GetVersionDescription();
+        
         ThemeIndex = (int)_themeSelectorService.Theme;
     }
 
     public string AppDescription => "AppDescription".GetLocalized();
-
-
+    
     public int ThemeIndex
     {
         get => _themeIndex;

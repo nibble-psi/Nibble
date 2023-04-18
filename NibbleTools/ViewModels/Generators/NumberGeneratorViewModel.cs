@@ -24,17 +24,19 @@ public partial class NumberGeneratorViewModel : ObservableRecipient
         Number = string.Join(" ", GenerateNumbersArray());
     }
 
-    public int[] GenerateNumbersArray()
+    public IEnumerable<int> GenerateNumbersArray()
     {
         var rnd = new Random();
-        var Numbers = new int[Count];
+        
+        var numbers = new int[Count];
+        
         for (var i = 0; i < Count; i++)
         {
-            //Random rnd = new Random();
             var nr = rnd.Next(MinValue, MaxValue);
-            Numbers[i] = nr;
+            
+            numbers[i] = nr;
         }
 
-        return Numbers;
+        return numbers;
     }
 }

@@ -5,7 +5,6 @@
     x:Class="NibbleTools.Views.HashCodeGeneratorPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:NibbleTools.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewmodels="using:NibbleTools.ViewModels"
@@ -17,20 +16,18 @@
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 10 5 10">
 
             <StackPanel Orientation="Vertical"
-                            HorizontalAlignment="Left"
-                            Spacing="30"
-                            MinWidth="150">
+                        HorizontalAlignment="Left"
+                        Spacing="30"
+                        MinWidth="150">
                 <TextBox Text="{x:Bind ViewModel.PrimaryValue, Mode=TwoWay}"
-                           Header="Input string: "
-                           />
+                         Header="Input string: " />
             </StackPanel>
 
             <StackPanel Orientation="Vertical"
-                            HorizontalAlignment="Left"
-                            Spacing="30"
-                            MinWidth="150">
-                <TextBlock Text="Select hash code type: " Margin="0 20 5 0"
-                           />
+                        HorizontalAlignment="Left"
+                        Spacing="30"
+                        MinWidth="150">
+                <TextBlock Text="Select hash code type: " Margin="0 20 5 0" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
@@ -41,7 +38,7 @@
                     <ComboBoxItem Content="SHA-256" />
                 </ComboBox>
             </StackPanel>
-            
+
             <Button x:Name="GenerateHashCode" Content="Generate" Width="100" Height="30" Margin="0 40 5 0"
                     Click="GenerateHashCode_Click" />
             <TextBox x:Name="TextBox1"
@@ -49,7 +46,7 @@
                      Width="400" Margin="0 40 0 0" IsReadOnly="True"
                      TextWrapping="Wrap" />
         </StackPanel>
-        
+
     </ScrollViewer>
 
 </Page>

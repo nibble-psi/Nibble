@@ -30,13 +30,13 @@
                     TextWrapping="Wrap"
                     Height="300" />
 
-                <TextBox 
-                         x:Name="Output"
-                         IsReadOnly="True"
-                         Header="Output Text"                      
-                         TextWrapping="Wrap"
-                         Height="300"
-                         Grid.Column="1" />
+                <TextBox
+                    x:Name="Output"
+                    IsReadOnly="True"
+                    Header="Output Text"
+                    TextWrapping="Wrap"
+                    Height="300"
+                    Grid.Column="1" />
             </Grid>
 
             <ComboBox x:Name="DDL" Width="150" Height="30" SelectedIndex="0">

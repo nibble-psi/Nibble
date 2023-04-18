@@ -11,7 +11,7 @@ using NibbleTools.ViewModels;
 namespace NibbleTools.Views;
 
 /// <summary>
-/// An empty page that can be used on its own or navigated to within a Frame.
+///     An empty page that can be used on its own or navigated to within a Frame.
 /// </summary>
 public sealed partial class LinesSorterPage : Page
 {
@@ -31,7 +31,7 @@ public sealed partial class LinesSorterPage : Page
     private void LinesSorter_Click(object sender, RoutedEventArgs e)
     {
         var selectedItem = DDL.SelectedItem as ComboBoxItem;
-        string inputString = Input.Text.ToString();
+        var inputString = Input.Text;
 
         if (selectedItem != null)
         {

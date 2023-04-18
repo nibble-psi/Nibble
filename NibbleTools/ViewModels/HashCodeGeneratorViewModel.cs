@@ -1,61 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
-using System.Security.Cryptography;
 
 namespace NibbleTools.ViewModels;
+
 public partial class HashCodeGeneratorViewModel : ObservableRecipient
 {
+    private static string _valueToConvert = string.Empty;
 
-    [ObservableProperty]
-    private string _primaryValue = string.Empty;
-
-    public static string valueToConvert = string.Empty;
+    [ObservableProperty] private string _primaryValue = string.Empty;
 
     partial void OnPrimaryValueChanged(string value)
     {
         PrimaryValue = value;
-        valueToConvert = value;
+        _valueToConvert = value;
     }
 
-    public static string ConvertToMD5()
+    public static string ConvertToMd5()
     {
-        using MD5 md5 = MD5.Create();
-        return BitConverter.ToString(md5.ComputeHash(Encoding.UTF8.GetBytes(valueToConvert))).Replace("-", "");
+        return BitConverter.ToString(MD5.HashData(Encoding.UTF8.GetBytes(_valueToConvert))).Replace("-", "");
     }
 
-    public static string ConvertToSHA1()
+    public static string ConvertToSha1()
     {
-        var data = Encoding.ASCII.GetBytes(valueToConvert);
-        var hashData = new SHA1Managed().ComputeHash(data);
+        var data = Encoding.ASCII.GetBytes(_valueToConvert);
+        var hashData = SHA1.HashData(data);
+
+        return hashData.Aggregate(string.Empty, (current, b) => current + b.ToString("X2"));
+    }
+
+    public static string ConvertToSha256()
+    {
         var hash = string.Empty;
-        foreach (var b in hashData)
-        {
-            hash += b.ToString("X2");
-        }
-        return hash;
+        var hashValue = SHA256.HashData(Encoding.UTF8.GetBytes(_valueToConvert));
+
+        return hashValue.Aggregate(hash, (current, b) => current + $"{b:X2}");
     }
-
-    public static string ConvertToSHA256()
-    {
-        var hash = String.Empty;
-
-        // Initialize a SHA256 hash object
-        using (SHA256 sha256 = SHA256.Create())
-        {
-            // Compute the hash of the given string
-            var hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(valueToConvert));
-
-            // Convert the byte array to string format
-            foreach (var b in hashValue)
-            {
-                hash += $"{b:X2}";
-            }
-        }
-        return hash;
-    }
-
 }
