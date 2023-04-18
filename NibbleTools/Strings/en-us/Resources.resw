@@ -210,4 +210,7 @@
   <data name="Shell_UnitConverter.Content" xml:space="preserve">
     <value>Unit Converter</value>
   </data>
+  <data name="Shell_LetterCases.Content" xml:space="preserve">
+    <value>Text Letter Cases Converter</value>
+  </data>
 </root>
