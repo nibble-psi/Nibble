@@ -1,0 +1,96 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="NibbleTools.Views.UnixTimestampsConverterPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="using:NibbleTools.ViewModels" 
+    d:DataContext="{d:DesignInstance Type=viewmodels:UnixTimestampsConverterViewModel}"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+
+        <StackPanel x:Name="ContentArea"
+                Orientation="Horizontal"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Spacing="30"
+                Padding="0 20 0 50">
+
+                <!--Input fields-->
+            <Grid ColumnSpacing="30"
+                  RowSpacing="20"
+                  ColumnDefinitions="Auto, Auto"
+                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+
+                <TextBox 
+                        x:Name="UnixTimestampTextBox"
+                        Header="Unix Timestamp (seconds):"
+                        Margin="12, 0, 0, 0"
+                        VerticalAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="0"/>
+
+                <Button Content="Convert"
+                    Margin="12, 30, 0, 0"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Click="ConvertUNIX_Click"/>
+
+                <TextBox 
+                   x:Name="YearTextBlock"
+                   Header="Year:"
+                   Margin="12,0,0,0"
+                   Grid.Row="1"
+                   VerticalAlignment="Center"
+                   Style="{StaticResource BodyTextBlockStyle}" />
+
+                <TextBox 
+                   x:Name="MonthTextBlock"
+                   Margin="12,0,0,0"
+                   Header="Month:"
+                   Grid.Row="2"
+                   VerticalAlignment="Center"
+                   Style="{StaticResource BodyTextBlockStyle}" />
+
+                <TextBox 
+                   x:Name="DayTextBlock"
+                   Margin="12,0,0,0"
+                   Header="Day:"
+                   Grid.Row="3"
+                   VerticalAlignment="Center"
+                   Style="{StaticResource BodyTextBlockStyle}" />
+
+                <TextBox 
+                   x:Name="HourTextBlock"
+                   Margin="12,0,0,0"
+                   Header="Hour:"
+                   Grid.Row="4"
+                   VerticalAlignment="Center"
+                   Style="{StaticResource BodyTextBlockStyle}" />
+
+                <TextBox 
+                   x:Name="MinuteTextBlock"
+                   Margin="12,0,0,0"
+                   Header="Minute:"
+                   Grid.Row="5"
+                   VerticalAlignment="Center"
+                   Style="{StaticResource BodyTextBlockStyle}" />
+
+
+                <TextBox 
+                   x:Name="SecondTextBlock"
+                   Margin="12,0,0,0"
+                   Header="Second:"
+                   Grid.Row="6"
+                   VerticalAlignment="Center"
+                   Style="{StaticResource BodyTextBlockStyle}" />
+
+            </Grid>
+        </StackPanel>
+
+    </ScrollViewer>
+</Page>

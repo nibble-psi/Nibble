@@ -161,6 +161,14 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
+                <!--Unix timestamps converter-->
+                <NavigationViewItem x:Uid="Shell_UnixTimestampsConverter"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.UnixTimestampsConverterViewModel">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEC92;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
                 <!--Uuid generator-->
                 <NavigationViewItem x:Uid="Shell_UuidGenerator"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.CryptographySecurity.UuidGeneratorViewModel">

@@ -216,4 +216,7 @@
   <data name="Shell_PasswordGenerator.Content" xml:space="preserve">
     <value>Password Generator</value>
   </data>
+  <data name="Shell_UnixTimestampsConverter.Content" xml:space="preserve">
+    <value>Unix Timestamps Converter</value>
+  </data>
 </root>
