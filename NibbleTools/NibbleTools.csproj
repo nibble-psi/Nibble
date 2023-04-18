@@ -34,6 +34,7 @@
         <None Remove="Views\BitwisePage.xaml" />
         <None Remove="Views\Converters\UnitConverter.xaml" />
         <None Remove="Views\CounterPage.xaml" />
+        <None Remove="Views\CryptographySecurity\PasswordGeneratorPage.xaml" />
         <None Remove="Views\CryptographySecurity\UuidGeneratorPage.xaml" />
         <None Remove="Views\HashCodeGeneratorPage.xaml" />
         <None Remove="Views\NumberGeneratorPage.xaml" />
@@ -62,6 +63,9 @@
         <None Update="appsettings.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <Page Update="Views\CryptographySecurity\PasswordGeneratorPage.xaml">
+          <Generator>MSBuild:Compile</Generator>
+        </Page>
         <Page Update="Views\TextManipulation\LetterCasesPage.xaml">
           <Generator>MSBuild:Compile</Generator>
         </Page>

@@ -64,6 +64,7 @@ public static class ServicesExtensions
 
             services.AddTransient<UuidGeneratorPage, UuidGeneratorViewModel>();
             services.AddTransient<HashCodeGeneratorPage, HashCodeGeneratorViewModel>();
+            services.AddTransient<PasswordGeneratorPage, PasswordGeneratorViewModel>();
         });
 
     public static IServiceCollection AddTransient<TPage, TViewModel>(this IServiceCollection services)

@@ -177,6 +177,14 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
+                <!--Password generator-->
+                <NavigationViewItem x:Uid="Shell_PasswordGenerator"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.CryptographySecurity.PasswordGeneratorViewModel">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE8D7;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
             </NavigationView.MenuItems>
 
             <NavigationView.HeaderTemplate>
