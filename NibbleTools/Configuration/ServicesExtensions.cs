@@ -50,6 +50,7 @@ public static class ServicesExtensions
             services.AddTransient<BitwisePage, BitwiseViewModel>();
 
             services.AddTransient<BaseNumberConverterPage, BaseNumberConverterModel>();
+            services.AddTransient<UnitConverterPage, UnitConverterViewModel>();
 
             services.AddTransient<NumberGeneratorPage, NumberGeneratorViewModel>();
             services.AddTransient<StringGeneratorPage, StringGeneratorViewModel>();
