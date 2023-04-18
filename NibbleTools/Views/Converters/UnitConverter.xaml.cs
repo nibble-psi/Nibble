@@ -31,7 +31,7 @@ public sealed partial class UnitConverterPage : Page
     {
         ViewModel = App.GetService<UnitConverterViewModel>();
         DataContext = ViewModel;
-        this.InitializeComponent();
+        InitializeComponent();
     }
 
     public UnitConverterViewModel ViewModel
@@ -46,19 +46,30 @@ public sealed partial class UnitConverterPage : Page
         var selectedTwo = itemTwo.SelectedItem as ComboBoxItem;
         var value = Value.Value;
 
-        var from = selectedOne.Content as string;
-        var to = selectedTwo.Content as string;
+        string? from = null;
+        string? to = null;
+
+        if (selectedOne != null)
+        {
+            from = selectedOne.Content as string;
+        }
+
+        if (selectedTwo != null)
+        {
+            to = selectedTwo.Content as string;
+        }
 
         var factors = new Dictionary<(string, string), double>
-    {
-        { ("m", "km"), 0.001 },
-        { ("m", "cm"), 100 },
-        { ("km", "m"), 1000 },
-        { ("km", "cm"), 100000 },
-        { ("cm", "m"), 0.01 },
-        { ("cm", "km"), 0.00001 }
-    };
-        if (factors.ContainsKey((from, to)))
+        {
+            { ("m", "km"), 0.001 },
+            { ("m", "cm"), 100 },
+            { ("km", "m"), 1000 },
+            { ("km", "cm"), 100000 },
+            { ("cm", "m"), 0.01 },
+            { ("cm", "km"), 0.00001 }
+        };
+
+        if (from != null && to != null && factors.ContainsKey((from, to)))
         {
             var factor = factors[(from, to)];
             var x = Convert.ToString(value * factor);
@@ -66,7 +77,8 @@ public sealed partial class UnitConverterPage : Page
             TextBox1.Text = x;
         }
         else
+        {
             TextBox1.Text = Convert.ToString(value);
-
+        }
     }
 }
