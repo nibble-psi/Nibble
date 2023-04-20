@@ -19,6 +19,7 @@
         <Compile Remove="Assets\Images\**" />
         <Content Remove="Assets\Icons\**" />
         <Content Remove="Assets\Images\**" />
+        <Content Include="Strings\lt-lt\Resources.resw" />
         <EmbeddedResource Remove="Assets\Icons\**" />
         <EmbeddedResource Remove="Assets\Images\**" />
         <None Remove="Assets\Icons\**" />
@@ -159,5 +160,20 @@
     <ItemGroup>
         <Folder Include="Views\BitsManipulation\" />
         <Folder Include="Views\Generators\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Properties\Resources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Resources.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Properties\Resources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 </Project>
