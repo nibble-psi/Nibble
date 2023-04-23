@@ -39,10 +39,10 @@
             <NavigationView.AutoSuggestBox>
                 <AutoSuggestBox
                     x:Name="ControlsSearchBox"
+                    x:Uid="Shell_SearchBox"
                     MinWidth="200"
                     VerticalAlignment="Center"
                     KeyboardAcceleratorPlacementMode="Hidden"
-                    PlaceholderText="Search"
                     QueryIcon="Find"
                     QuerySubmitted="OnControlsSearchBoxQuerySubmitted"
                     TextChanged="OnControlsSearchBoxTextChanged">

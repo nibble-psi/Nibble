@@ -7,7 +7,7 @@ public interface ILocalizationSelectorService
         get;
     }
 
-    IReadOnlyList<string> Languages
+    IReadOnlyList<string> ManifestLanguages
     {
         get;
     }

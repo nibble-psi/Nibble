@@ -126,41 +126,38 @@
       <value>NibbleTools įrankiai</value>
     </data>
     <data name="AppDescription" xml:space="preserve">
-    <value>Latest version</value>
-  </data>
+      <value>Naujausia versija</value>
+    </data>
     <data name="Shell_Main.Content" xml:space="preserve">
-    <value>Home</value>
-  </data>
+      <value>Namai</value>
+    </data>
     <data name="Settings_Personalization.Text" xml:space="preserve">
-    <value>Personalization</value>
-  </data>
+      <value>Personalizacija</value>
+    </data>
     <data name="Settings_Theme.Text" xml:space="preserve">
-    <value>Theme</value>
-  </data>
+      <value>Tema</value>
+    </data>
     <data name="Settings_Theme_Light.Content" xml:space="preserve">
-    <value>Light</value>
-  </data>
+      <value>Šviesi</value>
+    </data>
     <data name="Settings_Theme_Dark.Content" xml:space="preserve">
-    <value>Dark</value>
-  </data>
+      <value>Tamsi</value>
+    </data>
     <data name="Settings_Theme_Default.Content" xml:space="preserve">
-    <value>Default</value>
-  </data>
+      <value>Numatytoji</value>
+    </data>
     <data name="Settings_About.Text" xml:space="preserve">
-    <value>About this application</value>
-  </data>
+      <value>Apie programą</value>
+    </data>
     <data name="Settings_AboutDescription.Text" xml:space="preserve">
-    <value>This is your app description.</value>
-  </data>
+      <value>Programos aprašymas</value>
+    </data>
     <data name="SettingsPage_PrivacyTermsLink.Content" xml:space="preserve">
-    <value>Privacy Statement</value>
-  </data>
-    <data name="SettingsPage_PrivacyTermsLink.NavigateUri" xml:space="preserve">
-    <value>https://YourPrivacyUrlGoesHere/</value>
-  </data>
+      <value>Privatumas</value>
+    </data>
     <data name="Shell_Bitshift.Content" xml:space="preserve">
-    <value>Bit Shift Operations</value>
-  </data>
+      <value>Dvejetainiai postūmiai</value>
+    </data>
     <data name="Shell_XOR.Content" xml:space="preserve">
     <value>XOR</value>
   </data>
@@ -174,54 +171,57 @@
     <value>AND &amp; NAND</value>
   </data>
     <data name="Shell_BitManipulation.Content" xml:space="preserve">
-    <value>Bits Manipulation</value>
-  </data>
+      <value>Bitų manipuliacijos</value>
+    </data>
     <data name="Shell_Bitwise.Content" xml:space="preserve">
-    <value>Bitwise Operations</value>
-  </data>
+      <value>Bitų operacijos </value>
+    </data>
     <data name="Shell_BaseNumberConverter.Content" xml:space="preserve">
-    <value>Base Number Converter</value>
-  </data>
+      <value>Skaičiavimo sistemos keitimas</value>
+    </data>
     <data name="Shell_NumberGenerator.Content" xml:space="preserve">
-    <value>Number Generator</value>
-  </data>
+      <value>Skaičių generatorius</value>
+    </data>
     <data name="Shell_StringGenerator.Content" xml:space="preserve">
-    <value>String Generator</value>
-  </data>
+      <value>String generatorius</value>
+    </data>
     <data name="Shell_Counter.Content" xml:space="preserve">
-    <value>Text Counter</value>
-  </data>
+      <value>Teksto skaičiuotuvas</value>
+    </data>
     <data name="Shell_TextSplit.Content" xml:space="preserve">
-    <value>Text Split</value>
-  </data>
+        <value>Teksto skaidymas</value>
+    </data>
     <data name="Shell_Generators.Content" xml:space="preserve">
-    <value>Generators</value>
-  </data>
+      <value>Generatoriai</value>
+    </data>
     <data name="Shell_TextManipulation.Content" xml:space="preserve">
-    <value>Text Manipulation</value>
-  </data>
+      <value>Teksto operacijos</value>
+    </data>
     <data name="Shell_UuidGenerator.Content" xml:space="preserve">
-    <value>UUID Generator</value>
-  </data>
+      <value>UUID generatorius</value>
+    </data>
     <data name="Shell_SymbolsReplace.Content" xml:space="preserve">
-    <value>Symbols Replace</value>
-  </data>
+      <value>Simbolių keitiklis</value>
+    </data>
     <data name="Shell_HashCodeGenerator.Content" xml:space="preserve">
-    <value>Hash Code Generator</value>
-  </data>
+      <value>Hash kodo generatorius</value>
+    </data>
     <data name="Shell_LinesSorter.Content" xml:space="preserve">
-    <value>Lines Sorter</value>
-  </data>
+      <value>Eilučių rušiuotojas</value>
+    </data>
     <data name="Shell_UnitConverter.Content" xml:space="preserve">
-    <value>Unit Converter</value>
-  </data>
+      <value>Vienetų keitiklis</value>
+    </data>
     <data name="Shell_LetterCases.Content" xml:space="preserve">
-    <value>Text Letter Cases Converter</value>
-  </data>
+      <value>Raidžių keitiklis</value>
+    </data>
     <data name="Shell_PasswordGenerator.Content" xml:space="preserve">
-    <value>Password Generator</value>
-  </data>
-  <data name="Shell_UnixTimestampsConverter.Content" xml:space="preserve">
-    <value>Unix Timestamps Converter</value>
-  </data>
+      <value>Slaptažodžių generatorius</value>
+    </data>
+    <data name="Shell_UnixTimestampsConverter.Content" xml:space="preserve">
+        <value>Unix laiko žymos keitiklis</value>
+    </data>
+    <data name="Shell_SearchBox.PlaceholderText" xml:space="preserve">
+        <value>Paieška</value>
+    </data>
 </root>

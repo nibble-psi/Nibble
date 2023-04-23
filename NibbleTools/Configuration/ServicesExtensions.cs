@@ -30,6 +30,7 @@ public static class ServicesExtensions
             // Services
             services.AddSingleton<ILocalSettingsService, LocalSettingsService>();
             services.AddSingleton<IThemeSelectorService, ThemeSelectorService>();
+            services.AddSingleton<ILocalizationSelectorService, LocalizationSelectorService>();
             services.AddTransient<INavigationViewService, NavigationViewService>();
             services.AddSingleton<IActivationService, ActivationService>();
             services.AddSingleton<IPageService, PageService>();
