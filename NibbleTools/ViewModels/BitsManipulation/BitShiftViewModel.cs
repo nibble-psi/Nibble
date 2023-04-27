@@ -69,4 +69,5 @@ public partial class BitShiftViewModel : ObservableRecipient
 
         ShiftNumber();
     }
+
 }
