@@ -43,5 +43,8 @@ public static class PageServiceExtensions
         pageService.Configure<UuidGeneratorViewModel, UuidGeneratorPage>();
         pageService.Configure<HashCodeGeneratorViewModel, HashCodeGeneratorPage>();
         pageService.Configure<PasswordGeneratorViewModel, PasswordGeneratorPage>();
+
+        //Color picker
+        pageService.Configure<ColorPickerViewModel, ColorPickerPage>();
     }
 }
