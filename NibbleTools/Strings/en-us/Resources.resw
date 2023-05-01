@@ -222,4 +222,7 @@
   <data name="Shell_ColorPicker.Content" xml:space="preserve">
     <value>Color Picker</value>
   </data>
+  <data name="Shell_PrimeNumberGenerator.Content" xml:space="preserve">
+    <value>Prime Number Generator</value>
+  </data>
 </root>

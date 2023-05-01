@@ -54,6 +54,7 @@ public static class ServicesExtensions
             services.AddTransient<UnixTimestampsConverterPage, UnixTimestampsConverterViewModel>();
 
             services.AddTransient<NumberGeneratorPage, NumberGeneratorViewModel>();
+            services.AddTransient<PrimeNumberGeneratorPage, PrimeNumberGeneratorViewModel>();
             services.AddTransient<StringGeneratorPage, StringGeneratorViewModel>();
 
             services.AddTransient<CounterPage, CounterViewModel>();

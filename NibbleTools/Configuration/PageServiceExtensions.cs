@@ -29,6 +29,7 @@ public static class PageServiceExtensions
 
         // Sequences generator pages
         pageService.Configure<NumberGeneratorViewModel, NumberGeneratorPage>();
+        pageService.Configure<PrimeNumberGeneratorViewModel, PrimeNumberGeneratorPage>();
         pageService.Configure<StringGeneratorViewModel, StringGeneratorPage>();
 
 
