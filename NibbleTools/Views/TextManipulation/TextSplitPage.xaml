@@ -48,6 +48,9 @@
             <Button Content="Split"
                     Command="{Binding ButtonClickCommand}" />
 
+            <Button Content="Paste"
+                    Command="{Binding PasteTextCommand}" />
+
 
         </StackPanel>
     </ScrollViewer>

@@ -1,10 +1,13 @@
 ﻿using System.Globalization;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Windows.ApplicationModel.DataTransfer;
 
 namespace NibbleTools.ViewModels;
 
 public class LetterCasesViewModel : ObservableRecipient
 {
+
     public static string ConvertToLowerCase(string inputString)
     {
         var lowerCase = inputString.ToLower();
@@ -26,4 +29,7 @@ public class LetterCasesViewModel : ObservableRecipient
         
         return capitalizedCase;
     }
+
+
+
 }
