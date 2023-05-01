@@ -6,7 +6,7 @@ namespace NibbleTools.ViewModels.BitsManipulation;
 
 public partial class BitwiseViewModel : ObservableRecipient
 {
-    private readonly IBitwiseOperations _bitwiseOperations;
+    private readonly IBitwiseOperations<int, string> _bitwiseOperations;
 
     [ObservableProperty] private int _firstValue = 1;
 
@@ -33,8 +33,8 @@ public partial class BitwiseViewModel : ObservableRecipient
 
     public BitwiseViewModel()
     {
-        _bitwiseOperations = new BitwiseOperations();
-        
+        _bitwiseOperations = new StringBitwiseOperations();
+
         FirstValueBinary = FirstValue.ToBinaryString();
         SecondValueBinary = SecondValue.ToBinaryString();
     }

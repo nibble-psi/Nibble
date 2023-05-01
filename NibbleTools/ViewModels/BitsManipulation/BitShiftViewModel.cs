@@ -6,7 +6,7 @@ namespace NibbleTools.ViewModels.BitsManipulation;
 
 public partial class BitShiftViewModel : ObservableRecipient
 {
-    private readonly IBitShiftOperations _bitShiftOperations;
+    private readonly IStringBitShiftOperations<int> _bitShiftOperations;
 
     [ObservableProperty] private int _number = 1;
 
@@ -32,7 +32,7 @@ public partial class BitShiftViewModel : ObservableRecipient
     {
         NumberBinaryString = Number.ToBinaryString();
         BitsToShiftBinaryString = BitsToShift.ToBinaryString();
-        _bitShiftOperations = new BitShiftOperations();
+        _bitShiftOperations = new StringBitShiftOperations();
     }
 
     private void ShiftNumber()

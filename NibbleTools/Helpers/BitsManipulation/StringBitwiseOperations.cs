@@ -2,7 +2,7 @@
 
 namespace NibbleTools.Helpers;
 
-public class BitwiseOperations : IBitwiseOperations
+public class StringBitwiseOperations : IStringBitwiseOperations<int>
 {
     public string And(int value1, int value2)
     {
