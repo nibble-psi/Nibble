@@ -193,6 +193,14 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
+                <!--Color picker-->
+                <NavigationViewItem x:Uid="Shell_ColorPicker"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.ColorPickerViewModel">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE8D7;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
             </NavigationView.MenuItems>
 
             <NavigationView.HeaderTemplate>
