@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
 using NibbleTools.Interfaces.Services;
 using NibbleTools.Views;
@@ -55,4 +56,6 @@ public class ShellViewModel : ObservableRecipient
             Selected = selectedItem;
         }
     }
+
+    
 }

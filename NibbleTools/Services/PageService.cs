@@ -7,6 +7,17 @@ namespace NibbleTools.Services;
 
 public class PageService : IPageService
 {
+    public Dictionary<string, Type> Pages
+    {
+        get
+        {
+            lock (_pages)
+            {
+                return _pages;
+            }
+        }
+    }
+
     private readonly Dictionary<string, Type> _pages = new();
 
     public PageService()

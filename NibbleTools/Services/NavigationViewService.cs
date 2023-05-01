@@ -22,6 +22,13 @@ public class NavigationViewService : INavigationViewService
 
     public IList<object>? MenuItems => _navigationView?.MenuItems;
 
+    public IList<NavigationViewItem> NavigationViewItems
+    {
+        get;
+        private set;
+    }
+
+
     public object? SettingsItem => _navigationView?.SettingsItem;
 
     [MemberNotNull(nameof(_navigationView))]
@@ -30,15 +37,19 @@ public class NavigationViewService : INavigationViewService
         _navigationView = navigationView;
         _navigationView.BackRequested += OnBackRequested;
         _navigationView.ItemInvoked += OnItemInvoked;
+
+        NavigationViewItems = GetNavigationViewItems();
     }
 
     public void UnregisterEvents()
     {
-        if (_navigationView != null)
+        if (_navigationView == null)
         {
-            _navigationView.BackRequested -= OnBackRequested;
-            _navigationView.ItemInvoked -= OnItemInvoked;
+            return;
         }
+
+        _navigationView.BackRequested -= OnBackRequested;
+        _navigationView.ItemInvoked -= OnItemInvoked;
     }
 
     public NavigationViewItem? GetSelectedItem(Type pageType)
@@ -99,5 +110,35 @@ public class NavigationViewService : INavigationViewService
         }
 
         return false;
+    }
+
+    private IList<NavigationViewItem> GetNavigationViewItems(Func<NavigationViewItem, bool>? predicate = null)
+    {
+        var menuItems = new List<NavigationViewItem>();
+
+        var stack = new Stack<object>(MenuItems ?? Enumerable.Empty<object>());
+
+        while (stack.Count > 0)
+        {
+            if (stack.Pop() is not NavigationViewItem currentItem)
+            {
+                continue;
+            }
+
+            if (predicate?.Invoke(currentItem) ?? true)
+            {
+                menuItems.Add(currentItem);
+            }
+
+            foreach (var child in currentItem.MenuItems)
+            {
+                if (child is not null)
+                {
+                    stack.Push(child);
+                }
+            }
+        }
+
+        return menuItems;
     }
 }
