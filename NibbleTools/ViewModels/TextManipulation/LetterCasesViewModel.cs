@@ -29,7 +29,4 @@ public class LetterCasesViewModel : ObservableRecipient
         
         return capitalizedCase;
     }
-
-
-
 }
