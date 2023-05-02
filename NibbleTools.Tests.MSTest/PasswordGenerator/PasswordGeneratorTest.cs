@@ -13,7 +13,7 @@ public class PasswordGeneratorTest
     {
         var viewModel = new PasswordGeneratorViewModel();
 
-        viewModel.Length = 12;
+        viewModel.Length = 20;
         viewModel.IsNumber = false;
         viewModel.IsUpperCase = false;
 
@@ -21,7 +21,7 @@ public class PasswordGeneratorTest
 
         var password = viewModel.Pw;
 
-        Assert.AreEqual(12, password.Length);
+        Assert.AreEqual(20, password.Length);
 
         bool hasUppercase = false;
         bool hasNumber = false;
@@ -49,7 +49,7 @@ public class PasswordGeneratorTest
     {
         var viewModel = new PasswordGeneratorViewModel();
 
-        viewModel.Length = 12;
+        viewModel.Length = 20;
         viewModel.IsNumber = true;
         viewModel.IsUpperCase = false;
 
@@ -57,7 +57,7 @@ public class PasswordGeneratorTest
 
         var password = viewModel.Pw;
 
-        Assert.AreEqual(12, password.Length);
+        Assert.AreEqual(20, password.Length);
 
         bool hasUppercase = false;
         bool hasNumber = false;
@@ -85,7 +85,7 @@ public class PasswordGeneratorTest
     {
         var viewModel = new PasswordGeneratorViewModel();
 
-        viewModel.Length = 12;
+        viewModel.Length = 20;
         viewModel.IsNumber = false;
         viewModel.IsUpperCase = true;
 
@@ -93,7 +93,7 @@ public class PasswordGeneratorTest
 
         var password = viewModel.Pw;
 
-        Assert.AreEqual(12, password.Length);
+        Assert.AreEqual(20, password.Length);
 
         bool hasUppercase = false;
         bool hasNumber = false;
@@ -121,7 +121,7 @@ public class PasswordGeneratorTest
     {
         var viewModel = new PasswordGeneratorViewModel();
 
-        viewModel.Length = 12;
+        viewModel.Length = 20;
         viewModel.IsNumber = true;
         viewModel.IsUpperCase = true;
 
@@ -129,7 +129,7 @@ public class PasswordGeneratorTest
 
         var password = viewModel.Pw;
 
-        Assert.AreEqual(12, password.Length);
+        Assert.AreEqual(20, password.Length);
 
         bool hasUppercase = false;
         bool hasNumber = false;
