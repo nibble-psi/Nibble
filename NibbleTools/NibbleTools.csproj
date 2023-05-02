@@ -38,6 +38,7 @@
         <None Remove="Views\CryptographySecurity\PasswordGeneratorPage.xaml" />
         <None Remove="Views\CryptographySecurity\UuidGeneratorPage.xaml" />
         <None Remove="Views\HashCodeGeneratorPage.xaml" />
+        <None Remove="Views\Markdown\MarkdownPreviewPage.xaml" />
         <None Remove="Views\NumberGeneratorPage.xaml" />
         <None Remove="Views\ORNORPageNOR.xaml" />
         <None Remove="Views\StringGeneratorPage.xaml" />
@@ -54,7 +55,9 @@
     <ItemGroup>
         <PackageReference Include="CommunityToolkit.Labs.WinUI.SettingsControls" Version="0.0.16" />
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0-preview2" />
+        <PackageReference Include="CommunityToolkit.WinUI.UI.Controls.Markdown" Version="7.1.2" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0-preview.3.23174.8" />
+        <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls" Version="7.1.3" />
         <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.3.230331000" />
         <PackageReference Include="Microsoft.Xaml.Behaviors.WinUI.Managed" Version="2.0.9" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
@@ -64,6 +67,9 @@
         <None Update="appsettings.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <Page Update="Views\Markdown\MarkdownPreviewPage.xaml">
+          <Generator>MSBuild:Compile</Generator>
+        </Page>
         <Page Update="Views\Converters\UnixTimestampsConverter.xaml">
           <Generator>MSBuild:Compile</Generator>
         </Page>

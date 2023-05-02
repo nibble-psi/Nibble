@@ -193,6 +193,14 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
+                <!--Markdown preview-->
+                <NavigationViewItem x:Uid="Shell_MarkdownPreview"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.Markdown.MarkdownPreviewViewModel">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE724;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
             </NavigationView.MenuItems>
 
             <NavigationView.HeaderTemplate>
