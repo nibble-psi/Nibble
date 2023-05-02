@@ -104,6 +104,14 @@
                             </NavigationViewItem.Icon>
                         </NavigationViewItem>
 
+                        <!--Prime Number Generator page-->
+                        <NavigationViewItem x:Uid="Shell_PrimeNumberGenerator"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.PrimeNumberGeneratorViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon Glyph="&#xF150;" />
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+
                         <!--String Generator-->
                         <NavigationViewItem x:Uid="Shell_StringGenerator"
                                             helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.StringGeneratorViewModel">

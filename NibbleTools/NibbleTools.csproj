@@ -38,6 +38,7 @@
         <None Remove="Views\CounterPage.xaml" />
         <None Remove="Views\CryptographySecurity\PasswordGeneratorPage.xaml" />
         <None Remove="Views\CryptographySecurity\UuidGeneratorPage.xaml" />
+        <None Remove="Views\Generators\PrimeNumberGeneratorPage.xaml" />
         <None Remove="Views\HashCodeGeneratorPage.xaml" />
         <None Remove="Views\NumberGeneratorPage.xaml" />
         <None Remove="Views\ORNORPageNOR.xaml" />
@@ -65,6 +66,9 @@
         <None Update="appsettings.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <Page Update="Views\Generators\PrimeNumberGeneratorPage.xaml">
+          <Generator>MSBuild:Compile</Generator>
+        </Page>
         <Page Update="Views\ColorPickerPage.xaml">
           <Generator>MSBuild:Compile</Generator>
         </Page>
@@ -162,6 +166,5 @@
 
     <ItemGroup>
         <Folder Include="Views\BitsManipulation\" />
-        <Folder Include="Views\Generators\" />
     </ItemGroup>
 </Project>
