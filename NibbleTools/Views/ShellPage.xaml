@@ -225,7 +225,7 @@
                 <NavigationViewItem x:Uid="Shell_ColorPicker"
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.ColorPickerViewModel">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE8D7;" />
+                        <FontIcon Glyph="&#xE790;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
