@@ -3,9 +3,11 @@ using NibbleTools.Pages;
 using NibbleTools.ViewModels;
 using NibbleTools.ViewModels.BitsManipulation;
 using NibbleTools.ViewModels.CryptographySecurity;
+using NibbleTools.ViewModels.Markdown;
 using NibbleTools.ViewModels.TextManipulation;
 using NibbleTools.Views;
 using NibbleTools.Views.CryptographySecurity;
+using NibbleTools.Views.Markdown;
 using NibbleTools.Views.TextManipulation;
 
 namespace NibbleTools.Configuration;
@@ -45,7 +47,11 @@ public static class PageServiceExtensions
         pageService.Configure<HashCodeGeneratorViewModel, HashCodeGeneratorPage>();
         pageService.Configure<PasswordGeneratorViewModel, PasswordGeneratorPage>();
 
+        // Markdown preview page
+        pageService.Configure<MarkdownPreviewViewModel, MarkdownPreviewPage>();
+
         //Color picker
         pageService.Configure<ColorPickerViewModel, ColorPickerPage>();
+
     }
 }

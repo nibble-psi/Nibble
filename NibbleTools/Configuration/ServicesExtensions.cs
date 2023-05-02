@@ -12,9 +12,11 @@ using NibbleTools.Services;
 using NibbleTools.ViewModels;
 using NibbleTools.ViewModels.BitsManipulation;
 using NibbleTools.ViewModels.CryptographySecurity;
+using NibbleTools.ViewModels.Markdown;
 using NibbleTools.ViewModels.TextManipulation;
 using NibbleTools.Views;
 using NibbleTools.Views.CryptographySecurity;
+using NibbleTools.Views.Markdown;
 using NibbleTools.Views.TextManipulation;
 
 namespace NibbleTools.Configuration;
@@ -67,7 +69,7 @@ public static class ServicesExtensions
             services.AddTransient<UuidGeneratorPage, UuidGeneratorViewModel>();
             services.AddTransient<HashCodeGeneratorPage, HashCodeGeneratorViewModel>();
             services.AddTransient<PasswordGeneratorPage, PasswordGeneratorViewModel>();
-
+            services.AddTransient<MarkdownPreviewPage, MarkdownPreviewViewModel>();
             services.AddTransient<ColorPickerPage, ColorPickerViewModel>();
         });
 
