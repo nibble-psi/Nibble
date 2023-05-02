@@ -32,11 +32,13 @@
         <None Remove="Views\BaseNumberConverterPage.xaml" />
         <None Remove="Views\BitShiftPage.xaml" />
         <None Remove="Views\BitwisePage.xaml" />
+        <None Remove="Views\ColorPickerPage.xaml" />
         <None Remove="Views\Converters\UnitConverter.xaml" />
         <None Remove="Views\Converters\UnixTimestampsConverter.xaml" />
         <None Remove="Views\CounterPage.xaml" />
         <None Remove="Views\CryptographySecurity\PasswordGeneratorPage.xaml" />
         <None Remove="Views\CryptographySecurity\UuidGeneratorPage.xaml" />
+        <None Remove="Views\Generators\PrimeNumberGeneratorPage.xaml" />
         <None Remove="Views\HashCodeGeneratorPage.xaml" />
         <None Remove="Views\Markdown\MarkdownPreviewPage.xaml" />
         <None Remove="Views\NumberGeneratorPage.xaml" />
@@ -67,7 +69,14 @@
         <None Update="appsettings.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+
         <Page Update="Views\Markdown\MarkdownPreviewPage.xaml">
+          <Generator>MSBuild:Compile</Generator>
+        </Page>
+        <Page Update="Views\Generators\PrimeNumberGeneratorPage.xaml">
+          <Generator>MSBuild:Compile</Generator>
+        </Page>
+        <Page Update="Views\ColorPickerPage.xaml">
           <Generator>MSBuild:Compile</Generator>
         </Page>
         <Page Update="Views\Converters\UnixTimestampsConverter.xaml">
@@ -164,6 +173,5 @@
 
     <ItemGroup>
         <Folder Include="Views\BitsManipulation\" />
-        <Folder Include="Views\Generators\" />
     </ItemGroup>
 </Project>

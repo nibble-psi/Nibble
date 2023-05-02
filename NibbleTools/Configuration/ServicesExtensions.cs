@@ -56,6 +56,7 @@ public static class ServicesExtensions
             services.AddTransient<UnixTimestampsConverterPage, UnixTimestampsConverterViewModel>();
 
             services.AddTransient<NumberGeneratorPage, NumberGeneratorViewModel>();
+            services.AddTransient<PrimeNumberGeneratorPage, PrimeNumberGeneratorViewModel>();
             services.AddTransient<StringGeneratorPage, StringGeneratorViewModel>();
 
             services.AddTransient<CounterPage, CounterViewModel>();
@@ -68,8 +69,8 @@ public static class ServicesExtensions
             services.AddTransient<UuidGeneratorPage, UuidGeneratorViewModel>();
             services.AddTransient<HashCodeGeneratorPage, HashCodeGeneratorViewModel>();
             services.AddTransient<PasswordGeneratorPage, PasswordGeneratorViewModel>();
-
             services.AddTransient<MarkdownPreviewPage, MarkdownPreviewViewModel>();
+            services.AddTransient<ColorPickerPage, ColorPickerViewModel>();
         });
 
     public static IServiceCollection AddTransient<TPage, TViewModel>(this IServiceCollection services)

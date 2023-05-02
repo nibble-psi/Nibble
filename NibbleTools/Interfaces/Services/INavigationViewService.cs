@@ -8,6 +8,11 @@ public interface INavigationViewService
     {
         get;
     }
+    
+    IList<NavigationViewItem> NavigationViewItems
+    {
+        get;
+    }
 
     object? SettingsItem
     {

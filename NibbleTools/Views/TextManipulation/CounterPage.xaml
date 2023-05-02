@@ -61,6 +61,9 @@
             <Button Content="Count"
                     Command="{Binding ButtonClickCommand}" />
 
+            <Button Content="Paste"
+                    Command="{Binding PasteTextCommand}" />
+
         </StackPanel>
     </ScrollViewer>
 </Page>

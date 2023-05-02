@@ -1,6 +1,7 @@
 using System.Text;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Microsoft.UI.Xaml.Documents;
 
 namespace NibbleTools.ViewModels.CryptographySecurity;
 
@@ -15,7 +16,7 @@ public partial class PasswordGeneratorViewModel : ObservableRecipient
     [ObservableProperty] private string _pw = string.Empty;
 
     [RelayCommand]
-    private void CreatePassword()
+    public void CreatePassword()
     {
         const string valid = "abcdefghijklmnopqrstuvwxyz";
         const string valid1 = "abcdefghijklmnopqrstuvwxyz1234567890";

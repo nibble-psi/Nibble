@@ -1,11 +1,24 @@
-﻿namespace NibbleTools.Interfaces.BitsOperations;
+﻿using System.Numerics;
 
-public interface IBitShiftOperations
+namespace NibbleTools.Interfaces.BitsOperations;
+
+
+public interface IBitShiftOperations<TSelf, TResult>
 {
-    string ArithmeticLeftShift(int value, int offset);
-    string ArithmeticRightShift(int value, int offset);
-    string LogicalLeftShift(int value, int offset);
-    string LogicalRightShift(int value, int offset);
-    string CircularLeftShift(int value, int offset);
-    string CircularRightShift(int value, int offset);
+    TResult ArithmeticLeftShift(TSelf value, TSelf offset);
+    TResult ArithmeticRightShift(TSelf value, TSelf offset);
+    TResult LogicalLeftShift(TSelf value, TSelf offset);
+    TResult LogicalRightShift(TSelf value, TSelf offset);
+    TResult CircularLeftShift(TSelf value, TSelf offset);
+    TResult CircularRightShift(TSelf value, TSelf offset);
+}
+
+public interface INumberBitShiftOperations<TSelf> : IBitShiftOperations<TSelf, TSelf> where TSelf : INumber<TSelf>, IBinaryNumber<TSelf>
+{
+
+}
+
+public interface IStringBitShiftOperations<TSelf> : IBitShiftOperations<TSelf, string> where TSelf : INumber<TSelf>, IBinaryNumber<TSelf>
+{
+
 }

@@ -5,11 +5,12 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using NibbleTools.Helpers;
 using NibbleTools.Interfaces.Services;
+using NibbleTools.Models;
 using NibbleTools.ViewModels;
 
 namespace NibbleTools.Views;
 
-public sealed partial class ShellPage : Page
+public sealed partial class ShellPage
 {
     public ShellPage(ShellViewModel viewModel)
     {
@@ -77,5 +78,62 @@ public sealed partial class ShellPage : Page
         var result = navigationService.GoBack();
 
         args.Handled = result;
+    }
+
+    private void OnControlsSearchBoxTextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+    {
+        if (args.Reason != AutoSuggestionBoxTextChangeReason.UserInput)
+        {
+            return;
+        }
+
+
+        var querySplit = sender.Text.Split(" ");
+        var navigationViewItems = ViewModel.NavigationViewService.NavigationViewItems;
+
+
+        var suggestions = navigationViewItems
+                          .Select(item => new SearchItem(item.Content?.ToString() ?? string.Empty,
+                              NavigationHelper.GetNavigateTo(item)))
+                          .Where(searchItem => !string.IsNullOrWhiteSpace(searchItem.PageKey))
+                          .Select(searchItem => new
+                          {
+                              searchItem,
+                              isMatch = querySplit.All(query =>
+                                  searchItem.Title.Contains(query, StringComparison.CurrentCultureIgnoreCase))
+                          })
+                          .Where(t => t.isMatch)
+                          .Select(t => t.searchItem)
+                          .OrderByDescending(item =>
+                              item.Title.StartsWith(sender.Text,
+                                  StringComparison.CurrentCultureIgnoreCase))
+                          .ThenBy(item => item.Title)
+                          .ToList();
+
+
+        ControlsSearchBox.ItemsSource = suggestions.Count > 0
+            ? suggestions
+            : new List<SearchItem>
+            {
+                new("No results found", string.Empty)
+            };
+    }
+
+
+    private void OnControlsSearchBoxQuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+    {
+        ControlsSearchBox.Text = string.Empty;
+
+        if (args.ChosenSuggestion is not SearchItem searchItem || string.IsNullOrWhiteSpace(searchItem.PageKey))
+        {
+            return;
+        }
+
+        ViewModel.NavigationService.NavigateTo(searchItem.PageKey);
+    }
+
+    private void CtrlF_Invoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
+    {
+        ControlsSearchBox.Focus(FocusState.Programmatic);
     }
 }

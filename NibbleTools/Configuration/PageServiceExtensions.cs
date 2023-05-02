@@ -31,6 +31,7 @@ public static class PageServiceExtensions
 
         // Sequences generator pages
         pageService.Configure<NumberGeneratorViewModel, NumberGeneratorPage>();
+        pageService.Configure<PrimeNumberGeneratorViewModel, PrimeNumberGeneratorPage>();
         pageService.Configure<StringGeneratorViewModel, StringGeneratorPage>();
 
 
@@ -48,5 +49,9 @@ public static class PageServiceExtensions
 
         // Markdown preview page
         pageService.Configure<MarkdownPreviewViewModel, MarkdownPreviewPage>();
+
+        //Color picker
+        pageService.Configure<ColorPickerViewModel, ColorPickerPage>();
+
     }
 }

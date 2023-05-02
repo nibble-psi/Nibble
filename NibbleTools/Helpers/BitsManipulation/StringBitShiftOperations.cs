@@ -2,7 +2,7 @@
 
 namespace NibbleTools.Helpers;
 
-public class BitShiftOperations : IBitShiftOperations
+public class StringBitShiftOperations : IStringBitShiftOperations<int>
 {
     public string ArithmeticLeftShift(int value, int offset) =>
         (value << offset).ToBinaryString().TakeLastOrDefault(value.NumBits());
