@@ -47,4 +47,6 @@ public class LinesSorterViewModel : ObservableRecipient
 
         return outputString;
     }
+
+
 }

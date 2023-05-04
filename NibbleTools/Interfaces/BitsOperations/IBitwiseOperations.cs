@@ -1,11 +1,23 @@
-﻿namespace NibbleTools.Interfaces.BitsOperations;
+﻿using System.Numerics;
 
-public interface IBitwiseOperations
+namespace NibbleTools.Interfaces.BitsOperations;
+
+public interface IBitwiseOperations<TSelf, TResult>
 {
-    string Not(int value);
-    string Xor(int value1, int value2);
-    string And(int value1, int value2);
-    string Nand(int value1, int value2);
-    string Or(int value1, int value2);
-    string Nor(int value1, int value2);
+    TResult Not(TSelf value);
+    TResult Xor(TSelf value1, TSelf value2);
+    TResult And(TSelf value1, TSelf value2);
+    TResult Nand(TSelf value1, TSelf value2);
+    TResult Or(TSelf value1, TSelf value2);
+    TResult Nor(TSelf value1, TSelf value2);
+}
+
+public interface INumberBitwiseOperations<TSelf> : IBitwiseOperations<TSelf, TSelf> where TSelf : INumber<TSelf>, IBinaryNumber<TSelf>
+{
+
+}
+
+public interface IStringBitwiseOperations<TSelf> : IBitwiseOperations<TSelf, string> where TSelf : INumber<TSelf>, IBinaryNumber<TSelf>
+{
+
 }

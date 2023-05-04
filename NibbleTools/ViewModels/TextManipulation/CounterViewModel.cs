@@ -1,5 +1,6 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Windows.ApplicationModel.DataTransfer;
 
 namespace NibbleTools.ViewModels;
 
@@ -50,4 +51,24 @@ public partial class CounterViewModel : ObservableRecipient
             }
         }
     }
+
+    [RelayCommand]
+    private void CopyText()
+    {
+        var package = new DataPackage();
+        package.SetText("Copy this text");
+        Clipboard.SetContent(package);
+    }
+
+    [RelayCommand]
+    private async void PasteText()
+    {
+        var package = Clipboard.GetContent();
+        if (package.Contains(StandardDataFormats.Text))
+        {
+            var text = await package.GetTextAsync();
+            Input = text;
+        }
+    }
+
 }

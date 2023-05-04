@@ -59,6 +59,9 @@
 
                 <Button Content="Clear"
                         Command="{x:Bind ViewModel.ClearCommand}" />
+
+                <Button Content="Paste"
+                        Command="{x:Bind ViewModel.PasteTextCommand}" />
             </StackPanel>
 
         </StackPanel>

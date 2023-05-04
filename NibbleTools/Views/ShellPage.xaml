@@ -104,6 +104,14 @@
                             </NavigationViewItem.Icon>
                         </NavigationViewItem>
 
+                        <!--Prime Number Generator page-->
+                        <NavigationViewItem x:Uid="Shell_PrimeNumberGenerator"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.PrimeNumberGeneratorViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon Glyph="&#xF150;" />
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+
                         <!--String Generator-->
                         <NavigationViewItem x:Uid="Shell_StringGenerator"
                                             helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.StringGeneratorViewModel">
@@ -210,6 +218,23 @@
                                     helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.CryptographySecurity.PasswordGeneratorViewModel">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE8D7;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+
+                <!--Markdown preview-->
+                <NavigationViewItem x:Uid="Shell_MarkdownPreview"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.Markdown.MarkdownPreviewViewModel">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE724;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <!--Color picker-->
+                <NavigationViewItem x:Uid="Shell_ColorPicker"
+                                    helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.ColorPickerViewModel">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE790;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
