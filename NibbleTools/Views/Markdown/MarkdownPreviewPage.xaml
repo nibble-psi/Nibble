@@ -11,44 +11,44 @@
     xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     mc:Ignorable="d">
 
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0"
-               Margin="12,12,12,0"
-               FontSize="18"
-               Text="Regular Text" />
-            <TextBox x:Name="UnformattedText"
-             Grid.Row="1"
-             Margin="12"
-             AcceptsReturn="True"
-             ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-             ScrollViewer.VerticalScrollBarVisibility="Auto"
-             TextWrapping="Wrap" 
-             Text="# Header&#x0a;### This is a heading&#x0a;* This is a list item&#x0a;**Bold text** and _italic text_"/>
-            
+        <TextBlock Grid.Row="0"
+                   x:Uid="MarkdownPreview_RegularText"
+                   Margin="12,12,12,0"
+                   FontSize="18" />
+        <TextBox x:Name="UnformattedText"
+                 Grid.Row="1"
+                 Margin="12"
+                 AcceptsReturn="True"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 TextWrapping="Wrap"
+                 Text="# Header&#x0a;### This is a heading&#x0a;* This is a list item&#x0a;**Bold text** and _italic text_" />
 
-            <TextBlock Grid.Row="2"
-               Margin="12,12,12,0"
-               FontSize="18"
-               Text="Markdown Text" />
-            <ScrollViewer Grid.Row="3"
-                  Margin="12"
-                  BorderBrush="{ThemeResource AppBarBorderThemeBrush}"
-                  BorderThickness="2"
-                  HorizontalScrollBarVisibility="Disabled"
-                  VerticalScrollBarVisibility="Visible">
-                <controls:MarkdownTextBlock x:Name="MarkdownText"
-                                  Margin="6"
-                                  Header1Foreground="{ThemeResource SystemControlForegroundAccentBrush}"
-                                  Text="{Binding ElementName=UnformattedText, Path=Text}"
-                                  SchemeList="companyportal,randomscheme"
-                                  UriPrefix="ms-appx://" />
-            </ScrollViewer>
-        </Grid>
+
+        <TextBlock Grid.Row="2"
+                   Margin="12,12,12,0"
+                   FontSize="18"
+                   x:Uid="MarkdownPreview_MarkdownText" />
+        <ScrollViewer Grid.Row="3"
+                      Margin="12"
+                      BorderBrush="{ThemeResource AppBarBorderThemeBrush}"
+                      BorderThickness="2"
+                      HorizontalScrollBarVisibility="Disabled"
+                      VerticalScrollBarVisibility="Visible">
+            <controls:MarkdownTextBlock x:Name="MarkdownText"
+                                        Margin="6"
+                                        Header1Foreground="{ThemeResource SystemControlForegroundAccentBrush}"
+                                        Text="{Binding ElementName=UnformattedText, Path=Text}"
+                                        SchemeList="companyportal,randomscheme"
+                                        UriPrefix="ms-appx://" />
+        </ScrollViewer>
+    </Grid>
 </Page>

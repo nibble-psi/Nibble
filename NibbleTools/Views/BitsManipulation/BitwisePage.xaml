@@ -21,11 +21,11 @@
                   ColumnDefinitions="Auto, Auto, Auto"
                   RowDefinitions="Auto,Auto,Auto">
 
-                <TextBlock Text="First Number"
+                <TextBlock x:Uid="Bitwise_FirstNumberLabel"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Column="1" />
-                <TextBlock Text="Second Number"
+                <TextBlock x:Uid="Bitwise_SecondNumberLabel"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Column="2" />
@@ -69,7 +69,7 @@
 
             </Grid>
 
-            <TextBlock Text="Output"
+            <TextBlock x:Uid="Bitwise_OutputLabel"
                        Style="{StaticResource TitleTextBlockStyle}" />
 
             <!--Output fiels-->

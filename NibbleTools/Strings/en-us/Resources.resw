@@ -228,4 +228,74 @@
   <data name="Shell_PrimeNumberGenerator.Content" xml:space="preserve">
     <value>Prime Number Generator</value>
   </data>
+  <data name="Shell_SearchBox.PlaceholderText" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  
+  <!-- NEW -->
+  <data name="Bitwise_FirstNumberLabel.Text" xml:space="preserve">
+    <value>First Number</value>
+  </data>
+  <data name="Bitwise_SecondNumberLabel.Text" xml:space="preserve">
+    <value>Second Number</value>
+  </data>
+  <data name="Bitwise_OutputLabel.Text" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  
+
+  <data name="MarkdownPreview_RegularText.Text" xml:space="preserve">
+    <value>Regular Text</value>
+  </data>
+  <data name="MarkdownPreview_MarkdownText.Text" xml:space="preserve">
+    <value>Markdown Text</value>
+  </data>
+
+  <data name="PasswordGenerator_Password.Header" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordGenerator_PasswordLength.Header" xml:space="preserve">
+    <value>Password length</value>
+  </data>
+  <data name="PasswordGenerator_UpperCase.Content" xml:space="preserve">
+    <value>Upper Case</value>
+  </data>
+  <data name="PasswordGenerator_Numbers.Content" xml:space="preserve">
+    <value>Numbers</value>
+  </data>
+  <data name="PasswordGenerator_Generate.Content" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+
+
+  <data name="HashGenerator_Input.Header" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="HashGenerator_HashType.Text" xml:space="preserve">
+    <value>Hash code type</value>
+  </data>
+  <data name="HashGenerator_HashCode.Header" xml:space="preserve">
+    <value>Hash code</value>
+  </data>
+  <data name="HashGenerator_Generate.Content" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+
+
+  <data name="UuidGenerator_UUID.Header" xml:space="preserve">
+    <value>UUID</value>
+  </data>
+  <data name="UuidGenerator_Count.Header" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="UuidGenerator_Delimiter.Header" xml:space="preserve">
+    <value>Delimiter</value>
+  </data>
+  <data name="UuidGenerator_UpperCase.Content" xml:space="preserve">
+    <value>Upper Case</value>
+  </data>
+  <data name="UuidGenerator_Generate.Content" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  
 </root>

@@ -19,9 +19,9 @@
         <Compile Remove="Assets\Images\**" />
         <Content Remove="Assets\Icons\**" />
         <Content Remove="Assets\Images\**" />
-        <Content Include="Strings\lt-lt\Resources.resw" />
         <EmbeddedResource Remove="Assets\Icons\**" />
         <EmbeddedResource Remove="Assets\Images\**" />
+        <EmbeddedResource Include="Strings\lt-lt\Resources.resw" />
         <None Remove="Assets\Icons\**" />
         <None Remove="Assets\Images\**" />
         <Page Remove="Assets\Icons\**" />
