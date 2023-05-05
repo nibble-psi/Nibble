@@ -21,7 +21,7 @@
                   VerticalAlignment="Stretch">
                 <TextBox
                     Text="{x:Bind ViewModel.Input, Mode=TwoWay}"
-                    Header="Input Text"
+                    x:Uid="Counter_Input"
                     AcceptsReturn="True"
                     IsReadOnly="False"
                     TextWrapping="Wrap"
@@ -32,7 +32,7 @@
                             Grid.Column="1"
                             VerticalAlignment="Top"
                             HorizontalAlignment="Stretch">
-                    <TextBlock Text="Symbols count"
+                    <TextBlock x:Uid="Counter_Symbols"
                                TextAlignment="Left"
                                VerticalAlignment="Center" />
                     <TextBox IsReadOnly="True"
@@ -40,7 +40,7 @@
                              TextWrapping="Wrap"
                              MaxWidth="500" />
 
-                    <TextBlock Text="Words count"
+                    <TextBlock x:Uid="Counter_Words"
                                TextAlignment="Left"
                                VerticalAlignment="Center" />
                     <TextBox IsReadOnly="True"
@@ -48,7 +48,7 @@
                              TextWrapping="Wrap"
                              MaxWidth="500" />
 
-                    <TextBlock Text="Lines count"
+                    <TextBlock x:Uid="Counter_Lines"
                                TextAlignment="Left"
                                VerticalAlignment="Center" />
                     <TextBox IsReadOnly="True"
@@ -58,10 +58,10 @@
                 </StackPanel>
             </Grid>
 
-            <Button Content="Count"
+            <Button x:Uid="Counter_Count"
                     Command="{Binding ButtonClickCommand}" />
 
-            <Button Content="Paste"
+            <Button x:Uid="Counter_Paste"
                     Command="{Binding PasteTextCommand}" />
 
         </StackPanel>

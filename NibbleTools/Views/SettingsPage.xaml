@@ -14,9 +14,9 @@
                     Spacing="4">
             <TextBlock Margin="1,0,0,4"
                        Style="{StaticResource BaseTextBlockStyle}"
-                       Text="Appearance and behavior" />
+                       x:Uid="Settings_Appearance" />
             <labs:SettingsCard Description=""
-                               Header="App theme">
+                               x:Uid="Settings_AppTheme">
                 <labs:SettingsCard.HeaderIcon>
                     <FontIcon Glyph="&#xE790;" />
                 </labs:SettingsCard.HeaderIcon>
@@ -28,8 +28,7 @@
                 </ComboBox>
             </labs:SettingsCard>
 
-            <labs:SettingsCard Description=""
-                               Header="Language">
+            <labs:SettingsCard x:Uid="Settings_Language">
                 <labs:SettingsCard.HeaderIcon>
                     <FontIcon Glyph="&#xE790;" />
                 </labs:SettingsCard.HeaderIcon>

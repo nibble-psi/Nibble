@@ -4,6 +4,7 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using NibbleTools.ViewModels;
+using WinRT.Interop;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -32,27 +33,31 @@ public sealed partial class StringGeneratorPage : Page
     {
         var selectedItem = DDL.SelectedItem as ComboBoxItem;
 
-        if (selectedItem != null)
+        if (selectedItem == null)
         {
-            var itemContent = selectedItem.Content as string;
+            return;
+        }
+        
+        var selectedIndex = DDL.SelectedIndex;
 
-            switch (itemContent)
-            {
-                case "Word":
-                    var randomWord = StringGeneratorViewModel.GenerateRandomWord(7);
-                    TextBox1.Text = randomWord;
-                    break;
+        switch (selectedIndex)
+        {
+            case 0:
+                TextBox1.Text = StringGeneratorViewModel.GenerateRandomWord(7);
+                break;
 
-                case "Sentence":
-                    var randomSentence = StringGeneratorViewModel.GenerateRandomSentence();
-                    TextBox1.Text = randomSentence;
-                    break;
+            case 1:
+                TextBox1.Text = StringGeneratorViewModel.GenerateRandomSentence();;
+                break;
 
-                case "Paragraph":
-                    var randomParagraph = StringGeneratorViewModel.GenerateRandomParagraph();
-                    TextBox1.Text = randomParagraph;
-                    break;
-            }
+            case 2:
+                TextBox1.Text = StringGeneratorViewModel.GenerateRandomParagraph();
+                break;
+            
+            default:
+                TextBox1.Text = "";
+                break;
+ 
         }
     }
 }

@@ -23,7 +23,7 @@
               RowSpacing="20"
               ColumnDefinitions="Auto, Auto, Auto, Auto"
               RowDefinitions="Auto,Auto,Auto,Auto">
-            <TextBlock Text="From:"
+            <TextBlock x:Uid="UnitConverter_From"
                        TextAlignment="Left"
                        VerticalAlignment="Center"
                        Grid.Row="0"
@@ -35,7 +35,7 @@
                 <ComboBoxItem Content="cm" />
             </ComboBox>
 
-            <TextBlock Text="To:"
+            <TextBlock x:Uid="UnitConverter_To"
                        TextAlignment="Left"
                        VerticalAlignment="Center"
                        Grid.Column="1"
@@ -58,7 +58,7 @@
                        Grid.Column="0"
                        Grid.Row="3" />
 
-            <Button Content="Convert"
+            <Button x:Uid="UnitConverter_Convert"
                     Grid.Column="1"
                     Grid.Row="3"
                     Click="Convert_Click" />

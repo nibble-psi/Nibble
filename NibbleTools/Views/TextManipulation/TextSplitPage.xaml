@@ -24,14 +24,14 @@
                   HorizontalAlignment="Stretch">
                 <TextBox
                     Text="{x:Bind ViewModel.Input, Mode=TwoWay}"
-                    Header="Input Text"
+                    x:Uid="TextSplit_Input"
                     AcceptsReturn="True"
                     IsReadOnly="False"
                     TextWrapping="Wrap"
                     Height="300" />
 
                 <TextBox IsReadOnly="True"
-                         Header="Output Text"
+                         x:Uid="TextSplit_Output"
                          Text="{Binding Output}"
                          TextWrapping="Wrap"
                          Height="300"
@@ -41,14 +41,14 @@
             <TextBox
                 Text="{x:Bind ViewModel.Seperator, Mode=TwoWay}"
                 IsReadOnly="False"
-                Header="Delimiter"
+                x:Uid="TextSplit_Delimiter"
                 Width="100"
                 HorizontalAlignment="Left"
                 TextWrapping="Wrap" />
-            <Button Content="Split"
+            <Button x:Uid="TextSplit_Split"
                     Command="{Binding ButtonClickCommand}" />
 
-            <Button Content="Paste"
+            <Button x:Uid="TextSplit_Paste"
                     Command="{Binding PasteTextCommand}" />
 
 

@@ -24,7 +24,7 @@
                   HorizontalAlignment="Stretch">
                 <TextBox
                     x:Name="Input"
-                    Header="Input Text"
+                    x:Uid="LetterCases_Input"
                     AcceptsReturn="True"
                     IsReadOnly="False"
                     TextWrapping="Wrap"
@@ -32,20 +32,20 @@
 
                 <TextBox
                     x:Name="Output"
+                    x:Uid="LetterCases_Output"
                     IsReadOnly="True"
-                    Header="Output Text"
                     TextWrapping="Wrap"
                     Height="300"
                     Grid.Column="1" />
             </Grid>
 
             <ComboBox x:Name="DDL" Width="150" Height="30" SelectedIndex="0">
-                <ComboBoxItem Content="lower case" />
-                <ComboBoxItem Content="UPPER CASE" />
-                <ComboBoxItem Content="Capitalized Case" />
+                <ComboBoxItem x:Uid="LetterCases_LowerCase" />
+                <ComboBoxItem x:Uid="LetterCases_UpperCase" />
+                <ComboBoxItem x:Uid="LetterCases_CapitalizedCase" />
             </ComboBox>
 
-            <Button x:Name="SortButton" Content="Convert" Width="100" Height="30" Margin="0 40 5 0"
+            <Button x:Name="SortButton" x:Uid="LetterCases_Convert" Width="100" Height="30" Margin="0 40 5 0"
                     Click="LetterCases_Click" />
 
 

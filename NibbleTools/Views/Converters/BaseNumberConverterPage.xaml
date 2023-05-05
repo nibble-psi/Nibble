@@ -17,13 +17,13 @@
                 Spacing="30"
                 MinWidth="100">
         <TextBox Text="{x:Bind ViewModel.BinaryValue, Mode=TwoWay}"
-                 Header="BIN" />
+                 x:Uid="BaseNumberConverter_Binary" />
         <TextBox Text="{x:Bind ViewModel.DecimalValue, Mode=TwoWay}"
-                 Header="DEC" />
+                 x:Uid="BaseNumberConverter_Decimal" />
         <TextBox Text="{x:Bind ViewModel.OctaValue, Mode=TwoWay}"
-                 Header="OCT" />
+                 x:Uid="BaseNumberConverter_Octal" />
         <TextBox Text="{x:Bind ViewModel.HexaValue, Mode=TwoWay}"
-                 Header="HEX" />
+                 x:Uid="BaseNumberConverter_Hexadecimal" />
     </StackPanel>
 
 

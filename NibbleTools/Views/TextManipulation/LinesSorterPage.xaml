@@ -24,7 +24,7 @@
                   HorizontalAlignment="Stretch">
                 <TextBox
                     x:Name="Input"
-                    Header="Input Text"
+                    x:Uid="LinesSorter_Input"
                     AcceptsReturn="True"
                     IsReadOnly="False"
                     TextWrapping="Wrap"
@@ -33,19 +33,19 @@
                 <TextBox
                     x:Name="Output"
                     IsReadOnly="True"
-                    Header="Output Text"
+                    x:Uid="LinesSorter_Output"
                     TextWrapping="Wrap"
                     Height="300"
                     Grid.Column="1" />
             </Grid>
 
             <ComboBox x:Name="DDL" Width="150" Height="30" SelectedIndex="0">
-                <ComboBoxItem Content="Alphabetically" />
-                <ComboBoxItem Content="Reverse" />
-                <ComboBoxItem Content="Random" />
+                <ComboBoxItem x:Uid="LinesSorter_SortAlphabetically" />
+                <ComboBoxItem x:Uid="LinesSorter_SortReverse" />
+                <ComboBoxItem x:Uid="LinesSorter_SortRandom" />
             </ComboBox>
 
-            <Button x:Name="SortButton" Content="Sort" Width="100" Height="30" Margin="0 40 5 0"
+            <Button x:Name="SortButton" x:Uid="LinesSorter_Sort" Width="100" Height="30" Margin="0 40 5 0"
                     Click="LinesSorter_Click" />
 
         </StackPanel>

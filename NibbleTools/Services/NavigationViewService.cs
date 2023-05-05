@@ -18,6 +18,7 @@ public class NavigationViewService : INavigationViewService
     {
         _navigationService = navigationService;
         _pageService = pageService;
+        NavigationViewItems = new List<NavigationViewItem>();
     }
 
     public IList<object>? MenuItems => _navigationView?.MenuItems;

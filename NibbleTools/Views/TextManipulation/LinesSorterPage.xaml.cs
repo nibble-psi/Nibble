@@ -33,24 +33,19 @@ public sealed partial class LinesSorterPage : Page
         var selectedItem = DDL.SelectedItem as ComboBoxItem;
         var inputString = Input.Text;
 
-        if (selectedItem != null)
+        if (selectedItem == null)
         {
-            var itemContent = selectedItem.Content as string;
-
-            switch (itemContent)
-            {
-                case "Alphabetically":
-                    Output.Text = LinesSorterViewModel.SortLinesInAlphabeticalOrder(inputString);
-                    break;
-
-                case "Reverse":
-                    Output.Text = LinesSorterViewModel.SortLinesInReverseOrder(inputString);
-                    break;
-
-                case "Random":
-                    Output.Text = LinesSorterViewModel.SortLinesInRandomOrder(inputString);
-                    break;
-            }
+            return;
         }
+
+        var selectedIndex = DDL.SelectedIndex;
+
+        Output.Text = selectedIndex switch
+        {
+            0 => LinesSorterViewModel.SortLinesInAlphabeticalOrder(inputString),
+            1 => LinesSorterViewModel.SortLinesInReverseOrder(inputString),
+            2 => LinesSorterViewModel.SortLinesInRandomOrder(inputString),
+            _ => Output.Text
+        };
     }
 }

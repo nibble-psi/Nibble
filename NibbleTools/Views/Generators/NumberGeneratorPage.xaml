@@ -20,15 +20,15 @@
                   RowSpacing="20"
                   ColumnDefinitions="Auto, Auto, Auto, Auto"
                   RowDefinitions="Auto,Auto,Auto,Auto">
-                <TextBlock Text="Min Value"
+                <TextBlock x:Uid="NumberGenerator_MinValue"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Column="0" />
-                <TextBlock Text="Max Value"
+                <TextBlock x:Uid="NumberGenerator_MaxValue"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Column="1" />
-                <TextBlock Text="Amount of numbers"
+                <TextBlock x:Uid="NumberGenerator_Count"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Column="2" />
@@ -58,14 +58,14 @@
                            AcceptsExpression="True"
                            Grid.Row="1"
                            Grid.Column="2" />
-                <Button Content="Generate"
+                <Button x:Uid="NumberGenerator_Generate"
                         Grid.Row="3"
                         Grid.Column="0"
                         Command="{Binding ButtonClickCommand}" />
 
             </Grid>
 
-            <TextBox Header="Output Text"
+            <TextBox x:Uid="NumberGenerator_Output"
                      Width="800"
                      Height="300"
                      Margin="0 20 0 0"

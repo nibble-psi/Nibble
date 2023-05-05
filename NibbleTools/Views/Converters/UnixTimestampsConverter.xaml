@@ -28,14 +28,14 @@
 
                 <NumberBox
                     x:Name="UnixTimestampTextBox"
-                    Header="Unix Timestamp (seconds)"
+                    x:Uid="UnixTimestamp_Input"
                     Margin="12, 0, 0, 0"
                     VerticalAlignment="Center"
                     Maximum="253402300799"
                     Grid.Row="0"
                     Grid.Column="0" />
 
-                <Button Content="Convert"
+                <Button x:Uid="UnixTimestamp_Convert"
                         Margin="12, 30, 0, 0"
                         Grid.Row="0"
                         Grid.Column="1"
@@ -48,38 +48,38 @@
                     Margin="0 50 0 0">
                     <TextBox
                         x:Name="YearTextBlock"
-                        Header="Year"
+                        x:Uid="UnixTimestamp_Year"
                         Margin="12,0,0,0"
                         VerticalAlignment="Center" />
 
                     <TextBox
                         x:Name="MonthTextBlock"
                         Margin="12,0,0,0"
-                        Header="Month"
+                        x:Uid="UnixTimestamp_Month"
                         VerticalAlignment="Center" />
 
                     <TextBox
                         x:Name="DayTextBlock"
                         Margin="12,0,0,0"
-                        Header="Day"
+                        x:Uid="UnixTimestamp_Day"
                         VerticalAlignment="Center" />
 
                     <TextBox
                         x:Name="HourTextBlock"
                         Margin="12,0,0,0"
-                        Header="Hour"
+                        x:Uid="UnixTimestamp_Hour"
                         VerticalAlignment="Center" />
 
                     <TextBox
                         x:Name="MinuteTextBlock"
                         Margin="12,0,0,0"
-                        Header="Minute"
+                        x:Uid="UnixTimestamp_Minute"
                         VerticalAlignment="Center" />
 
                     <TextBox
                         x:Name="SecondTextBlock"
                         Margin="12,0,0,0"
-                        Header="Second"
+                        x:Uid="UnixTimestamp_Second"
                         VerticalAlignment="Center" />
                 </StackPanel>
 
