@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-using FluentAssertions;
-using NibbleTools.ViewModels.CryptographySecurity;
+﻿using NibbleTools.ViewModels.CryptographySecurity;
 
 namespace NibbleTools.Tests.MSTest;
 
@@ -23,17 +21,17 @@ public class PasswordGeneratorTest
 
         Assert.AreEqual(20, password.Length);
 
-        bool hasUppercase = false;
-        bool hasNumber = false;
+        var hasUppercase = false;
+        var hasNumber = false;
 
-        foreach (char c in password)
+        foreach (var c in password)
         {
-            if (Char.IsUpper(c))
+            if (char.IsUpper(c))
             {
                 hasUppercase = true;
             }
 
-            if (Char.IsNumber(c))
+            if (char.IsNumber(c))
             {
                 hasNumber = true;
             }
@@ -59,17 +57,17 @@ public class PasswordGeneratorTest
 
         Assert.AreEqual(20, password.Length);
 
-        bool hasUppercase = false;
-        bool hasNumber = false;
+        var hasUppercase = false;
+        var hasNumber = false;
 
-        foreach (char c in password)
+        foreach (var c in password)
         {
-            if (Char.IsUpper(c))
+            if (char.IsUpper(c))
             {
                 hasUppercase = true;
             }
 
-            if (Char.IsNumber(c))
+            if (char.IsNumber(c))
             {
                 hasNumber = true;
             }
@@ -95,17 +93,17 @@ public class PasswordGeneratorTest
 
         Assert.AreEqual(20, password.Length);
 
-        bool hasUppercase = false;
-        bool hasNumber = false;
+        var hasUppercase = false;
+        var hasNumber = false;
 
-        foreach (char c in password)
+        foreach (var c in password)
         {
-            if (Char.IsUpper(c))
+            if (char.IsUpper(c))
             {
                 hasUppercase = true;
             }
 
-            if (Char.IsNumber(c))
+            if (char.IsNumber(c))
             {
                 hasNumber = true;
             }
@@ -131,17 +129,17 @@ public class PasswordGeneratorTest
 
         Assert.AreEqual(20, password.Length);
 
-        bool hasUppercase = false;
-        bool hasNumber = false;
+        var hasUppercase = false;
+        var hasNumber = false;
 
-        foreach (char c in password)
+        foreach (var c in password)
         {
-            if (Char.IsUpper(c))
+            if (char.IsUpper(c))
             {
                 hasUppercase = true;
             }
 
-            if (Char.IsNumber(c))
+            if (char.IsNumber(c))
             {
                 hasNumber = true;
             }

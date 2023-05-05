@@ -7,6 +7,13 @@ namespace NibbleTools.Services;
 
 public class PageService : IPageService
 {
+    private readonly Dictionary<string, Type> _pages = new();
+
+    public PageService()
+    {
+        this.ConfigurePages();
+    }
+
     public Dictionary<string, Type> Pages
     {
         get
@@ -16,13 +23,6 @@ public class PageService : IPageService
                 return _pages;
             }
         }
-    }
-
-    private readonly Dictionary<string, Type> _pages = new();
-
-    public PageService()
-    {
-        this.ConfigurePages();
     }
 
     public Type GetPageType(string key)

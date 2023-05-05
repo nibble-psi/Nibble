@@ -3,7 +3,6 @@
 
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using NibbleTools.Helpers;
 using NibbleTools.ViewModels;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -38,7 +37,7 @@ public sealed partial class LetterCasesPage : Page
         {
             return;
         }
-        
+
         var selectedIndex = DDL.SelectedIndex;
 
         Output.Text = selectedIndex switch

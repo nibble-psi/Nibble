@@ -216,9 +216,9 @@
         <value>NOT2</value>
     </data>
 
-    
+
     <!-- MarkdownPreview_ -->
-    
+
     <data name="MarkdownPreview_RegularText.Text" xml:space="preserve">
     <value>Paprastas tekstas</value>
   </data>
@@ -404,8 +404,8 @@
     <data name="TextSplit_Paste.Content" xml:space="preserve">
         <value>Įklijuoti</value>
     </data>
-    
-    
+
+
     <!--Counter-->
     <data name="Counter_Input.Header" xml:space="preserve">
         <value>Įvestis</value>
@@ -461,7 +461,7 @@
     <data name="BitShift_CircularRight.Text" xml:space="preserve">
         <value>Ciklinis į dešinę</value>
     </data>
-    
+
     <!-- BaseNumberConverter_ -->
 
     <data name="BaseNumberConverter_Binary.Header" xml:space="preserve">
@@ -527,5 +527,5 @@
     <data name="NumberGenerator_Output.Header" xml:space="preserve">
         <value>Išvestis</value>
     </data>
-    
+
 </root>

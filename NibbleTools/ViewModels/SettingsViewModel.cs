@@ -5,26 +5,26 @@ using CommunityToolkit.Mvvm.Input;
 using Microsoft.UI.Xaml;
 using NibbleTools.Helpers;
 using NibbleTools.Interfaces.Services;
-using AppInstance = Microsoft.Windows.AppLifecycle.AppInstance;
 
 namespace NibbleTools.ViewModels;
 
 public partial class SettingsViewModel : ObservableRecipient
 {
-    private readonly IThemeSelectorService _themeSelectorService;
     private readonly ILocalizationSelectorService _localizationSelectorService;
+    private readonly IThemeSelectorService _themeSelectorService;
 
     private ElementTheme _currentTheme;
+
+    [ObservableProperty] private IReadOnlyList<string> _languages = new List<string>();
+
+    [ObservableProperty] private string _selectedLanguage = string.Empty;
     private int _themeIndex;
 
     [ObservableProperty] private string _versionDescription = string.Empty;
 
-    [ObservableProperty] private IReadOnlyList<string> _languages = new List<string>();
-    
-    [ObservableProperty] private string _selectedLanguage = string.Empty;
 
-
-    public SettingsViewModel(IThemeSelectorService themeSelectorService, ILocalizationSelectorService localizationSelectorService)
+    public SettingsViewModel(IThemeSelectorService themeSelectorService,
+        ILocalizationSelectorService localizationSelectorService)
     {
         _themeSelectorService = themeSelectorService;
         _localizationSelectorService = localizationSelectorService;
@@ -32,7 +32,7 @@ public partial class SettingsViewModel : ObservableRecipient
         VersionDescription = GetVersionDescription();
         Languages = _localizationSelectorService.ManifestLanguages;
         SelectedLanguage = _localizationSelectorService.PrimaryLanguage;
-        
+
         ThemeIndex = (int)_themeSelectorService.Theme;
     }
 
@@ -71,7 +71,7 @@ public partial class SettingsViewModel : ObservableRecipient
         SwitchLanguageCommand.Execute(value);
     }*/
 
-    
+
     [RelayCommand]
     private async Task SwitchLanguage(string language)
     {

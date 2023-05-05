@@ -1,12 +1,12 @@
-﻿using System.Text.RegularExpressions;
-using FluentAssertions;
+﻿using FluentAssertions;
+using NibbleTools.ViewModels;
 
 namespace NibbleTools.Tests.MSTest;
 
 [TestClass]
 public class BaseConvertersTest
 {
-    private readonly ViewModels.BaseNumberConverterModel _baseNumberConverter = new();
+    private readonly BaseNumberConverterModel _baseNumberConverter = new();
 
     // Binary conversion tests
     [TestMethod]
@@ -49,7 +49,6 @@ public class BaseConvertersTest
 
         var result1 = _baseNumberConverter.DecimalToBinary(1000.ToString());
         result1.Should().Be(1111101000.ToString());
-
     }
 
     [TestMethod]
@@ -105,7 +104,6 @@ public class BaseConvertersTest
     }
 
 
-
     // Octal conversion tests
     [TestMethod]
     public void OctalToBinaryTest()
@@ -136,5 +134,4 @@ public class BaseConvertersTest
         var result1 = _baseNumberConverter.OctalToHexa(7000.ToString());
         result1.Should().Be("E00");
     }
-
 }

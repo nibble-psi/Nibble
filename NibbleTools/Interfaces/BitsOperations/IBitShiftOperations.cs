@@ -2,7 +2,6 @@
 
 namespace NibbleTools.Interfaces.BitsOperations;
 
-
 public interface IBitShiftOperations<TSelf, TResult>
 {
     TResult ArithmeticLeftShift(TSelf value, TSelf offset);
@@ -13,12 +12,12 @@ public interface IBitShiftOperations<TSelf, TResult>
     TResult CircularRightShift(TSelf value, TSelf offset);
 }
 
-public interface INumberBitShiftOperations<TSelf> : IBitShiftOperations<TSelf, TSelf> where TSelf : INumber<TSelf>, IBinaryNumber<TSelf>
+public interface INumberBitShiftOperations<TSelf> : IBitShiftOperations<TSelf, TSelf>
+    where TSelf : INumber<TSelf>, IBinaryNumber<TSelf>
 {
-
 }
 
-public interface IStringBitShiftOperations<TSelf> : IBitShiftOperations<TSelf, string> where TSelf : INumber<TSelf>, IBinaryNumber<TSelf>
+public interface IStringBitShiftOperations<TSelf> : IBitShiftOperations<TSelf, string>
+    where TSelf : INumber<TSelf>, IBinaryNumber<TSelf>
 {
-
 }

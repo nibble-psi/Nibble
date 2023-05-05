@@ -4,7 +4,6 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using NibbleTools.ViewModels;
-using WinRT.Interop;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -37,7 +36,7 @@ public sealed partial class StringGeneratorPage : Page
         {
             return;
         }
-        
+
         var selectedIndex = DDL.SelectedIndex;
 
         switch (selectedIndex)
@@ -47,17 +46,17 @@ public sealed partial class StringGeneratorPage : Page
                 break;
 
             case 1:
-                TextBox1.Text = StringGeneratorViewModel.GenerateRandomSentence();;
+                TextBox1.Text = StringGeneratorViewModel.GenerateRandomSentence();
+                ;
                 break;
 
             case 2:
                 TextBox1.Text = StringGeneratorViewModel.GenerateRandomParagraph();
                 break;
-            
+
             default:
                 TextBox1.Text = "";
                 break;
- 
         }
     }
 }

@@ -20,5 +20,4 @@ public sealed partial class MainWindow : WindowEx
         /*Height = 600;
         Width = 800;*/
     }
-    
 }

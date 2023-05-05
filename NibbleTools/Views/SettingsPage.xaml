@@ -35,8 +35,7 @@
 
                 <ComboBox ItemsSource="{x:Bind Mode=TwoWay, Path=ViewModel.Languages}"
                           SelectedItem="{x:Bind Mode=TwoWay, Path=ViewModel.SelectedLanguage}"
-                          SelectionChanged="Selector_OnSelectionChanged">
-                </ComboBox>
+                          SelectionChanged="Selector_OnSelectionChanged" />
             </labs:SettingsCard>
 
             <TextBlock Margin="1,16,0,4"

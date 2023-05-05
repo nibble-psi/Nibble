@@ -39,20 +39,20 @@ public class BitwiseTest
     public void BitwiseNotTest()
     {
         var result = _bitwiseOperations.Not(1);
-        result.Should().Be((-2));
+        result.Should().Be(-2);
     }
 
     [TestMethod]
     public void BitwiseNandTest()
     {
         var result = _bitwiseOperations.Nand(1, 1);
-        result.Should().Be((-2));
+        result.Should().Be(-2);
     }
 
     [TestMethod]
     public void BitwiseNorTest()
     {
         var result = _bitwiseOperations.Nor(1, 1);
-        result.Should().Be((-2));
+        result.Should().Be(-2);
     }
 }

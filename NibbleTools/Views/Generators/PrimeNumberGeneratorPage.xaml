@@ -20,12 +20,12 @@
                   RowSpacing="20"
                   ColumnDefinitions="Auto, Auto, Auto, Auto"
                   RowDefinitions="Auto,Auto,Auto,Auto">
-                
+
                 <TextBlock x:Uid="PrimeNumber_Length"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Column="0" />
-                
+
                 <TextBlock x:Uid="PrimeNumber_Count"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
@@ -39,7 +39,7 @@
                            AcceptsExpression="True"
                            Grid.Row="1"
                            Grid.Column="0" />
-                
+
                 <NumberBox Value="{x:Bind ViewModel.Count, Mode=TwoWay}"
                            SpinButtonPlacementMode="Compact"
                            Minimum="1"
@@ -48,7 +48,7 @@
                            AcceptsExpression="True"
                            Grid.Row="1"
                            Grid.Column="1" />
-                
+
                 <Button x:Uid="PrimeNumber_Generate"
                         Grid.Row="3"
                         Grid.Column="0"

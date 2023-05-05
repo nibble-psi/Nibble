@@ -16,10 +16,8 @@ public partial class HashCodeGeneratorViewModel : ObservableRecipient
         _valueToConvert = value;
     }
 
-    public static string ConvertToMd5()
-    {
-        return BitConverter.ToString(MD5.HashData(Encoding.UTF8.GetBytes(_valueToConvert))).Replace("-", "");
-    }
+    public static string ConvertToMd5() =>
+        BitConverter.ToString(MD5.HashData(Encoding.UTF8.GetBytes(_valueToConvert))).Replace("-", "");
 
     public static string ConvertToSha1()
     {

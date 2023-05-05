@@ -1,7 +1,4 @@
-﻿using System.Text.RegularExpressions;
-using FluentAssertions;
-using NibbleTools.ViewModels;
-using NibbleTools.ViewModels.TextManipulation;
+﻿using NibbleTools.ViewModels;
 
 namespace NibbleTools.Tests.MSTest.TextManipulation;
 

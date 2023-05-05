@@ -11,6 +11,12 @@ public class LocalizationSelectorService : ILocalizationSelectorService
     private readonly ILocalSettingsService _localSettingsService;
 
 
+    public LocalizationSelectorService(ILocalSettingsService localSettingsService)
+    {
+        _localSettingsService = localSettingsService;
+    }
+
+
     public string PrimaryLanguage
     {
         get;
@@ -19,12 +25,6 @@ public class LocalizationSelectorService : ILocalizationSelectorService
 
 
     public IReadOnlyList<string> ManifestLanguages => ApplicationLanguages.ManifestLanguages;
-
-
-    public LocalizationSelectorService(ILocalSettingsService localSettingsService)
-    {
-        _localSettingsService = localSettingsService;
-    }
 
 
     public async Task InitializeAsync()

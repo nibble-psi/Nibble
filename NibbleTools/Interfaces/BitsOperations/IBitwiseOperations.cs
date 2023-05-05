@@ -12,12 +12,12 @@ public interface IBitwiseOperations<TSelf, TResult>
     TResult Nor(TSelf value1, TSelf value2);
 }
 
-public interface INumberBitwiseOperations<TSelf> : IBitwiseOperations<TSelf, TSelf> where TSelf : INumber<TSelf>, IBinaryNumber<TSelf>
+public interface INumberBitwiseOperations<TSelf> : IBitwiseOperations<TSelf, TSelf>
+    where TSelf : INumber<TSelf>, IBinaryNumber<TSelf>
 {
-
 }
 
-public interface IStringBitwiseOperations<TSelf> : IBitwiseOperations<TSelf, string> where TSelf : INumber<TSelf>, IBinaryNumber<TSelf>
+public interface IStringBitwiseOperations<TSelf> : IBitwiseOperations<TSelf, string>
+    where TSelf : INumber<TSelf>, IBinaryNumber<TSelf>
 {
-
 }

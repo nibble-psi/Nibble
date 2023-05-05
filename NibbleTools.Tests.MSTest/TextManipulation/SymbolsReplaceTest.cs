@@ -9,7 +9,7 @@ public class SymbolsReplaceViewModelTests
     public void ReplaceCharactersNull()
     {
         // Arrange
-        var viewModel = new SymbolsReplaceViewModel()
+        var viewModel = new SymbolsReplaceViewModel
         {
             ReplaceFrom = "a",
             ReplaceTo = "b",
@@ -27,7 +27,7 @@ public class SymbolsReplaceViewModelTests
     public void ReplaceCharacters()
     {
         // Arrange
-        var viewModel = new SymbolsReplaceViewModel()
+        var viewModel = new SymbolsReplaceViewModel
         {
             ReplaceFrom = "a",
             ReplaceTo = "b",

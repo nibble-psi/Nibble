@@ -2,6 +2,12 @@
 
 public class SearchItem
 {
+    public SearchItem(string title, string pageKey)
+    {
+        Title = title;
+        PageKey = pageKey;
+    }
+
     public string Title
     {
         get;
@@ -12,14 +18,5 @@ public class SearchItem
         get;
     }
 
-    public SearchItem(string title, string pageKey)
-    {
-        Title = title;
-        PageKey = pageKey;
-    }
-
-    public override string ToString()
-    {
-        return Title;
-    }
+    public override string ToString() => Title;
 }

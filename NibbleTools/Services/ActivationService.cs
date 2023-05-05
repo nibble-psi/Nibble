@@ -10,12 +10,13 @@ public class ActivationService : IActivationService
 {
     private readonly IEnumerable<IActivationHandler> _activationHandlers;
     private readonly ActivationHandler<LaunchActivatedEventArgs> _defaultHandler;
-    private readonly IThemeSelectorService _themeSelectorService;
     private readonly ILocalizationSelectorService _localizationSelectorService;
+    private readonly IThemeSelectorService _themeSelectorService;
     private UIElement? _shell;
 
     public ActivationService(ActivationHandler<LaunchActivatedEventArgs> defaultHandler,
-        IEnumerable<IActivationHandler> activationHandlers, IThemeSelectorService themeSelectorService, ILocalizationSelectorService localizationSelectorService)
+        IEnumerable<IActivationHandler> activationHandlers, IThemeSelectorService themeSelectorService,
+        ILocalizationSelectorService localizationSelectorService)
     {
         _defaultHandler = defaultHandler;
         _activationHandlers = activationHandlers;

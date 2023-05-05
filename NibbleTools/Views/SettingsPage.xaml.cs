@@ -1,6 +1,6 @@
 ﻿using Microsoft.UI.Xaml.Controls;
-using NibbleTools.ViewModels;
 using Microsoft.Windows.AppLifecycle;
+using NibbleTools.ViewModels;
 
 namespace NibbleTools.Views;
 
@@ -23,9 +23,9 @@ public sealed partial class SettingsPage : Page
         {
             return;
         }
-        
+
         await ViewModel.SwitchLanguageCommand.ExecuteAsync((string)e.AddedItems[0]);
-        
+
         AppInstance.Restart("LanguageChanged");
     }
 }

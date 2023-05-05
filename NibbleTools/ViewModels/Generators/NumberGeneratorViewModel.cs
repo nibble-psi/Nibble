@@ -27,13 +27,13 @@ public partial class NumberGeneratorViewModel : ObservableRecipient
     public IEnumerable<int> GenerateNumbersArray()
     {
         var rnd = new Random();
-        
+
         var numbers = new int[Count];
-        
+
         for (var i = 0; i < Count; i++)
         {
             var nr = rnd.Next(MinValue, MaxValue);
-            
+
             numbers[i] = nr;
         }
 

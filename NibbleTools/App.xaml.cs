@@ -1,13 +1,8 @@
 ﻿using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using Windows.ApplicationModel.Activation;
-using Windows.Globalization;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Hosting.Internal;
 using Microsoft.UI.Xaml;
 using NibbleTools.Configuration;
 using NibbleTools.Interfaces.Services;
-using LaunchActivatedEventArgs = Microsoft.UI.Xaml.LaunchActivatedEventArgs;
 using UnhandledExceptionEventArgs = Microsoft.UI.Xaml.UnhandledExceptionEventArgs;
 
 namespace NibbleTools;
@@ -22,7 +17,7 @@ public partial class App : Application
                         .UseContentRoot(AppContext.BaseDirectory)
                         .ConfigureServices()
                         .Build();
-        
+
         UnhandledException += App_UnhandledException;
     }
 
@@ -56,9 +51,4 @@ public partial class App : Application
 
         await GetService<IActivationService>().ActivateAsync(args);
     }
-    
- 
-    
-    
-    
 }

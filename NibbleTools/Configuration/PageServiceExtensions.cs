@@ -52,6 +52,5 @@ public static class PageServiceExtensions
 
         //Color picker
         pageService.Configure<ColorPickerViewModel, ColorPickerPage>();
-
     }
 }
