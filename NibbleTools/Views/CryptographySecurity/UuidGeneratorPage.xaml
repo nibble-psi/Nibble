@@ -15,7 +15,7 @@
                     Padding="0 20 0 50">
 
             <TextBox Text="{x:Bind ViewModel.Uuid, Mode=TwoWay}"
-                     Header="UUID"
+                     x:Uid="UuidGenerator_UUID"
                      AcceptsReturn="True"
                      IsReadOnly="True"
                      HorizontalAlignment="Left"
@@ -27,7 +27,7 @@
                         Spacing="30">
                 <NumberBox Value="{x:Bind ViewModel.Count, Mode=TwoWay}"
                            SpinButtonPlacementMode="Compact"
-                           Header="Count"
+                           x:Uid="UuidGenerator_Count"
                            HorizontalAlignment="Left"
                            Minimum="1"
                            Maximum="2147483647"
@@ -36,17 +36,17 @@
 
                 <TextBox Text="{x:Bind ViewModel.Separator, Mode=TwoWay}"
                          IsReadOnly="False"
-                         Header="Delimiter"
+                         x:Uid="UuidGenerator_Delimiter"
                          HorizontalAlignment="Left"
                          TextWrapping="Wrap" />
 
                 <CheckBox IsChecked="{x:Bind ViewModel.IsUpperCase, Mode=TwoWay}"
                           VerticalAlignment="Bottom"
-                          Content="Upper Case" />
+                          x:Uid="UuidGenerator_UpperCase" />
 
             </StackPanel>
 
-            <Button Content="Generate"
+            <Button x:Uid="UuidGenerator_Generate"
                     Command="{x:Bind ViewModel.GenerateUuidCommand}" />
 
         </StackPanel>

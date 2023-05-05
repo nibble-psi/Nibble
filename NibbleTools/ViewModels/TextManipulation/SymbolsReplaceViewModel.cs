@@ -1,18 +1,17 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using Windows.ApplicationModel.DataTransfer;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Windows.ApplicationModel.DataTransfer;
-
 
 namespace NibbleTools.ViewModels.TextManipulation;
 
 public partial class SymbolsReplaceViewModel : ObservableObject
 {
     [ObservableProperty] private string _input = string.Empty;
-    
+
     [ObservableProperty] private string _output = string.Empty;
-    
+
     [ObservableProperty] private string _replaceFrom = string.Empty;
-    
+
     [ObservableProperty] private string _replaceTo = string.Empty;
 
     [RelayCommand]
@@ -53,5 +52,4 @@ public partial class SymbolsReplaceViewModel : ObservableObject
             Input = text;
         }
     }
-
 }

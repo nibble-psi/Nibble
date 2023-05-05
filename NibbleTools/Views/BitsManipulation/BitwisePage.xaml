@@ -21,16 +21,16 @@
                   ColumnDefinitions="Auto, Auto, Auto"
                   RowDefinitions="Auto,Auto,Auto">
 
-                <TextBlock Text="First Number"
+                <TextBlock x:Uid="Bitwise_FirstNumberLabel"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Column="1" />
-                <TextBlock Text="Second Number"
+                <TextBlock x:Uid="Bitwise_SecondNumberLabel"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Column="2" />
 
-                <TextBlock Text="DEC"
+                <TextBlock x:Uid="Bitwise_Decimal"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Row="1" />
@@ -53,7 +53,7 @@
                            Grid.Row="1"
                            Grid.Column="2" />
 
-                <TextBlock Text="BIN"
+                <TextBlock x:Uid="Bitwise_Binary"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Row="2" />
@@ -69,7 +69,7 @@
 
             </Grid>
 
-            <TextBlock Text="Output"
+            <TextBlock x:Uid="Bitwise_OutputLabel"
                        Style="{StaticResource TitleTextBlockStyle}" />
 
             <!--Output fiels-->
@@ -79,7 +79,7 @@
                   RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto, Auto,Auto">
 
                 <!--AND-->
-                <TextBlock Text="AND"
+                <TextBlock x:Uid="Bitwise_AND"
                            Grid.Column="0"
                            Grid.Row="1"
                            TextAlignment="Left"
@@ -90,7 +90,7 @@
                          Grid.Row="1" />
 
                 <!--NAND-->
-                <TextBlock Text="NAND"
+                <TextBlock x:Uid="Bitwise_NAND"
                            Grid.Column="0"
                            Grid.Row="2"
                            TextAlignment="Left"
@@ -101,7 +101,7 @@
                          Grid.Row="2" />
 
                 <!--OR-->
-                <TextBlock Text="OR"
+                <TextBlock x:Uid="Bitwise_OR"
                            Grid.Column="0"
                            Grid.Row="3"
                            TextAlignment="Left"
@@ -112,7 +112,7 @@
                          Grid.Row="3" />
 
                 <!--NOR-->
-                <TextBlock Text="NOR"
+                <TextBlock x:Uid="Bitwise_NOR"
                            Grid.Column="0"
                            Grid.Row="4"
                            TextAlignment="Left"
@@ -123,7 +123,7 @@
                          Grid.Row="4" />
 
                 <!--XOR-->
-                <TextBlock Text="XOR"
+                <TextBlock x:Uid="Bitwise_XOR"
                            Grid.Column="0"
                            Grid.Row="5"
                            TextAlignment="Left"
@@ -134,7 +134,7 @@
                          Grid.Row="5" />
 
                 <!--NOT1-->
-                <TextBlock Text="NOT1"
+                <TextBlock x:Uid="Bitwise_NOT1"
                            Grid.Column="0"
                            Grid.Row="6"
                            TextAlignment="Left"
@@ -145,7 +145,7 @@
                          Grid.Row="6" />
 
                 <!--NOT2-->
-                <TextBlock Text="NOT2"
+                <TextBlock x:Uid="Bitwise_NOT2"
                            Grid.Column="0"
                            Grid.Row="7"
                            TextAlignment="Left"

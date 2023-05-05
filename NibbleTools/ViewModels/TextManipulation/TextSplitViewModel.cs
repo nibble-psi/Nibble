@@ -1,6 +1,6 @@
+using Windows.ApplicationModel.DataTransfer;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Windows.ApplicationModel.DataTransfer;
 
 namespace NibbleTools.ViewModels;
 
@@ -84,5 +84,4 @@ public partial class TextSplitViewModel : ObservableRecipient
             Input = text;
         }
     }
-
 }

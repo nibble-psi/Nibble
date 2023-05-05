@@ -1,65 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<root>
-    <!-- 
-      Microsoft ResX Schema 
-      
-      Version 2.0
-      
-      The primary goals of this format is to allow a simple XML format 
-      that is mostly human readable. The generation and parsing of the 
-      various data types are done through the TypeConverter classes 
-      associated with the data types.
-      
-      Example:
-      
-      ... ado.net/XML headers & schema ...
-      <resheader name="resmimetype">text/microsoft-resx</resheader>
-      <resheader name="version">2.0</resheader>
-      <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-      <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-      <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-      <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-      <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-          <value>[base64 mime encoded serialized .NET Framework object]</value>
-      </data>
-      <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-          <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-          <comment>This is a comment</comment>
-      </data>
-                  
-      There are any number of "resheader" rows that contain simple 
-      name/value pairs.
-      
-      Each data row contains a name, and value. The row also contains a 
-      type or mimetype. Type corresponds to a .NET class that support 
-      text/value conversion through the TypeConverter architecture. 
-      Classes that don't support this are serialized and stored with the 
-      mimetype set.
-      
-      The mimetype is used for serialized objects, and tells the 
-      ResXResourceReader how to depersist the object. This is currently not 
-      extensible. For a given mimetype the value must be set accordingly:
-      
-      Note - application/x-microsoft.net.object.binary.base64 is the format 
-      that the ResXResourceWriter will generate, however the reader can 
-      read any of the formats listed below.
-      
-      mimetype: application/x-microsoft.net.object.binary.base64
-      value   : The object must be serialized with 
-              : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-              : and then encoded with base64 encoding.
-      
-      mimetype: application/x-microsoft.net.object.soap.base64
-      value   : The object must be serialized with 
-              : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-              : and then encoded with base64 encoding.
-  
-      mimetype: application/x-microsoft.net.object.bytearray.base64
-      value   : The object must be serialized into a byte array 
-              : using a System.ComponentModel.TypeConverter
-              : and then encoded with base64 encoding.
-      -->
-    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root"
+﻿<root>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+                id="root"
                 xmlns="">
         <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
         <xsd:element name="root" msdata:IsDataSet="true">
@@ -123,44 +64,41 @@
         </value>
     </resheader>
     <data name="AppDisplayName" xml:space="preserve">
-    <value>NibbleTools</value>
-  </data>
+      <value>NibbleTools įrankiai</value>
+    </data>
     <data name="AppDescription" xml:space="preserve">
-    <value>Latest version</value>
-  </data>
+      <value>Naujausia versija</value>
+    </data>
     <data name="Shell_Main.Content" xml:space="preserve">
-    <value>Home</value>
-  </data>
+      <value>Namai</value>
+    </data>
     <data name="Settings_Personalization.Text" xml:space="preserve">
-    <value>Personalization</value>
-  </data>
+      <value>Personalizacija</value>
+    </data>
     <data name="Settings_Theme.Text" xml:space="preserve">
-    <value>Theme</value>
-  </data>
+      <value>Tema</value>
+    </data>
     <data name="Settings_Theme_Light.Content" xml:space="preserve">
-    <value>Light</value>
-  </data>
+      <value>Šviesi</value>
+    </data>
     <data name="Settings_Theme_Dark.Content" xml:space="preserve">
-    <value>Dark</value>
-  </data>
+      <value>Tamsi</value>
+    </data>
     <data name="Settings_Theme_Default.Content" xml:space="preserve">
-    <value>Default</value>
-  </data>
+      <value>Numatytoji</value>
+    </data>
     <data name="Settings_About.Text" xml:space="preserve">
-    <value>About this application</value>
-  </data>
+      <value>Apie programą</value>
+    </data>
     <data name="Settings_AboutDescription.Text" xml:space="preserve">
-    <value>This is your app description.</value>
-  </data>
+      <value>Programos aprašymas</value>
+    </data>
     <data name="SettingsPage_PrivacyTermsLink.Content" xml:space="preserve">
-    <value>Privacy Statement</value>
-  </data>
-    <data name="SettingsPage_PrivacyTermsLink.NavigateUri" xml:space="preserve">
-    <value>https://YourPrivacyUrlGoesHere/</value>
-  </data>
+      <value>Privatumas</value>
+    </data>
     <data name="Shell_Bitshift.Content" xml:space="preserve">
-    <value>Bit Shift Operations</value>
-  </data>
+      <value>Dvejetainiai postūmiai</value>
+    </data>
     <data name="Shell_XOR.Content" xml:space="preserve">
     <value>XOR</value>
   </data>
@@ -174,75 +112,78 @@
     <value>AND &amp; NAND</value>
   </data>
     <data name="Shell_BitManipulation.Content" xml:space="preserve">
-    <value>Bits Manipulation</value>
-  </data>
+      <value>Bitų manipuliacijos</value>
+    </data>
     <data name="Shell_Bitwise.Content" xml:space="preserve">
-    <value>Bitwise Operations</value>
-  </data>
+      <value>Bitų operacijos </value>
+    </data>
     <data name="Shell_BaseNumberConverter.Content" xml:space="preserve">
-    <value>Base Number Converter</value>
-  </data>
+      <value>Skaičiavimo sistemos keitimas</value>
+    </data>
     <data name="Shell_NumberGenerator.Content" xml:space="preserve">
-    <value>Number Generator</value>
-  </data>
+      <value>Skaičių generatorius</value>
+    </data>
     <data name="Shell_StringGenerator.Content" xml:space="preserve">
-    <value>String Generator</value>
-  </data>
+      <value>Teksto generatorius</value>
+    </data>
     <data name="Shell_Counter.Content" xml:space="preserve">
-    <value>Text Counter</value>
-  </data>
+      <value>Teksto skaičiuotuvas</value>
+    </data>
     <data name="Shell_TextSplit.Content" xml:space="preserve">
-    <value>Text Split</value>
-  </data>
+        <value>Teksto skaidymas</value>
+    </data>
     <data name="Shell_Generators.Content" xml:space="preserve">
-    <value>Generators</value>
-  </data>
+      <value>Generatoriai</value>
+    </data>
     <data name="Shell_TextManipulation.Content" xml:space="preserve">
-    <value>Text Manipulation</value>
-  </data>
+      <value>Teksto operacijos</value>
+    </data>
     <data name="Shell_UuidGenerator.Content" xml:space="preserve">
-    <value>UUID Generator</value>
-  </data>
+      <value>UUID generatorius</value>
+    </data>
     <data name="Shell_SymbolsReplace.Content" xml:space="preserve">
-    <value>Symbols Replace</value>
-  </data>
+      <value>Simbolių keitiklis</value>
+    </data>
     <data name="Shell_HashCodeGenerator.Content" xml:space="preserve">
-    <value>Hash Code Generator</value>
-  </data>
+      <value>Hash kodo generatorius</value>
+    </data>
     <data name="Shell_LinesSorter.Content" xml:space="preserve">
-    <value>Lines Sorter</value>
-  </data>
+      <value>Eilučių rūšiuotojas</value>
+    </data>
     <data name="Shell_UnitConverter.Content" xml:space="preserve">
-    <value>Unit Converter</value>
-  </data>
+      <value>Vienetų keitiklis</value>
+    </data>
     <data name="Shell_LetterCases.Content" xml:space="preserve">
-    <value>Text Letter Cases Converter</value>
-  </data>
+      <value>Raidžių keitiklis</value>
+    </data>
     <data name="Shell_PasswordGenerator.Content" xml:space="preserve">
-    <value>Password Generator</value>
-  </data>
+      <value>Slaptažodžių generatorius</value>
+    </data>
     <data name="Shell_UnixTimestampsConverter.Content" xml:space="preserve">
-    <value>Unix Timestamps Converter</value>
-  </data>
-    <data name="Shell_MarkdownPreview.Content" xml:space="preserve">
-    <value>Markdown preview</value>
+        <value>Unix laiko žymos keitiklis</value>
+    </data>
+    <data name="Shell_SearchBox.PlaceholderText" xml:space="preserve">
+        <value>Paieška</value>
+    </data>
+    <data name="SettingsPage_PrivacyTermsLink.NavigateUri" xml:space="preserve">
+    <value>https://YourPrivacyUrlGoesHere/</value>
   </data>
     <data name="Shell_ColorPicker.Content" xml:space="preserve">
-    <value>Color Picker</value>
+    <value>Spalvų ratas</value>
+  </data>
+    <data name="Shell_MarkdownPreview.Content" xml:space="preserve">
+    <value>Markdown peržiūra</value>
   </data>
     <data name="Shell_PrimeNumberGenerator.Content" xml:space="preserve">
-    <value>Prime Number Generator</value>
-  </data>
-    <data name="Shell_SearchBox.PlaceholderText" xml:space="preserve">
-    <value>Search</value>
+    <value>Pirminių skaičių generatorius</value>
   </data>
 
     <!-- Bitwise_ -->
     <data name="Bitwise_FirstNumberLabel.Text" xml:space="preserve">
-    <value>First Number</value>
+    <value>Pirmas skaičius</value>
   </data>
     <data name="Bitwise_SecondNumberLabel.Text" xml:space="preserve">
-    <value>Second Number</value>
+    <value>Antras skaičius</value>
   </data>
     <data name="Bitwise_Decimal.Text" xml:space="preserve">
         <value>DEC</value>
@@ -251,7 +192,7 @@
         <value>BIN</value>
     </data>
     <data name="Bitwise_OutputLabel.Text" xml:space="preserve">
-    <value>Output</value>
+    <value>Rezultatai</value>
   </data>
     <data name="Bitwise_AND.Text" xml:space="preserve">
         <value>AND</value>
@@ -276,41 +217,42 @@
     </data>
 
 
+    <!-- MarkdownPreview_ -->
+
     <data name="MarkdownPreview_RegularText.Text" xml:space="preserve">
-    <value>Regular Text</value>
+    <value>Paprastas tekstas</value>
   </data>
     <data name="MarkdownPreview_MarkdownText.Text" xml:space="preserve">
-    <value>Markdown Text</value>
+    <value>Markdown tekstas</value>
   </data>
 
     <data name="PasswordGenerator_Password.Header" xml:space="preserve">
-    <value>Password</value>
+    <value>Slaptažodis</value>
   </data>
     <data name="PasswordGenerator_PasswordLength.Header" xml:space="preserve">
-    <value>Password length</value>
+    <value>Slaptažodžio ilgis</value>
   </data>
     <data name="PasswordGenerator_UpperCase.Content" xml:space="preserve">
-    <value>Upper Case</value>
+    <value>Didžiosios raidės</value>
   </data>
     <data name="PasswordGenerator_Numbers.Content" xml:space="preserve">
-    <value>Numbers</value>
+    <value>Skaičiai</value>
   </data>
     <data name="PasswordGenerator_Generate.Content" xml:space="preserve">
-    <value>Generate</value>
+    <value>Generuoti</value>
   </data>
-
 
     <data name="HashGenerator_Input.Header" xml:space="preserve">
-    <value>Input</value>
+    <value>Įvestis</value>
   </data>
     <data name="HashGenerator_HashType.Text" xml:space="preserve">
-    <value>Hash code type</value>
+    <value>Maišos kodo tipas</value>
   </data>
     <data name="HashGenerator_HashCode.Header" xml:space="preserve">
-    <value>Hash code</value>
+    <value>Maišos kodas</value>
   </data>
     <data name="HashGenerator_Generate.Content" xml:space="preserve">
-    <value>Generate</value>
+    <value>Generuoti</value>
   </data>
 
 
@@ -318,177 +260,179 @@
     <value>UUID</value>
   </data>
     <data name="UuidGenerator_Count.Header" xml:space="preserve">
-    <value>Count</value>
+    <value>Kiekis</value>
   </data>
     <data name="UuidGenerator_Delimiter.Header" xml:space="preserve">
-    <value>Delimiter</value>
+    <value>Skyriklis</value>
   </data>
     <data name="UuidGenerator_UpperCase.Content" xml:space="preserve">
-    <value>Upper Case</value>
+    <value>Didžiosios raidės</value>
   </data>
     <data name="UuidGenerator_Generate.Content" xml:space="preserve">
-    <value>Generate</value>
+    <value>Generuoti</value>
   </data>
 
+
     <data name="Settings_Appearance.Text" xml:space="preserve">
-    <value>Appearance and behavior</value>
+    <value>Išvaizda ir elgsena</value>
   </data>
     <data name="Settings_AppTheme.Header" xml:space="preserve">
-    <value>App theme</value>
-  </data>
-    <data name="Settings_Language.Description" xml:space="preserve">
-    <value>Language change makes app automatically restart</value>
+    <value>Programos tema</value>
   </data>
     <data name="Settings_Language.Header" xml:space="preserve">
-    <value>Language</value>
-    </data>
+    <value>Kalba</value>
+  </data>
+    <data name="Settings_Language.Description" xml:space="preserve">
+    <value>Pakeitus kalbą programa automatiškai persikraus</value>
+  </data>
 
 
     <data name="UnixTimestamp_Input.Header" xml:space="preserve">
-    <value>Unix Timestamp</value>
+    <value>Unix laiko žyma</value>
   </data>
     <data name="UnixTimestamp_Convert.Content" xml:space="preserve">
-    <value>Convert</value>
+    <value>Paversti</value>
   </data>
     <data name="UnixTimestamp_Year.Header" xml:space="preserve">
-    <value>Year</value>
+    <value>Metai</value>
   </data>
     <data name="UnixTimestamp_Month.Header" xml:space="preserve">
-        <value>Month</value>
+        <value>Mėnesis</value>
     </data>
     <data name="UnixTimestamp_Day.Header" xml:space="preserve">
-        <value>Day</value>
+        <value>Diena</value>
     </data>
     <data name="UnixTimestamp_Hour.Header" xml:space="preserve">
-        <value>Hour</value>
+        <value>Valanda</value>
     </data>
     <data name="UnixTimestamp_Minute.Header" xml:space="preserve">
-        <value>Minute</value>
+        <value>Minutės</value>
     </data>
     <data name="UnixTimestamp_Second.Header" xml:space="preserve">
-        <value>Second</value>
+        <value>Sekundės</value>
     </data>
 
 
     <data name="UnitConverter_From.Text" xml:space="preserve">
-        <value>From</value>
+        <value>Iš</value>
     </data>
     <data name="UnitConverter_To.Text" xml:space="preserve">
-        <value>To</value>
+        <value>Į</value>
     </data>
     <data name="UnitConverter_Convert.Content" xml:space="preserve">
-        <value>Convert</value>
+        <value>Paversti</value>
     </data>
 
-    <!--SymbolsReplace_-->
 
     <data name="SymbolsReplace_Input.Header" xml:space="preserve">
-        <value>Input Text</value>
+        <value>Įvestis</value>
     </data>
     <data name="SymbolsReplace_Output.Header" xml:space="preserve">
-        <value>Output Text</value>
+        <value>Išvestis</value>
     </data>
     <data name="SymbolsReplace_Find.Header" xml:space="preserve">
-        <value>Find</value>
+        <value>Surasti</value>
     </data>
     <data name="SymbolsReplace_Replace.Header" xml:space="preserve">
-        <value>Replace</value>
+        <value>Pakeisti į</value>
     </data>
     <data name="SymbolsReplace_ReplaceButton.Content" xml:space="preserve">
-        <value>Replace</value>
+        <value>Pakeisti</value>
     </data>
     <data name="SymbolsReplace_ClearButton.Content" xml:space="preserve">
-        <value>Clear</value>
+        <value>Išvalyti</value>
     </data>
     <data name="SymbolsReplace_PasteButton.Content" xml:space="preserve">
-        <value>Paste</value>
+        <value>Įklijuoti</value>
     </data>
 
     <!--LetterCases_-->
     <data name="LetterCases_Input.Header" xml:space="preserve">
-        <value>Input Text</value>
+        <value>Įvestis</value>
     </data>
     <data name="LetterCases_Output.Header" xml:space="preserve">
-        <value>Output Text</value>
+        <value>Išvestis</value>
     </data>
     <data name="LetterCases_LowerCase.Content" xml:space="preserve">
-        <value>lower case</value>
+        <value>mažosios raidės</value>
     </data>
     <data name="LetterCases_UpperCase.Content" xml:space="preserve">
-        <value>UPPER CASE</value>
+        <value>DIDŽIOSIOS RAIDĖS</value>
     </data>
     <data name="LetterCases_CapitalizedCase.Content" xml:space="preserve">
-        <value>Capitalized Case</value>
+        <value>Iš Didžiosios Raidės</value>
     </data>
     <data name="LetterCases_Convert.Content" xml:space="preserve">
-        <value>Convert</value>
+        <value>Paversti</value>
     </data>
 
 
     <!--LinesSorter_-->
     <data name="LinesSorter_Input.Header" xml:space="preserve">
-        <value>Input Text</value>
+        <value>Įvestis</value>
     </data>
     <data name="LinesSorter_Output.Header" xml:space="preserve">
-        <value>Output Text</value>
+        <value>Išvestis</value>
     </data>
     <data name="LinesSorter_Sort.Content" xml:space="preserve">
-        <value>Sort</value>
+        <value>Rūšiuoti</value>
     </data>
     <data name="LinesSorter_SortAlphabetically.Content" xml:space="preserve">
-        <value>Alphabetically</value>
+        <value>Abėcėliškai</value>
     </data>
     <data name="LinesSorter_SortReverse.Content" xml:space="preserve">
-        <value>Reverse</value>
+        <value>Atvirkščiai</value>
     </data>
     <data name="LinesSorter_SortRandom.Content" xml:space="preserve">
-        <value>Random</value>
+        <value>Atsitiktinai</value>
     </data>
+
 
     <!--TextSplit_-->
     <data name="TextSplit_Input.Header" xml:space="preserve">
-        <value>Input Text</value>
+        <value>Įvestis</value>
     </data>
     <data name="TextSplit_Output.Header" xml:space="preserve">
-        <value>Output Text</value>
+        <value>Išvestis</value>
     </data>
     <data name="TextSplit_Delimiter.Header" xml:space="preserve">
-        <value>Delimiter</value>
+        <value>Skyriklis</value>
     </data>
     <data name="TextSplit_Split.Content" xml:space="preserve">
-        <value>Split</value>
+        <value>Skaldyti</value>
     </data>
     <data name="TextSplit_Paste.Content" xml:space="preserve">
-        <value>Paste</value>
+        <value>Įklijuoti</value>
     </data>
 
 
     <!--Counter-->
     <data name="Counter_Input.Header" xml:space="preserve">
-        <value>Input Text</value>
+        <value>Įvestis</value>
     </data>
     <data name="Counter_Symbols.Text" xml:space="preserve">
-        <value>Symbols count</value>
+        <value>Simbolių kiekis</value>
     </data>
     <data name="Counter_Words.Text" xml:space="preserve">
-        <value>Words count</value>
+        <value>Žodžių kiekis</value>
     </data>
     <data name="Counter_Lines.Text" xml:space="preserve">
-        <value>Lines count</value>
+        <value>Eilučių kiekis</value>
     </data>
     <data name="Counter_Count.Content" xml:space="preserve">
-        <value>Count</value>
+        <value>Skaičiuoti</value>
     </data>
     <data name="Counter_Paste.Content" xml:space="preserve">
-        <value>Paste</value>
+        <value>Įklijuoti</value>
     </data>
+
 
     <!--BitShift_-->
     <data name="BitShift_Input.Text" xml:space="preserve">
-        <value>Input Number</value>
+        <value>Įvesties skaičius</value>
     </data>
     <data name="BitShift_Bits.Text" xml:space="preserve">
-        <value>Bits to Shift</value>
+        <value>Postūmių kiekis</value>
     </data>
     <data name="BitShift_Decimal.Text" xml:space="preserve">
         <value>DEC</value>
@@ -497,27 +441,26 @@
         <value>BIN</value>
     </data>
     <data name="BitShift_Output.Text" xml:space="preserve">
-        <value>Output</value>
+        <value>Išvestis</value>
     </data>
     <data name="BitShift_LogicalLeft.Text" xml:space="preserve">
-        <value>Logical Left</value>
+        <value>Loginis į kairę</value>
     </data>
     <data name="BitShift_LogicalRight.Text" xml:space="preserve">
-        <value>Logical Right</value>
+        <value>Loginis į dešinę</value>
     </data>
     <data name="BitShift_ArithmeticLeft.Text" xml:space="preserve">
-        <value>Arithmetic Left</value>
+        <value>Aritmetinis į kairę</value>
     </data>
     <data name="BitShift_ArithmeticRight.Text" xml:space="preserve">
-        <value>Arithmetic Right</value>
+        <value>Aritmetinis į dešinę</value>
     </data>
     <data name="BitShift_CircularLeft.Text" xml:space="preserve">
-        <value>Circular Left</value>
+        <value>Ciklinis į kairę</value>
     </data>
     <data name="BitShift_CircularRight.Text" xml:space="preserve">
-        <value>Circular Right</value>
+        <value>Ciklinis į dešinę</value>
     </data>
-
 
     <!-- BaseNumberConverter_ -->
 
@@ -538,52 +481,51 @@
     <!-- StringGenerator_ -->
 
     <data name="StringGenerator_Output.Header" xml:space="preserve">
-        <value>Output Text</value>
+        <value>Išvestis</value>
     </data>
     <data name="StringGenerator_Generate.Content" xml:space="preserve">
-        <value>Generate</value>
+        <value>Generuoti</value>
     </data>
     <data name="StringGenerator_Word.Content" xml:space="preserve">
-        <value>Word</value>
+        <value>Žodis</value>
     </data>
     <data name="StringGenerator_Sentence.Content" xml:space="preserve">
-        <value>Sentence</value>
+        <value>Sakinys</value>
     </data>
     <data name="StringGenerator_Paragraph.Content" xml:space="preserve">
-        <value>Paragraph</value>
+        <value>Pastraipa</value>
     </data>
 
 
     <!-- PrimeNumber_ -->
     <data name="PrimeNumber_Length.Text" xml:space="preserve">
-        <value>Length of each prime number</value>
+        <value>Skaitmenų skaičius</value>
     </data>
     <data name="PrimeNumber_Count.Text" xml:space="preserve">
-        <value>Amount of numbers</value>
+        <value>Kiekis</value>
     </data>
     <data name="PrimeNumber_Generate.Content" xml:space="preserve">
-        <value>Generate</value>
+        <value>Generuoti</value>
     </data>
     <data name="PrimeNumber_Output.Header" xml:space="preserve">
-        <value>Output Text</value>
+        <value>Išvestis</value>
     </data>
-
 
     <!-- NumberGenerator_ -->
     <data name="NumberGenerator_MinValue.Text" xml:space="preserve">
-        <value>Min Value</value>
+        <value>Min reikšmė</value>
     </data>
     <data name="NumberGenerator_MaxValue.Text" xml:space="preserve">
-        <value>Max Value</value>
+        <value>Max reikšmė</value>
     </data>
     <data name="NumberGenerator_Count.Text" xml:space="preserve">
-        <value>Amount of numbers</value>
+        <value>Kiekis</value>
     </data>
     <data name="NumberGenerator_Generate.Content" xml:space="preserve">
-        <value>Generate</value>
+        <value>Generuoti</value>
     </data>
     <data name="NumberGenerator_Output.Header" xml:space="preserve">
-        <value>Output Text</value>
+        <value>Išvestis</value>
     </data>
 
 </root>

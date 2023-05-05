@@ -132,8 +132,6 @@ public sealed partial class ShellPage
         ViewModel.NavigationService.NavigateTo(searchItem.PageKey);
     }
 
-    private void CtrlF_Invoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
-    {
+    private void CtrlF_Invoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args) =>
         ControlsSearchBox.Focus(FocusState.Programmatic);
-    }
 }

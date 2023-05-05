@@ -8,10 +8,7 @@ public class TextSplitViewModelTests
     private TextSplitViewModel viewModel;
 
     [TestInitialize]
-    public void Initialize()
-    {
-        viewModel = new TextSplitViewModel();
-    }
+    public void Initialize() => viewModel = new TextSplitViewModel();
 
     [TestMethod]
     public void SplitBySeperator_InputEmpty_OutputEmpty()

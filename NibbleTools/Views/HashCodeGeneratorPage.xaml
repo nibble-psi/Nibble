@@ -20,14 +20,14 @@
                         Spacing="30"
                         MinWidth="150">
                 <TextBox Text="{x:Bind ViewModel.PrimaryValue, Mode=TwoWay}"
-                         Header="Input string: " />
+                         x:Uid="HashGenerator_Input" />
             </StackPanel>
 
             <StackPanel Orientation="Vertical"
                         HorizontalAlignment="Left"
                         Spacing="30"
                         MinWidth="150">
-                <TextBlock Text="Select hash code type: " Margin="0 20 5 0" />
+                <TextBlock x:Uid="HashGenerator_HashType" Margin="0 20 5 0" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
@@ -39,10 +39,10 @@
                 </ComboBox>
             </StackPanel>
 
-            <Button x:Name="GenerateHashCode" Content="Generate" Width="100" Height="30" Margin="0 40 5 0"
+            <Button x:Name="GenerateHashCode" x:Uid="HashGenerator_Generate" Width="100" Height="30" Margin="0 40 5 0"
                     Click="GenerateHashCode_Click" />
             <TextBox x:Name="TextBox1"
-                     Header="Hash code: "
+                     x:Uid="HashGenerator_HashCode"
                      Width="400" Margin="0 40 0 0" IsReadOnly="True"
                      TextWrapping="Wrap" />
         </StackPanel>

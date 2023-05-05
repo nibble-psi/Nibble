@@ -11,7 +11,7 @@ public partial class UuidGeneratorViewModel : ObservableRecipient
     [ObservableProperty] private bool _isUpperCase;
 
     [ObservableProperty] private string _separator = string.Empty;
-    
+
     [ObservableProperty] private string _uuid = string.Empty;
 
     [RelayCommand]

@@ -19,14 +19,14 @@
                   RowDefinitions="Auto"
                   HorizontalAlignment="Stretch">
                 <TextBox Text="{x:Bind ViewModel.Input, Mode=TwoWay}"
-                         Header="Input Text"
+                         x:Uid="SymbolsReplace_Input"
                          AcceptsReturn="True"
                          IsReadOnly="False"
                          TextWrapping="Wrap"
                          Height="300" />
 
                 <TextBox IsReadOnly="True"
-                         Header="Output Text"
+                         x:Uid="SymbolsReplace_Output"
                          Text="{x:Bind ViewModel.Output, Mode=TwoWay}"
                          TextWrapping="Wrap"
                          Height="300"
@@ -38,14 +38,14 @@
                         Spacing="30">
                 <TextBox Text="{x:Bind ViewModel.ReplaceFrom, Mode=TwoWay}"
                          IsReadOnly="False"
-                         Header="Find"
+                         x:Uid="SymbolsReplace_Find"
                          Width="100"
                          HorizontalAlignment="Left"
                          TextWrapping="Wrap" />
 
                 <TextBox Text="{x:Bind ViewModel.ReplaceTo, Mode=TwoWay}"
                          IsReadOnly="False"
-                         Header="Replace"
+                         x:Uid="SymbolsReplace_Replace"
                          Width="100"
                          HorizontalAlignment="Left"
                          TextWrapping="Wrap" />
@@ -54,13 +54,13 @@
             <StackPanel HorizontalAlignment="Left"
                         Orientation="Horizontal"
                         Spacing="20">
-                <Button Content="Replace"
+                <Button x:Uid="SymbolsReplace_ReplaceButton"
                         Command="{x:Bind ViewModel.ReplaceCommand}" />
 
-                <Button Content="Clear"
+                <Button x:Uid="SymbolsReplace_ClearButton"
                         Command="{x:Bind ViewModel.ClearCommand}" />
 
-                <Button Content="Paste"
+                <Button x:Uid="SymbolsReplace_PasteButton"
                         Command="{x:Bind ViewModel.PasteTextCommand}" />
             </StackPanel>
 

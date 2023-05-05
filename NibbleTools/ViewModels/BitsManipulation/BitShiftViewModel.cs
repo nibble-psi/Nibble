@@ -8,8 +8,6 @@ public partial class BitShiftViewModel : ObservableRecipient
 {
     private readonly IStringBitShiftOperations<int> _bitShiftOperations;
 
-    [ObservableProperty] private int _number = 1;
-
     [ObservableProperty] private string _arithmeticLeftShiftBinaryString = string.Empty;
 
     [ObservableProperty] private string _arithmeticRightShiftBinaryString = string.Empty;
@@ -25,6 +23,8 @@ public partial class BitShiftViewModel : ObservableRecipient
     [ObservableProperty] private string _logicalLeftShiftBinaryString = string.Empty;
 
     [ObservableProperty] private string _logicalRightShiftBinaryString = string.Empty;
+
+    [ObservableProperty] private int _number = 1;
 
     [ObservableProperty] private string _numberBinaryString = string.Empty;
 
@@ -69,5 +69,4 @@ public partial class BitShiftViewModel : ObservableRecipient
 
         ShiftNumber();
     }
-
 }

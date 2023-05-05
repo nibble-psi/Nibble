@@ -48,6 +48,7 @@ public partial class App : Application
     protected async override void OnLaunched(LaunchActivatedEventArgs args)
     {
         base.OnLaunched(args);
+
         await GetService<IActivationService>().ActivateAsync(args);
     }
 }

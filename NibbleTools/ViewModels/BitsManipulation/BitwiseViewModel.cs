@@ -12,10 +12,6 @@ public partial class BitwiseViewModel : ObservableRecipient
 
     [ObservableProperty] private string _firstValueBinary = string.Empty;
 
-    [ObservableProperty] private int _secondValue = 1;
-
-    [ObservableProperty] private string _secondValueBinary = string.Empty;
-
     [ObservableProperty] private string _resultAnd = string.Empty;
 
     [ObservableProperty] private string _resultNand = string.Empty;
@@ -27,6 +23,10 @@ public partial class BitwiseViewModel : ObservableRecipient
     [ObservableProperty] private string _resultNotSecondValue = string.Empty;
 
     [ObservableProperty] private string _resultOr = string.Empty;
+
+    [ObservableProperty] private int _secondValue = 1;
+
+    [ObservableProperty] private string _secondValueBinary = string.Empty;
 
     [ObservableProperty] private string resultXor = string.Empty;
 

@@ -20,16 +20,16 @@
                   ColumnDefinitions="Auto, Auto, Auto"
                   RowDefinitions="Auto,Auto,Auto">
 
-                <TextBlock Text="Input Number"
+                <TextBlock x:Uid="BitShift_Input"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Column="1" />
-                <TextBlock Text="Bits to Shift"
+                <TextBlock x:Uid="BitShift_Bits"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Column="2" />
 
-                <TextBlock Text="DEC"
+                <TextBlock x:Uid="BitShift_Decimal"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Row="1" />
@@ -52,7 +52,7 @@
                            Grid.Row="1"
                            Grid.Column="2" />
 
-                <TextBlock Text="BIN"
+                <TextBlock x:Uid="BitShift_Binary"
                            TextAlignment="Left"
                            VerticalAlignment="Center"
                            Grid.Row="2" />
@@ -68,7 +68,7 @@
 
             </Grid>
 
-            <TextBlock Text="Output"
+            <TextBlock x:Uid="BitShift_Output"
                        Style="{StaticResource TitleTextBlockStyle}" />
 
             <!--!Output fiels-->
@@ -77,7 +77,7 @@
                   ColumnDefinitions="Auto, Auto"
                   RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
 
-                <TextBlock Text="Logical Left"
+                <TextBlock x:Uid="BitShift_LogicalLeft"
                            Grid.Column="0"
                            Grid.Row="0"
                            TextAlignment="Left"
@@ -87,7 +87,7 @@
                          Grid.Column="1"
                          Grid.Row="0" />
 
-                <TextBlock Text="Logical Right"
+                <TextBlock x:Uid="BitShift_LogicalRight"
                            Grid.Column="0"
                            Grid.Row="1"
                            TextAlignment="Left"
@@ -97,7 +97,7 @@
                          Grid.Column="1"
                          Grid.Row="1" />
 
-                <TextBlock Text="Aritmetic Left"
+                <TextBlock x:Uid="BitShift_ArithmeticLeft"
                            Grid.Column="0"
                            Grid.Row="2"
                            TextAlignment="Left"
@@ -107,7 +107,7 @@
                          Grid.Column="1"
                          Grid.Row="2" />
 
-                <TextBlock Text="Aritmetic Right"
+                <TextBlock x:Uid="BitShift_ArithmeticRight"
                            Grid.Column="0"
                            Grid.Row="3"
                            TextAlignment="Left"
@@ -117,7 +117,7 @@
                          Grid.Column="1"
                          Grid.Row="3" />
 
-                <TextBlock Text="Circular Left"
+                <TextBlock x:Uid="BitShift_CircularLeft"
                            Grid.Column="0"
                            Grid.Row="4"
                            TextAlignment="Left"
@@ -127,7 +127,7 @@
                          Grid.Column="1"
                          Grid.Row="4" />
 
-                <TextBlock Text="Circular Right"
+                <TextBlock x:Uid="BitShift_CircularRight"
                            Grid.Column="0"
                            Grid.Row="5"
                            TextAlignment="Left"

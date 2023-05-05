@@ -1,6 +1,6 @@
+using Windows.ApplicationModel.DataTransfer;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Windows.ApplicationModel.DataTransfer;
 
 namespace NibbleTools.ViewModels;
 
@@ -30,7 +30,7 @@ public partial class CounterViewModel : ObservableRecipient
     {
         Words = 0;
         var index = 0;
-        
+
         while (index < Input.Length && char.IsWhiteSpace(Input[index]))
         {
             index++;
@@ -44,7 +44,7 @@ public partial class CounterViewModel : ObservableRecipient
             }
 
             Words++;
-            
+
             while (index < Input.Length && char.IsWhiteSpace(Input[index]))
             {
                 index++;
@@ -70,5 +70,4 @@ public partial class CounterViewModel : ObservableRecipient
             Input = text;
         }
     }
-
 }

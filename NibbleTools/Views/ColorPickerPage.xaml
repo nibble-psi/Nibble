@@ -13,7 +13,7 @@
                     HorizontalAlignment="Left"
                     Spacing="40"
                     Padding="0 20 0 50">
-             <ColorPicker
+            <ColorPicker
                 ColorSpectrumShape="Ring"
                 IsMoreButtonVisible="False"
                 IsColorSliderVisible="True"

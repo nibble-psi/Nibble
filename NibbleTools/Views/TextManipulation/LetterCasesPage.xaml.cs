@@ -33,24 +33,19 @@ public sealed partial class LetterCasesPage : Page
         var selectedItem = DDL.SelectedItem as ComboBoxItem;
         var inputString = Input.Text;
 
-        if (selectedItem != null)
+        if (selectedItem == null)
         {
-            var itemContent = selectedItem.Content as string;
-
-            switch (itemContent)
-            {
-                case "lower case":
-                    Output.Text = LetterCasesViewModel.ConvertToLowerCase(inputString);
-                    break;
-
-                case "UPPER CASE":
-                    Output.Text = LetterCasesViewModel.ConvertToUpperCase(inputString);
-                    break;
-
-                case "Capitalized Case":
-                    Output.Text = LetterCasesViewModel.ConvertToCapitalizedCase(inputString);
-                    break;
-            }
+            return;
         }
+
+        var selectedIndex = DDL.SelectedIndex;
+
+        Output.Text = selectedIndex switch
+        {
+            0 => LetterCasesViewModel.ConvertToLowerCase(inputString),
+            1 => LetterCasesViewModel.ConvertToUpperCase(inputString),
+            2 => LetterCasesViewModel.ConvertToCapitalizedCase(inputString),
+            _ => Output.Text
+        };
     }
 }

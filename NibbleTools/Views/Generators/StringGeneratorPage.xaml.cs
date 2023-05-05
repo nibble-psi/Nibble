@@ -32,27 +32,31 @@ public sealed partial class StringGeneratorPage : Page
     {
         var selectedItem = DDL.SelectedItem as ComboBoxItem;
 
-        if (selectedItem != null)
+        if (selectedItem == null)
         {
-            var itemContent = selectedItem.Content as string;
+            return;
+        }
 
-            switch (itemContent)
-            {
-                case "Word":
-                    var randomWord = StringGeneratorViewModel.GenerateRandomWord(7);
-                    TextBox1.Text = randomWord;
-                    break;
+        var selectedIndex = DDL.SelectedIndex;
 
-                case "Sentence":
-                    var randomSentence = StringGeneratorViewModel.GenerateRandomSentence();
-                    TextBox1.Text = randomSentence;
-                    break;
+        switch (selectedIndex)
+        {
+            case 0:
+                TextBox1.Text = StringGeneratorViewModel.GenerateRandomWord(7);
+                break;
 
-                case "Paragraph":
-                    var randomParagraph = StringGeneratorViewModel.GenerateRandomParagraph();
-                    TextBox1.Text = randomParagraph;
-                    break;
-            }
+            case 1:
+                TextBox1.Text = StringGeneratorViewModel.GenerateRandomSentence();
+                ;
+                break;
+
+            case 2:
+                TextBox1.Text = StringGeneratorViewModel.GenerateRandomParagraph();
+                break;
+
+            default:
+                TextBox1.Text = "";
+                break;
         }
     }
 }
