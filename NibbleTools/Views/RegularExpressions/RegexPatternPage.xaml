@@ -1,0 +1,60 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="NibbleTools.Views.RegexPatternPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="using:NibbleTools.ViewModels"
+    d:DataContext="{d:DesignInstance Type=viewmodels:RegexPatternViewModel}"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <StackPanel x:Name="ContentArea"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Stretch"
+                    Spacing="30"
+                    Padding="0 20 0 50">
+
+            <Grid ColumnDefinitions="*, *"
+                  ColumnSpacing="40"
+                  RowDefinitions="Auto"
+                  HorizontalAlignment="Stretch">
+                
+                <TextBox
+                    x:Name="Input_Regular_Expression"
+                    x:Uid="RegexPattern_RegexpInput"
+                    AcceptsReturn="True"
+                    IsReadOnly="False"
+                    TextWrapping="Wrap"
+                    Height="300"
+                    Width="500"/>
+
+                <TextBox
+                    x:Name="Input_String"
+                    x:Uid="RegexPattern_StringInput"
+                    AcceptsReturn="True"
+                    IsReadOnly="False"
+                    TextWrapping="Wrap"
+                    Height="300"
+                    Width="500"
+                    Grid.Column="1"/>
+            </Grid>
+
+                <TextBox
+                    x:Name="Output"
+                    IsReadOnly="True"
+                    Background ="White"
+                    x:Uid="RegexPattern_Output"
+                    HorizontalAlignment="Left"
+                    TextWrapping="Wrap"
+                    Width="150"/>
+
+            <Button x:Name="Check" x:Uid="RegexPattern_Check" Width="100" Height="30" Margin="0 40 5 0"
+                    Click="RegexPattern_Click" />
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>
