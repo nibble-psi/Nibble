@@ -34,6 +34,8 @@ public static class PageServiceExtensions
         pageService.Configure<PrimeNumberGeneratorViewModel, PrimeNumberGeneratorPage>();
         pageService.Configure<StringGeneratorViewModel, StringGeneratorPage>();
 
+        // Regular expression pages
+        pageService.Configure<RegexPatternViewModel, RegexPatternPage>();
 
         // Text manipulation pages
         pageService.Configure<CounterViewModel, CounterPage>();

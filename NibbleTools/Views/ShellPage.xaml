@@ -123,6 +123,25 @@
                     </NavigationViewItem.MenuItems>
                 </NavigationViewItem>
 
+                <!--Regular expressions-->
+                <NavigationViewItem x:Uid="Shell_RegularExpressions">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE8E9;" />
+                    </NavigationViewItem.Icon>
+                    <NavigationViewItem.MenuItems>
+
+                        <!--Regex pattern match tester page-->
+                        <NavigationViewItem x:Uid="Shell_RegexPattern"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.RegexPatternViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon Glyph="&#xE8D2;" />
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+
+                    </NavigationViewItem.MenuItems>
+                </NavigationViewItem>
+
+
                 <!--Text manipualtion-->
                 <NavigationViewItem x:Uid="Shell_TextManipulation">
                     <NavigationViewItem.Icon>

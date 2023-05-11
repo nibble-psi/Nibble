@@ -60,6 +60,8 @@ public static class ServicesExtensions
             services.AddTransient<PrimeNumberGeneratorPage, PrimeNumberGeneratorViewModel>();
             services.AddTransient<StringGeneratorPage, StringGeneratorViewModel>();
 
+            services.AddTransient<RegexPatternPage, RegexPatternViewModel>();
+
             services.AddTransient<CounterPage, CounterViewModel>();
             services.AddTransient<TextSplitPage, TextSplitViewModel>();
             services.AddTransient<SymbolsReplacePage, SymbolsReplaceViewModel>();
