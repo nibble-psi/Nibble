@@ -557,7 +557,7 @@
   </data>
 
     <data name="MainPage_WelcomeTitle.Text" xml:space="preserve">
-      <value>Sveiki atvykę į Nibble įrankius! Visi įrankiai prieinami šoninėje juostoje</value>
+      <value>Sveiki atvykę į Nibble įrankius!</value>
     </data>
 
   <data name="MainPage_WelcomeSubtitle.Text" xml:space="preserve">
