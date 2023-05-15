@@ -555,6 +555,15 @@
   <data name="RegexPattern_Check.Content" xml:space="preserve">
     <value>Tikrinti</value>
   </data>
+
+    <data name="MainPage_WelcomeTitle.Text" xml:space="preserve">
+      <value>Sveiki atvykę į Nibble įrankius!</value>
+    </data>
+
+  <data name="MainPage_WelcomeSubtitle.Text" xml:space="preserve">
+      <value>Nibble Tools yra kūrėjams skirtų įrankių rinkinys. Visi įrankiai yra nemokami ir atvirojo kodo.</value>
+    </data>
+  
   <data name="RichTextEditor_Find.Text" xml:space="preserve">
     <value>Rasti:</value>
   </data>
@@ -564,4 +573,5 @@
   <data name="Shell_RichTextEditor.Content" xml:space="preserve">
     <value>Teksto redaktorius</value>
   </data>
+  
 </root>

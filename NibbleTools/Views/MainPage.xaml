@@ -6,5 +6,21 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:Name="ContentArea" />
+    <ScrollViewer>
+        <StackPanel HorizontalAlignment="Left">
+            <Image Source="/Assets/StoreLogo.png"
+                   Height="100"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,20"/>
+            <TextBlock x:Uid="MainPage_WelcomeTitle"
+                       VerticalAlignment="Center"
+                       TextWrapping="NoWrap"
+                       Style="{StaticResource SubtitleTextBlockStyle}"
+                       Margin="0,0,0,0" />
+            <TextBlock x:Uid="MainPage_WelcomeSubtitle"
+                       VerticalAlignment="Center"
+                       Style="{StaticResource BodyTextBlockStyle}"
+                       Margin="0,10,0,0" />
+        </StackPanel>
+    </ScrollViewer>
 </Page>
