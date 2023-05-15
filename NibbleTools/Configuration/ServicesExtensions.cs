@@ -67,6 +67,7 @@ public static class ServicesExtensions
             services.AddTransient<SymbolsReplacePage, SymbolsReplaceViewModel>();
             services.AddTransient<LinesSorterPage, LinesSorterViewModel>();
             services.AddTransient<LetterCasesPage, LetterCasesViewModel>();
+            services.AddTransient<RichTextEditorPage, RichTextEditorViewModel>();
 
 
             services.AddTransient<UuidGeneratorPage, UuidGeneratorViewModel>();

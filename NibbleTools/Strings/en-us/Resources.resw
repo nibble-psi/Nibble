@@ -555,4 +555,13 @@
   <data name="RegexPattern_Check.Content" xml:space="preserve">
     <value>Check</value>
   </data>
+  <data name="RichTextEditor_Find.Text" xml:space="preserve">
+    <value>Find:</value>
+  </data>
+  <data name="RichTextEditor_Place.PlaceholderText" xml:space="preserve">
+    <value>Enter search text</value>
+  </data>
+  <data name="Shell_RichTextEditor.Content" xml:space="preserve">
+    <value>Rich Text Editor</value>
+  </data>
 </root>
