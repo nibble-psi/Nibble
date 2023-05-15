@@ -48,6 +48,7 @@
         <None Remove="Views\StringGeneratorPage.xaml" />
         <None Remove="Views\TextManipulation\LetterCasesPage.xaml" />
         <None Remove="Views\TextManipulation\LinesSorterPage.xaml" />
+        <None Remove="Views\TextManipulation\RichTextEditorPage.xaml" />
         <None Remove="Views\TextManipulation\SymbolsReplacePage.xaml" />
         <None Remove="Views\TextSplitPage.xaml" />
     </ItemGroup>
@@ -71,6 +72,9 @@
         <None Update="appsettings.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <Page Update="Views\TextManipulation\RichTextEditorPage.xaml">
+          <Generator>MSBuild:Compile</Generator>
+        </Page>
         <Page Update="Views\RegularExpressions\RegexPatternPage.xaml">
           <Generator>MSBuild:Compile</Generator>
         </Page>

@@ -564,9 +564,19 @@
     <data name="MainPage_WelcomeTitle.Text" xml:space="preserve">
         <value>Welcome to the Nibble Tools!</value>
     </data>
-  
+
     <data name="MainPage_WelcomeSubtitle.Text" xml:space="preserve">
       <value>Nibble Tools is a collection of tools for developers. All tools are free and open source.</value>
     </data>
 
+
+    <data name="RichTextEditor_Find.Text" xml:space="preserve">
+    <value>Find:</value>
+  </data>
+    <data name="RichTextEditor_Place.PlaceholderText" xml:space="preserve">
+    <value>Enter search text</value>
+  </data>
+    <data name="Shell_RichTextEditor.Content" xml:space="preserve">
+    <value>Rich Text Editor</value>
+  </data>
 </root>
