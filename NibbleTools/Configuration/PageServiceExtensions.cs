@@ -43,6 +43,7 @@ public static class PageServiceExtensions
         pageService.Configure<SymbolsReplaceViewModel, SymbolsReplacePage>();
         pageService.Configure<LinesSorterViewModel, LinesSorterPage>();
         pageService.Configure<LetterCasesViewModel, LetterCasesPage>();
+        pageService.Configure<RichTextEditorViewModel, RichTextEditorPage>();
 
         // Cryptography and security pages
         pageService.Configure<UuidGeneratorViewModel, UuidGeneratorPage>();

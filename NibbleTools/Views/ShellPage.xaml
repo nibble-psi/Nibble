@@ -157,6 +157,14 @@
                             </NavigationViewItem.Icon>
                         </NavigationViewItem>
 
+                        <!--RichTextEditor page-->
+                        <NavigationViewItem x:Uid="Shell_RichTextEditor"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.RichTextEditorViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon Glyph="&#xE8D2;" />
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+
                         <!--Text Split page-->
                         <NavigationViewItem x:Uid="Shell_TextSplit"
                                             helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.TextSplitViewModel">
