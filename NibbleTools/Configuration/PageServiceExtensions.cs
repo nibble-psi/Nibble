@@ -36,6 +36,7 @@ public static class PageServiceExtensions
 
         // Regular expression pages
         pageService.Configure<RegexPatternViewModel, RegexPatternPage>();
+        pageService.Configure<RegexWikiViewModel, RegexWikiPage>();
 
         // Text manipulation pages
         pageService.Configure<CounterViewModel, CounterPage>();

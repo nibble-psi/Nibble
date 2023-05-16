@@ -555,15 +555,12 @@
   <data name="RegexPattern_Check.Content" xml:space="preserve">
     <value>Tikrinti</value>
   </data>
-
-    <data name="MainPage_WelcomeTitle.Text" xml:space="preserve">
-      <value>Sveiki atvykę į Nibble įrankius!</value>
-    </data>
-
+  <data name="MainPage_WelcomeTitle.Text" xml:space="preserve">
+    <value>Sveiki atvykę į Nibble įrankius!</value>
+  </data>
   <data name="MainPage_WelcomeSubtitle.Text" xml:space="preserve">
-      <value>Nibble Tools yra kūrėjams skirtų įrankių rinkinys. Visi įrankiai yra nemokami ir atvirojo kodo.</value>
-    </data>
-  
+    <value>Nibble Tools yra kūrėjams skirtų įrankių rinkinys. Visi įrankiai yra nemokami ir atvirojo kodo.</value>
+  </data>
   <data name="RichTextEditor_Find.Text" xml:space="preserve">
     <value>Rasti:</value>
   </data>
@@ -573,5 +570,55 @@
   <data name="Shell_RichTextEditor.Content" xml:space="preserve">
     <value>Teksto redaktorius</value>
   </data>
-  
+  <data name="RegexWiki_CommonPatterns.Text" xml:space="preserve">
+    <value>Dažniausiai naudojami reguliarių išraiškų šablonai</value>
+  </data>
+  <data name="RegexWiki_DateDescription.Text" xml:space="preserve">
+    <value>Aprašymas: Atitinka taisyklingą datos formatą YYYY-MM-DD.</value>
+  </data>
+  <data name="RegexWiki_DateLabel.Text" xml:space="preserve">
+    <value>Data (YYYY-MM-DD)</value>
+  </data>
+  <data name="RegexWiki_DatePattern.Text" xml:space="preserve">
+    <value>Šablonas: ^\d{4}-\d{2}-\d{2}$</value>
+  </data>
+  <data name="RegexWiki_EmailDescription.Text" xml:space="preserve">
+    <value>Aprašymas: Atitinka taisyklingą el. pašto adreso formatą.</value>
+  </data>
+  <data name="RegexWiki_EmailLabel.Text" xml:space="preserve">
+    <value>El. pašto adresas</value>
+  </data>
+  <data name="RegexWiki_EmailPattern.Text" xml:space="preserve">
+    <value>Šablonas: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$</value>
+  </data>
+  <data name="RegexWiki_IPDescription.Text" xml:space="preserve">
+    <value>Aprašymas: Atitinka taisyklingą IPv4 adreso formatą.</value>
+  </data>
+  <data name="RegexWiki_IPLabel.Text" xml:space="preserve">
+    <value>IP Adresas (IPv4)</value>
+  </data>
+  <data name="RegexWiki_IPPattern.Text" xml:space="preserve">
+    <value>Šablonas: ^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$</value>
+  </data>
+  <data name="RegexWiki_PhoneDescription.Text" xml:space="preserve">
+    <value>Aprašymas: Atitinka taisyklingą lietuviško telefono numerio formatą.</value>
+  </data>
+  <data name="RegexWiki_PhoneLabel.Text" xml:space="preserve">
+    <value>Telefono numeris (LT)</value>
+  </data>
+  <data name="RegexWiki_PhonePattern.Text" xml:space="preserve">
+    <value>Šablonas: ^\+370\d{8}$|^8\d{8}$</value>
+  </data>
+  <data name="RegexWiki_URLDescription.Text" xml:space="preserve">
+    <value>Aprašymas: Atitinka taisyklingą URL formatą, įskaitant http:// arba https:// prefiksus.</value>
+  </data>
+  <data name="RegexWiki_URLLabel.Text" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="RegexWiki_URLPattern.Text" xml:space="preserve">
+    <value>Šablonas: ^(http|https):\/\/([\w\d\-]+(\.[\w\d\-]+)*(:\d+)?(\/[\w\d\-]+(\.[\w\d\-]+)*)*\/?)$</value>
+  </data>
+  <data name="Shell_RegexWiki.Content" xml:space="preserve">
+    <value>Reguliarių išraiškų šablonai</value>
+  </data>
 </root>

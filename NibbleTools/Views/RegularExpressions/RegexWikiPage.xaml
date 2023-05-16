@@ -1,0 +1,42 @@
+<Page
+    x:Class="NibbleTools.Views.RegexWikiPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="using:NibbleTools.ViewModels"
+    d:DataContext="{d:DesignInstance Type=viewmodels:RegexWikiViewModel}"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <StackPanel x:Name="ContentArea"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Stretch"
+                    Spacing="30"
+                    Padding="0 20 0 50">
+
+            <TextBlock x:Uid="RegexWiki_CommonPatterns" FontWeight="Bold" FontSize="24" />
+
+            <TextBlock x:Uid="RegexWiki_EmailLabel" FontWeight="Bold" FontSize="20" />
+            <TextBlock x:Uid="RegexWiki_EmailPattern" FontSize="16" />
+            <TextBlock x:Uid="RegexWiki_EmailDescription" FontSize="16" />
+
+            <TextBlock x:Uid="RegexWiki_URLLabel" FontWeight="Bold" FontSize="20" />
+            <TextBlock x:Uid="RegexWiki_URLPattern" FontSize="16" />
+            <TextBlock x:Uid="RegexWiki_URLDescription" FontSize="16" />
+
+            <TextBlock x:Uid="RegexWiki_PhoneLabel" FontWeight="Bold" FontSize="20" />
+            <TextBlock x:Uid="RegexWiki_PhonePattern" FontSize="16" />
+            <TextBlock x:Uid="RegexWiki_PhoneDescription" FontSize="16" />
+
+            <TextBlock x:Uid="RegexWiki_DateLabel" FontWeight="Bold" FontSize="20" />
+            <TextBlock x:Uid="RegexWiki_DatePattern" FontSize="16" />
+            <TextBlock x:Uid="RegexWiki_DateDescription" FontSize="16" />
+
+            <TextBlock x:Uid="RegexWiki_IPLabel" FontWeight="Bold" FontSize="20" />
+            <TextBlock x:Uid="RegexWiki_IPPattern" FontSize="16" />
+            <TextBlock x:Uid="RegexWiki_IPDescription" FontSize="16" />
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>
