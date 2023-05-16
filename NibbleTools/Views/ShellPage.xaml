@@ -138,6 +138,14 @@
                             </NavigationViewItem.Icon>
                         </NavigationViewItem>
 
+                        <!--Regex wiki page-->
+                        <NavigationViewItem x:Uid="Shell_RegexWiki"
+                                            helpers:NavigationHelper.NavigateTo="NibbleTools.ViewModels.RegexWikiViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon Glyph="&#xE8D2;" />
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+
                     </NavigationViewItem.MenuItems>
                 </NavigationViewItem>
 

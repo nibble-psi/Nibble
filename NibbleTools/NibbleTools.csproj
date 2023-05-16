@@ -45,6 +45,7 @@
         <None Remove="Views\NumberGeneratorPage.xaml" />
         <None Remove="Views\ORNORPageNOR.xaml" />
         <None Remove="Views\RegularExpressions\RegexPatternPage.xaml" />
+        <None Remove="Views\RegularExpressions\RegexWikiPage.xaml" />
         <None Remove="Views\StringGeneratorPage.xaml" />
         <None Remove="Views\TextManipulation\LetterCasesPage.xaml" />
         <None Remove="Views\TextManipulation\LinesSorterPage.xaml" />
@@ -72,6 +73,9 @@
         <None Update="appsettings.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <Page Update="Views\RegularExpressions\RegexWikiPage.xaml">
+          <Generator>MSBuild:Compile</Generator>
+        </Page>
         <Page Update="Views\TextManipulation\RichTextEditorPage.xaml">
           <Generator>MSBuild:Compile</Generator>
         </Page>

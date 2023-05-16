@@ -61,6 +61,7 @@ public static class ServicesExtensions
             services.AddTransient<StringGeneratorPage, StringGeneratorViewModel>();
 
             services.AddTransient<RegexPatternPage, RegexPatternViewModel>();
+            services.AddTransient<RegexWikiPage, RegexWikiViewModel>();
 
             services.AddTransient<CounterPage, CounterViewModel>();
             services.AddTransient<TextSplitPage, TextSplitViewModel>();
