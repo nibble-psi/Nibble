@@ -2,24 +2,39 @@
 
 # Nibble
 
-## Introduction
+## 🖍️ Introduction
 
 Nibble is a simple, lightweight, and easy to use tool for developers. Application purpose is to provide a simple way to
 access and use various most common tools that
-assist developers in their daily tasks. Nibble is WinUI 3 application written in C# and XAML. Architecture is based on
+assist developers in their daily tasks. 
+
+Nibble is WinUI 3 application written in `C#` and `XAML`. Architecture is based on
 MVVM pattern.
 
-## Getting Started
+## 📦 Getting Started
 
 Nibble installation wizard will install all required dependencies. Download is available on
 Github [releases](https://github.com/nibble-psi/Nibble/releases) page.
 
-## Support and Feedback
+## ⁉ Support and Feedback
 
 If you have any questions, suggestions, or issues, provide feedback
 on [Github issues](https://github.com/nibble-psi/Nibble/issues) page.
 
-## Settings
+## 🚀 Contributors
+
+<a href="https://github.com/nibble-psi/Nibble/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=nibble-psi/Nibble" />
+</a>
+
+### 🧩 Nibble Team
+- Mantas Jasikėnas
+- Ailandas Odminis
+- Gvidas Garadauskas
+- Mantas Šmulkštys
+- Dovydas Stumbra
+
+## ⚙️ Settings
 
 ### Localisation
 
@@ -35,7 +50,7 @@ change will take effect immediately.
 
 <img src="./docs/images/NibbleTools_SettingsDark.png"  alt="" width="75%" height="75%">
 
-## Available Tools and Features
+## 🧪 Available Tools and Features
 
 ### Bits Manipulation
 
